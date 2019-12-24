@@ -1,0 +1,17 @@
+﻿#container {
+    padding-top: 10%;
+    text-align: center;
+}
+
+label {
+    text-align: left;
+}
+
+.card-heading {
+    font-size: 40px;
+}
+
+button {
+    background-color: forestgreen;
+    color: white;
+}
