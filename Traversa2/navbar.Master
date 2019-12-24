@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="navbar.master.cs" Inherits="Traversa2.navbar" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .ft{
+            color: #F9F6F4;
+            font-size: 16px;
+            text-transform: uppercase;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        }
+    </style>
+
+    <title>Traversa</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+       <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #A8C1E8;">
+           <div class="container">
+            <a class="navbar-brand" href="/"><img src="images/c.gif" alt="Logo" style="width:65px;" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link ft" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ft" href="#">Map</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ft" href="#">Itinerary</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ft" href="#">Events</a>
+                  </li>
+                  <li class="nav-item">
+                        <a class="nav-link ft" href="#">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                        <button type="button" class="btn btn-outline-info">Login</button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+           </nav>
+        <div class="container body-content">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+         </div>
+    </form>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
