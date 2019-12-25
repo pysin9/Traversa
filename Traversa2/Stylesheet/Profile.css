@@ -1,6 +1,8 @@
 ﻿#container {
-    padding-top: 10%;
+    margin-top: 10%;
     text-align: center;
+    border: 2px solid cornflowerblue;
+    border-radius:25px;
 }
 
 label {

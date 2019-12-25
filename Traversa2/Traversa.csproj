@@ -80,7 +80,8 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.4.1.min.js" />
-    <Content Include="Profile.aspx" />
+    <Content Include="Views\Users\ChangePassword.aspx" />
+    <Content Include="Views\Users\Profile.aspx" />
     <Content Include="Signup.aspx" />
     <Content Include="Stylesheet\login.css" />
     <Content Include="Stylesheet\Profile.css" />
@@ -97,11 +98,18 @@
     <Compile Include="navbar.Master.designer.cs">
       <DependentUpon>navbar.Master</DependentUpon>
     </Compile>
-    <Compile Include="Profile.aspx.cs">
+    <Compile Include="Views\Users\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Users\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\Profile.aspx.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Profile.aspx.designer.cs">
+    <Compile Include="Views\Users\Profile.aspx.designer.cs">
       <DependentUpon>Profile.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />

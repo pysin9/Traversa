@@ -1,6 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="Traversa2.Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="Stylesheet/Profile.css" rel="stylesheet" type="text/css" />
+
+
+    <link href="../../Stylesheet/Profile.css" rel="stylesheet" type="text/css" />
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container" id="container">
