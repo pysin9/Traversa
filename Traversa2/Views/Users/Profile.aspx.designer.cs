@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Traversa2
+namespace Traversa2.Views.Users
 {
 
 
