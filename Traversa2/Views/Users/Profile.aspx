@@ -23,44 +23,34 @@
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Username:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="Username" placeholder="Enter new username">
-              	        </div>
+                        <asp:TextBox ID="username" runat="server" placeholder="Enter new username" CssClass="col-lg-5"></asp:TextBox>
                     </div>
 			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Email:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="email" placeholder="Enter new email">
-              	        </div>
+                        <asp:TextBox ID="email" runat="server" placeholder="Enter new email" CssClass="col-lg-5"></asp:TextBox>
                     </div>
 			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Country of Origin:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="country" placeholder="Enter your country of origin">
-              	        </div>
+                		<asp:TextBox ID="country" runat="server" placeholder="Enter country of origin" CssClass="col-lg-5"></asp:TextBox>
                    </div>
 			    </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Language:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="language" placeholder="Enter language">
-              	        </div>
+                		<input class="form-control" type="text" name="language" placeholder="Enter language">
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Food Preference:</label>
-              	        <div class="col-lg-5">
-                	            <input class="form-control" type="text" name="foodpref" placeholder="Enter your food preference">
-                        </div>
+                	    <asp:DropDownList ID="foodpref" runat="server" CssClass="col-lg-5"></asp:DropDownList>
                     </div>
                 </div>
-                <button type="submit">Update</button>
+                <asp:Button ID="btnUpdate" runat="server" Text="Update" />
 			 </form>
       </div> <!-- end panel-body -->
     </div> <!-- end panel -->

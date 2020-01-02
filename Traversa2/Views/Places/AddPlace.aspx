@@ -6,7 +6,7 @@
         <div class="container" id="container">
   <div class=".col-lg-4 .col-lg-offset-2">
       <div class="card-heading" > Add a Place </div>
-<%--<div class="alert alert-success">
+      <%--<div class="alert alert-success">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         <strong>Success!</strong> Profile successfully saved
         </div>
@@ -19,46 +19,36 @@
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Name of Place:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="PName" placeholder="Enter name of place">
-              	        </div>
+                		    <asp:TextBox ID="Pname" runat="server" placeholder="Enter name of place" CssClass="col-lg-5"></asp:TextBox>
                     </div>
 			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Description:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="PDesc" placeholder="Enter description of place">
-              	        </div>
+                        <asp:TextBox ID="PDesc" runat="server" palceholder="Enter name of place" placeholder="Enter description of place" CssClass="col-lg-5"></asp:TextBox>
                     </div>
 			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Location(s):</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="PLocation" placeholder="Enter location(s) of place">
-              	        </div>
+                            <asp:TextBox ID="PLocation" runat="server" palceholder="Enter location(s) of place" placeholder="Enter description of place" CssClass="col-lg-5"></asp:TextBox>
                    </div>
 			    </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Category:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="Category" placeholder="Select categories">
-              	        </div>
+                		<asp:DropDownList ID="category" runat="server" CssClass="col-lg-5"></asp:DropDownList>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Image:</label>
-              	        <div class="col-lg-5">
-                	            <input class="form-control" type="text" name="image" placeholder="Select image">
-                        </div>
+                              <asp:Button ID="btnSelectImage" runat="server" CssClass="col-lg-5" Text="Select" />       
                     </div>
                 </div>
-                <button type="submit">Save</button>
+                    <asp:Button ID="btnSave" class="btnSave" Text="Save" runat="server"/>
 			 </form>
       </div> <!-- end panel-body -->
-    </div> <!-- end panel -->
-</div> <!-- end container-fluid -->
+    </div> <!-- end panel --> <!-- end container-fluid -->
+</div>
 </asp:Content>

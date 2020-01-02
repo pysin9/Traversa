@@ -11,7 +11,7 @@ label {
     font-size: 40px;
 }
 
-button {
+.btnSave{
     background-color: forestgreen;
     color: white;
 }

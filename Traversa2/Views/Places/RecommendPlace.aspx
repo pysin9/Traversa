@@ -15,24 +15,20 @@
         <strong>Oops!</strong> Profile not saved. Try later.
     </div>--%>
       <div class="card-body">
-		    <form>
+		    <form action="#" method="post">
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Place of recommendation:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="text" name="RPlace" placeholder="Name of recommended place">
-              	        </div>
+                		<asp:TextBox ID="RName" runat="server" placeholder="Enter name of recommended place" CssClass="col-lg-5" name="RName"></asp:TextBox>
                     </div>
 			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Reason for recommendation:</label>
-              	        <div class="col-lg-5">
-                		        <textarea class="form-control" name="reason" placeholder="Specify your reason for this recommendation"></textarea>
-              	        </div>
+                		<textarea ID="RReason" cols="60" rows="5" name="RReason"></textarea>
                     </div>
 			    </div>
-                <button type="submit">Recommend!</button>
+                    <asp:Button ID="btnRec" runat="server" Text="Recommend!"  OnClick="btnRec_Click" />
 			 </form>
       </div> <!-- end panel-body -->
     </div> <!-- end panel -->

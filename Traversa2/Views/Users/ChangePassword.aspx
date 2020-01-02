@@ -19,20 +19,16 @@
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">New Password:</label>
-              	        <div class="col-lg-5">
-                		        <input class="form-control" type="password" name="password" placeholder="Enter new password">
-              	        </div>
+                        <asp:TextBox ID="password" runat="server" placeholder="Enter new password" CssClass="col-lg-5"></asp:TextBox>
                     </div>
 			    </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Confirm Password:</label>
-              	        <div class="col-lg-5">
-                	            <input class="form-control" type="password" name="cfmpass" placeholder="Confirm your new password">
-                        </div>
+                	    <asp:TextBox ID="cfmpass" runat="server" placeholder="Re-enter new password" CssClass="col-lg-5"></asp:TextBox>
                     </div>
                 </div>
-                <button type="submit">Confirm</button>
+                <asp:Button ID="btnSubmit" runat="server" Text="Change" />
 			 </form>
       </div> <!-- end panel-body -->
     </div> <!-- end panel -->
