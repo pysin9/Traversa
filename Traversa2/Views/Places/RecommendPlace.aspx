@@ -5,15 +5,16 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <div class="container" id="container">
   <div class=".col-lg-4 .col-lg-offset-2">
-      <div class="card-heading" > Recommend a Place </div>
-<%--<div class="alert alert-success">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Success!</strong> Profile successfully saved
+     <%--  <div class="alert alert-success">
+       <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Recommendation successful!</strong>
         </div>
         <div class="alert alert-warning">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
         <strong>Oops!</strong> Profile not saved. Try later.
     </div>--%>
+      <div class="card-heading" > Recommend a Place </div>
+      <asp:Label ID="lblerror" runat="server" Text=""></asp:Label>
       <div class="card-body">
 		    <form action="#" method="post">
 			    <div class="form-group">

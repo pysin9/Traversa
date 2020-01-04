@@ -12,28 +12,33 @@ namespace Traversa2.Views.Places
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack==true)
+            {
+                lblerror.Text = "";
+            }
+            else
+            {
 
+            }
         }
 
         protected void btnRec_Click(object sender, EventArgs e)
         {
             string name = RName.Text;
             string reason = Request.Form["RReason"];
-            string test1 = "qwerty";
-            string test2 = "wasd";
-            if (IsPostBack == true)
+            if (reason =="" || name =="")
             {
-                btnRec.Text = name;
+                lblerror.Text = "Please fill up all fields!";
+                lblerror.ForeColor = System.Drawing.Color.Red;
+            }
+            else
+            {
                 Recommendation rec = new Recommendation(name, reason);
                 rec.AddRecommendation();
-            }
-            if(!IsPostBack)
-            {
-                btnRec.Text = name;
-                Recommendation rec = new Recommendation(name, reason);
-                Response.Write(rec.RName);
+                Response.Redirect("RecommendPlace.aspx");
             }
 
+            
         }
     }
 }

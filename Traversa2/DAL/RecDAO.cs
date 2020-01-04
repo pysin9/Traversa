@@ -50,5 +50,37 @@ namespace Traversa2.DAL
             return result;
         }
         //SelectAllRecommendation
+        public List<Recommendation> GetAll()
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            String sqlstmt = "SELECT RecID, RName, RReason FROM Recommendation";
+
+            SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            List<Recommendation> recList = new List<Recommendation>();
+
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            if (rec_cnt == 0)
+            {
+                recList = null;
+            }
+            else
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    string recid = Convert.ToString(row["RecID"]);
+                    string rname = Convert.ToString(row["RName"]);
+                    string rreason = Convert.ToString(row["RReason"]);
+                    Recommendation objRate = new Recommendation(rname, rreason);
+                    recList.Add(objRate);
+                }
+            }
+            return recList;
+        }
     }
 }
