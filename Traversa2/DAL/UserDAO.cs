@@ -12,7 +12,7 @@ namespace Traversa2.DAL
 {
     public class UserDAO
     {
-        public int Insert(Users u)
+        public int Insert(Travellers u)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -36,7 +36,7 @@ namespace Traversa2.DAL
             return result;
         }
 
-        public Users SelectByEmail(string email)
+        public Travellers SelectByEmail(string email)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -50,7 +50,7 @@ namespace Traversa2.DAL
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            Users user = null;
+            Travellers user = null;
             int rec_cnt = ds.Tables[0].Rows.Count;
             if (rec_cnt == 1)
             {
@@ -60,7 +60,7 @@ namespace Traversa2.DAL
                 string Email = row["Email"].ToString();
 
 
-                user = new Users(name, password, Email);
+                user = new Travellers(name, password, Email);
                 
 
             }
