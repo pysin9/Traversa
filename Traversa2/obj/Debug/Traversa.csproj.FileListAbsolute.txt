@@ -106,3 +106,13 @@ C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\Traversa\Traversa2\obj\Debug
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\Traversa\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\Traversa\Traversa2\obj\Debug\Traversa2.dll
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\Traversa\Traversa2\obj\Debug\Traversa2.pdb
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\bin\Traversa2.dll.config
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\bin\Traversa2.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\bin\Traversa2.pdb
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\obj\Debug\Traversa.csprojAssemblyReference.cache
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\obj\Debug\Traversa.csproj.CoreCompileInputs.cache
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\obj\Debug\Traversa2.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfk\Traversa\Traversa2\obj\Debug\Traversa2.pdb
