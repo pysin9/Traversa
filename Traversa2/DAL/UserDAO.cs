@@ -35,5 +35,36 @@ namespace Traversa2.DAL
 
             return result;
         }
+
+        public Users SelectByEmail(string email)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlstmt = "SELECT * From Travellers where Email = @paraAcc " +
+                            "and maturity >= GETDATE()";
+            SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
+
+            da.SelectCommand.Parameters.AddWithValue("@paraEmail", email);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            Users user = null;
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            if (rec_cnt == 1)
+            {
+                DataRow row = ds.Tables[0].Rows[0];
+                string name = row["Name"].ToString();
+                string password = row["Password"].ToString();
+                string Email = row["Email"].ToString();
+
+
+                user = new Users(name, password, Email);
+                
+
+            }
+            return user;
+        }
     }
 }

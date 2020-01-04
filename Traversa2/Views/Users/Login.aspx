@@ -3,6 +3,12 @@
     <link href="../../Stylesheet/login.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div runat="server" id="alertSuccess" role="alert">
+        <asp:Label ID="lblsuccess" runat="server" Text=""></asp:Label>
+    </div>
+    <div runat="server" id="alertDanger"  role="alert">
+        <asp:Label ID="lblAlert" class="alert-dismissible" runat="server" Text=""></asp:Label>
+    </div>
     <div class="container ice">
         <div class="card hot">
             <div class="card-title text-center  T">Login</div>
@@ -21,7 +27,7 @@
                         </div>
                     </div>
                     <div class="text-center col-sm-5 col-md-5 col-lg-6 f">
-                        <button type="submit" class="btn btn-success btn-round btn-lg btn-block">Login</button>
+                        <asp:Button ID="btnLogin" class="btn btn-success btn-round btn-lg btn-block" runat="server" Text="Login" />
                     </div>
                     <div class="text-center">
                         <a href="/Register" class="btn btn-link">Don't have an account?<u>Register now!</u></a>

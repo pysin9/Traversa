@@ -29,5 +29,11 @@ namespace Traversa2.BLL
             UserDAO dao = new UserDAO();
             return (dao.Insert(this));
         }
+
+        public Users GetTDbyEmail(string email)
+        {
+            UserDAO dao = new UserDAO();
+            return dao.SelectByEmail(email);
+        }
     }
 }
