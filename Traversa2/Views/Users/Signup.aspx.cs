@@ -58,7 +58,7 @@ namespace Traversa2
                 }
                 else
                 {
-                    Users user = new Users(name, password, email);
+                    Travellers user = new Travellers(name, password, email);
                     int result = user.AddNewUser();
                     if (result == 1)
                     {

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Traversa2.BLL;
 
 namespace Traversa2.Views.Users
 {
@@ -16,6 +17,9 @@ namespace Traversa2.Views.Users
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
+            string name = emailTB.Text;
+            string password = passwordTB.Text;
+
 
         }
     }

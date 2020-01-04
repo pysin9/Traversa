@@ -6,18 +6,18 @@ using Traversa2.DAL;
 
 namespace Traversa2.BLL
 {
-    public class Users
+    public class Travellers
     {
         public string Name { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
 
-        public Users()
+        public Travellers()
         {
 
         }
 
-        public Users(string name, string password, string email)
+        public Travellers(string name, string password, string email)
         {
             Name = name;
             Password = password;
@@ -30,7 +30,7 @@ namespace Traversa2.BLL
             return (dao.Insert(this));
         }
 
-        public Users GetTDbyEmail(string email)
+        public Travellers GetTDbyEmail(string email)
         {
             UserDAO dao = new UserDAO();
             return dao.SelectByEmail(email);
