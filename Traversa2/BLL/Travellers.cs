@@ -11,6 +11,8 @@ namespace Traversa2.BLL
         public string Name { get; set; }
         public string Password { get; set; }
         public string Email { get; set; }
+        public string Language { get; set; }
+        public string FoodPref { get; set; }
 
         public Travellers()
         {
@@ -34,6 +36,18 @@ namespace Traversa2.BLL
         {
             UserDAO dao = new UserDAO();
             return dao.SelectByEmail(email);
+        }
+
+        public int ChangePassword(int UserID, string psd)
+        {
+            UserDAO dao = new UserDAO();
+            return dao.UpdatePassword(UserID, psd);
+        }
+
+        public int UpdateProifle()
+        {
+            UserDAO dao = new UserDAO();
+            return dao.UpdateProfile(this);
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Traversa2.Views.Places
         protected void btnDelete_Click(object sender, EventArgs e)
         {
             Recommendation rec = new Recommendation();
+            //rec.DeleteSelected(id);
         }
     }
 }

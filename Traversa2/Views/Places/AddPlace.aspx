@@ -31,7 +31,7 @@
 			    <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Location(s):</label>
-                            <asp:TextBox ID="PLocation" runat="server" palceholder="Enter location(s) of place" placeholder="Enter description of place" CssClass="col-lg-5"></asp:TextBox>
+                            <asp:TextBox ID="PLocation" runat="server" palceholder="Enter location(s) of place" placeholder="Enter location(s) of place" CssClass="col-lg-5"></asp:TextBox>
                    </div>
 			    </div>
                 <div class="form-group">

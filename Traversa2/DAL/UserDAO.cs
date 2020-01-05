@@ -66,5 +66,56 @@ namespace Traversa2.DAL
             }
             return user;
         }
+
+        public int UpdatePassword(int UserID, string psd)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "UPDATE Travellers SET Password = @paraPassword where UserID =  @paraUserId";
+
+            int result = 0;    // Execute NonQuery return an integer value
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+
+            sqlCmd = new SqlCommand(sqlStmt.ToString(), myConn);
+
+            sqlCmd.Parameters.AddWithValue("@paraPassword", UserID);
+            sqlCmd.Parameters.AddWithValue("@paraUserId", psd);
+
+            myConn.Open();
+            result = sqlCmd.ExecuteNonQuery();
+
+            myConn.Close();
+
+            return result;
+        }
+
+        public int UpdateProfile(Travellers tv)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "UPDATE Travellers SET Username = @paraUsername, Email = @paraEmail, Langauge = @paraLanguage, FoodPref = @paraFoodPref where UserID =  @paraUserId";
+
+            int result = 0;    // Execute NonQuery return an integer value
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+
+            sqlCmd = new SqlCommand(sqlStmt.ToString(), myConn);
+
+           // sqlCmd.Parameters.AddWithValue("@paraUsername", tv.UserID);
+            sqlCmd.Parameters.AddWithValue("@paraUsername", tv.Name);
+            sqlCmd.Parameters.AddWithValue("@paraEmail", tv.Email);
+            sqlCmd.Parameters.AddWithValue("@paraLanguage", tv.Language);
+            sqlCmd.Parameters.AddWithValue("@paraFoodPref", tv.FoodPref);
+
+            myConn.Open();
+            result = sqlCmd.ExecuteNonQuery();
+
+            myConn.Close();
+
+            return result;
+        }
     }
 }

@@ -29,14 +29,8 @@
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Email:</label>
-                        <asp:TextBox ID="email" runat="server" placeholder="Enter new email" CssClass="col-lg-5"></asp:TextBox>
+                        <asp:TextBox ID="uemail" runat="server" placeholder="Enter new email" CssClass="col-lg-5"></asp:TextBox>
                     </div>
-			    </div>
-			    <div class="form-group">
-                    <div class="row justify-content-center">
-              	        <label class="col-lg-3 control-label">Country of Origin:</label>
-                		<asp:TextBox ID="country" runat="server" placeholder="Enter country of origin" CssClass="col-lg-5"></asp:TextBox>
-                   </div>
 			    </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
@@ -47,7 +41,16 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Food Preference:</label>
-                	    <asp:DropDownList ID="foodpref" runat="server" CssClass="col-lg-5"></asp:DropDownList>
+                	    <asp:DropDownList ID="foodpref" runat="server" CssClass="col-lg-5">
+                            <asp:ListItem>--Select--</asp:ListItem>
+                            <asp:ListItem>Vegan</asp:ListItem>
+                            <asp:ListItem>Vegetarian</asp:ListItem>
+                            <asp:ListItem>Pescatarian</asp:ListItem>
+                            <asp:ListItem>Seafood</asp:ListItem>
+                            <asp:ListItem Value="RedMeat">Red Meat</asp:ListItem>
+                            <asp:ListItem Value="NPork">No Pork</asp:ListItem>
+                            <asp:ListItem Value="NBeef">No Beef</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                 </div>
                 <asp:Button ID="btnUpdate" runat="server" Text="Update" />

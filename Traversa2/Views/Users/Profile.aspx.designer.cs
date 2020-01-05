@@ -22,22 +22,13 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.TextBox username;
         
         /// <summary>
-        /// email control.
+        /// uemail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox email;
-        
-        /// <summary>
-        /// country control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox country;
+        protected global::System.Web.UI.WebControls.TextBox uemail;
         
         /// <summary>
         /// foodpref control.
