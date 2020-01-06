@@ -10,20 +10,32 @@ namespace Traversa2.Views.Places
 {
     public partial class ViewAllRec : System.Web.UI.Page
     {
-        public List<Recommendation> recList;
+        public List<Recommendations> recList;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Recommendation rec = new Recommendation();
-            recList = rec.GetAllRec();
-
-            //GVRec.DataSource = rateList;
-            //GVRec.DataBind();
+            BindData();
         }
 
-        protected void btnDelete_Click(object sender, EventArgs e)
+        protected void GVRecs_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            Recommendation rec = new Recommendation();
-            //rec.DeleteSelected(id);
+            int id = Convert.ToInt32(GVRecs.DataKeys[e.RowIndex].Value);
+
+            Recommendations rec = new Recommendations();
+            rec.DeleteSelected(id);
+            lblMsg.Text = "Successfully deleted!";
+            lblMsg.ForeColor = System.Drawing.Color.Green;
+            BindData();
+            
+        }
+
+        public void BindData()
+        {
+            Recommendations rec = new Recommendations();
+            recList = rec.GetAllRec();
+
+            
+            GVRecs.DataSource = recList;
+            GVRecs.DataBind();
         }
     }
 }

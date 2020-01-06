@@ -27,17 +27,5 @@ namespace Traversa2.BLL
             //null value here
             return (dao.Insert(this));
         }
-
-        public List<Recommendation> GetAllRec()
-        {
-            RecDAO dao = new RecDAO();
-            return dao.GetAll();
-        }
-
-        public int DeleteSelected(int recid)
-        {
-            RecDAO dao = new RecDAO();
-            return dao.DeleteRec(recid);
-        }
     }
 }

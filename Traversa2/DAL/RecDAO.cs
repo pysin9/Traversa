@@ -36,7 +36,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "Delete Recommendation where RecID = @id";
+            string sqlStmt = "Delete Recommendation where RecID = @paraid";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
@@ -50,7 +50,7 @@ namespace Traversa2.DAL
             return result;
         }
         //SelectAllRecommendation
-        public List<Recommendation> GetAll()
+        public List<Recommendations> GetAll()
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -62,7 +62,7 @@ namespace Traversa2.DAL
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            List<Recommendation> recList = new List<Recommendation>();
+            List<Recommendations> recList = new List<Recommendations>();
 
             int rec_cnt = ds.Tables[0].Rows.Count;
             if (rec_cnt == 0)
@@ -73,10 +73,10 @@ namespace Traversa2.DAL
             {
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
-                    string recid = Convert.ToString(row["RecID"]);
+                    int recid = Convert.ToInt32(row["RecID"]);
                     string rname = Convert.ToString(row["RName"]);
                     string rreason = Convert.ToString(row["RReason"]);
-                    Recommendation objRate = new Recommendation(rname, rreason);
+                    Recommendations objRate = new Recommendations(rname, rreason, recid);
                     recList.Add(objRate);
                 }
             }

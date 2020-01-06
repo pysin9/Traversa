@@ -131,6 +131,7 @@
   <ItemGroup>
     <Compile Include="BLL\Place.cs" />
     <Compile Include="BLL\Recommendation.cs" />
+    <Compile Include="BLL\Recommendations.cs" />
     <Compile Include="BLL\Travellers.cs" />
     <Compile Include="DAL\RecDAO.cs" />
     <Compile Include="DAL\UserDAO.cs" />

@@ -1,5 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="ViewAllRec.aspx.cs" Inherits="Traversa2.Views.Places.ViewAllRec" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        #divider{
+            text-align:center;
+           
+        }
+        #lbl{
+            font-weight: bold;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 <%--    <asp:GridView ID="GVRec" runat="server" AutoGenerateColumns="False">
@@ -10,14 +19,17 @@
             <asp:CommandField ShowDeleteButton="True" />
         </Columns>
     </asp:GridView>--%>
-    <table id="tblRec" style="width: 100%;" class="table">
-        <% foreach (var item in recList) { %>
-            <tr>
-                <td><%= item.RName %></td>
-                <td><%= item.RReason%></td>
-                <td><asp:Button ID="btnDelete" runat="server" Text="Delete" OnClick="btnDelete_Click" /></td>
-                
-            </tr>
-        <% } %>
-    </table>
+    <div id="divider">
+        <label id="lbl">All Recommendations</label>
+        <br>
+        <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+        <asp:GridView ID="GVRecs" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" OnRowDeleting="GVRecs_RowDeleting" DataKeyNames="RecID">
+            <Columns>
+                <asp:BoundField DataField="RecID" HeaderText="Id" Visible="False" />
+                <asp:BoundField DataField="RName" HeaderText="Name of Place" />
+                <asp:BoundField DataField="RReason" HeaderText="Reason for Recommendation" />
+                <asp:CommandField ShowDeleteButton="True" />
+            </Columns>
+        </asp:GridView>
+    </div>
 </asp:Content>

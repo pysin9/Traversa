@@ -34,8 +34,21 @@ namespace Traversa2.Views.Places
             else
             {
                 Recommendation rec = new Recommendation(name, reason);
-                rec.AddRecommendation();
-                Response.Redirect("RecommendPlace.aspx");
+                int rslt = rec.AddRecommendation();
+                lblerror.Text = rslt.ToString();
+                if (rslt == 1)
+                {
+                    lblerror.Text = "Recommendation has been received, Thank you!";
+                    lblerror.ForeColor = System.Drawing.Color.Green;
+                    lblerror.Text = "";
+
+                }
+                else
+                {
+                    lblerror.Text = "An error occured while processing your recommendation";
+                    lblerror.ForeColor = System.Drawing.Color.Red;
+                }
+                
             }
 
             
