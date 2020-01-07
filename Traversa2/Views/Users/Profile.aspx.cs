@@ -14,7 +14,7 @@ namespace Traversa2
         {
             string email = "test@gmail.com"; //retrieve using session
             Travellers tv = new Travellers();
-            tv.GetTDbyEmail(email);
+            tv.GetbyEmail(email);
 
             username.Text = tv.Name;
             uemail.Text = tv.Email;

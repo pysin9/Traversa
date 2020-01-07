@@ -41,8 +41,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlstmt = "SELECT * From Travellers where Email = @paraAcc " +
-                            "and maturity >= GETDATE()";
+            string sqlstmt = "SELECT * From Travellers where Email = @paraEmail";
             SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
 
             da.SelectCommand.Parameters.AddWithValue("@paraEmail", email);
@@ -55,7 +54,7 @@ namespace Traversa2.DAL
             if (rec_cnt == 1)
             {
                 DataRow row = ds.Tables[0].Rows[0];
-                string name = row["Name"].ToString();
+                string name = row["Username"].ToString();
                 string password = row["Password"].ToString();
                 string Email = row["Email"].ToString();
 
@@ -117,5 +116,7 @@ namespace Traversa2.DAL
 
             return result;
         }
+
+        
     }
 }

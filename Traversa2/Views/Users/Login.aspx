@@ -7,7 +7,7 @@
         <asp:Label ID="lblsuccess" runat="server" Text=""></asp:Label>
     </div>
     <div runat="server" id="alertDanger"  role="alert">
-        <asp:Label ID="lblAlert" class="alert-dismissible" runat="server" Text=""></asp:Label>
+        <asp:Label ID="lblError" class="alert-dismissible" runat="server" Text=""></asp:Label>
     </div>
     <div class="container ice">
         <div class="card hot">
@@ -27,10 +27,10 @@
                         </div>
                     </div>
                     <div class="text-center col-sm-5 col-md-5 col-lg-6 f">
-                        <asp:Button ID="btnLogin" class="btn btn-success btn-round btn-lg btn-block" runat="server" Text="Login" />
+                        <asp:Button ID="btnLogin" class="btn btn-success btn-round btn-lg btn-block" runat="server" Text="Login" OnClick="btnLogin_Click" />
                     </div>
                     <div class="text-center">
-                        <a href="/Register" class="btn btn-link">Don't have an account?<u>Register now!</u></a>
+                        <a href="Signup.aspx" class="btn btn-link">Don't have an account?<u>Register now!</u></a>
                     </div>
                 </form>
             </div>

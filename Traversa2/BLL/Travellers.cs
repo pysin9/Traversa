@@ -32,7 +32,7 @@ namespace Traversa2.BLL
             return (dao.Insert(this));
         }
 
-        public Travellers GetTDbyEmail(string email)
+        public Travellers GetbyEmail(string email)
         {
             UserDAO dao = new UserDAO();
             return dao.SelectByEmail(email);
@@ -49,5 +49,7 @@ namespace Traversa2.BLL
             UserDAO dao = new UserDAO();
             return dao.UpdateProfile(this);
         }
+
+      
     }
 }
