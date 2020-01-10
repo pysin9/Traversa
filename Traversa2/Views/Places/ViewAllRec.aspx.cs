@@ -20,12 +20,14 @@ namespace Traversa2.Views.Places
         {
             int id = Convert.ToInt32(GVRecs.DataKeys[e.RowIndex].Value);
 
+           
+
             Recommendations rec = new Recommendations();
             rec.DeleteSelected(id);
             lblMsg.Text = "Successfully deleted!";
             lblMsg.ForeColor = System.Drawing.Color.Green;
             BindData();
-            
+
         }
 
         public void BindData()

@@ -3,38 +3,31 @@
     <link href="../../Stylesheet/login.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   <div runat="server" id="alertSuccess" role="alert">
+        <asp:Label ID="lblAlert" runat="server" Text=""></asp:Label>
+    </div>
     <div class="container ice">
-            <div class="row">
-                <div class="col-lg-5 col-md-10 ml-auto mr-auto">
-                    <div class="card card-login">
-                        <form class="form" action="/admin/create" method="POST">
-                            <h2 class="card-title text-center">Create Category</h2>
-                            <div class="card-body">
-                                <div class="input-group">
-                                    <div class="input-group-prepend">
-                                        <span class="input-group-text">
-                                            <i class="material-icons">&#128288;</i>
-                                        </span>
-                                    </div>
-                                    <div class="try-select" style="width:300px;">
-                                        <select name="category" class="form-control" id="exampleFormControlSelect1">
-                                            <option id='organic' value="Fresh">Fresh</option>
-                                            <option id='option 2' value="Dairy">Dairy</option>
-                                            <option id='option 3' value="Beverages">Beverages</option>
-                                            <option id='option 4' value="Frozen">Frozen</option>
-                                            <option id='option 4' value="Health">Health</option>
-                                            <option id='option 4' value="Snacks">Snacks</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-success btn-round">Create</button>
-                            </div>
-                        </form>
+        <div class="card hot">
+            <div class="card-title text-center  T">Create Category</div>
+            <div class="card-body">
+                <form class="text-center">
+                    <div class="form-group row b">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Category Image:</label>
+                        <div class="col-sm-5">
+                            <asp:FileUpload ID="FileUploadImage" runat="server" />
+                        </div>
                     </div>
-
-                </div>
+                    <div class="form-group row b">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Category Name:</label>
+                        <div class="col-sm-5">
+                            <asp:TextBox ID="NameTB" runat="server" type="text" class="form-control form-control-lg"  placeholder="Enter your password"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="text-center col-sm-5 col-md-5 col-lg-6 f">
+                        <asp:Button ID="btnCreate" class="btn btn-success btn-round btn-lg btn-block" runat="server" Text="Create" OnClick="btnCreate_Click" />
+                    </div>
+                </form>
             </div>
         </div>
+    </div>
 </asp:Content>

@@ -48,7 +48,9 @@ namespace Traversa2.Views.Users
 
                     lblsuccess.Text = "Login Success";
                     lblsuccess.ForeColor = Color.Green;
-                    
+
+                    Response.Redirect("Profile.aspx");
+                     
                 }
                 else
                 {

@@ -5,16 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Traversa2.Views.Places
+namespace Traversa2
 {
-    public partial class Category : System.Web.UI.Page
+    public partial class navbarForAdmin : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack == true)
-            {
 
-            }
         }
     }
 }

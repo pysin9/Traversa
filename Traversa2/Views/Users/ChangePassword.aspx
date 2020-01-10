@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="Traversa2.Views.Users.ChangePassword" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="ChangePassword.aspx.cs" Inherits="Traversa2.Views.Users.ChangePassword" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/Profile.css" rel="stylesheet" />
 </asp:Content>

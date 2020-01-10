@@ -106,6 +106,7 @@
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery-3.4.1.min.js" />
+    <Content Include="js\popper.min.js" />
     <Content Include="obj\Debug\Traversa.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Traversa2.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Traversa2.dll" />
@@ -129,10 +130,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CreateCategory.cs" />
     <Compile Include="BLL\Place.cs" />
     <Compile Include="BLL\Recommendation.cs" />
     <Compile Include="BLL\Recommendations.cs" />
     <Compile Include="BLL\Travellers.cs" />
+    <Compile Include="DAL\CatDAO.cs" />
     <Compile Include="DAL\RecDAO.cs" />
     <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="Global.asax.cs">
@@ -144,6 +147,20 @@
     </Compile>
     <Compile Include="navbar.Master.designer.cs">
       <DependentUpon>navbar.Master</DependentUpon>
+    </Compile>
+    <Compile Include="navbarAfterLogin.Master.cs">
+      <DependentUpon>navbarAfterLogin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navbarAfterLogin.Master.designer.cs">
+      <DependentUpon>navbarAfterLogin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="navbarForAdmin.Master.cs">
+      <DependentUpon>navbarForAdmin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navbarForAdmin.Master.designer.cs">
+      <DependentUpon>navbarForAdmin.Master</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -262,6 +279,8 @@
     <Content Include="obj\Debug\Traversa2.csproj.CopyComplete" />
     <Content Include="obj\Debug\Traversa2.csproj.CoreCompileInputs.cache" />
     <Content Include="obj\Debug\Traversa2.csprojAssemblyReference.cache" />
+    <Content Include="navbarForAdmin.Master" />
+    <Content Include="navbarAfterLogin.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

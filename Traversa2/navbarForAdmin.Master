@@ -1,0 +1,78 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="navbarForAdmin.master.cs" Inherits="Traversa2.navbarForAdmin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Welcome to traversa</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .ft{
+            color: #F9F6F4;
+            font-size: 16px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar navbar-light navbar-expand-lg" style="background-color: #A8C1E8;">
+           <div class="container">
+               <a class="navbar-brand" href="/"><img src="/images/c.gif" alt="Logo" style="width:65px;" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="nav navbar-nav ml-auto">
+                  <li class="nav-item">
+                     <a class="nav-link ft" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ft" href="#">Map</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Itinerary
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Experience</a>
+                      <a class="dropdown-item" href="#">My Itinerary</a>
+                    </div>
+                 </li>
+                  <li class="nav-item">
+                    <a class="nav-link ft" href="#">Events</a>
+                  </li>
+                  <li class="nav-item">
+                        <a class="nav-link ft" href="#">FAQ</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <asp:Label ID="UsernameLBL" runat="server" Text=""></asp:Label>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="Views/Users/Profile.aspx">Profile</a>
+                      <a class="dropdown-item" href="#">Favourite</a>
+                      <a class="dropdown-item" href="#">View Cart</a>
+                      <a class="dropdown-item" href="#">Logout</a>
+                    </div>
+                 </li>
+                </ul>
+              </div>
+            </div>
+           </nav>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+    
+</body>
+</html>
