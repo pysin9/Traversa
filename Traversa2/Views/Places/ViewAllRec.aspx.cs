@@ -13,13 +13,13 @@ namespace Traversa2.Views.Places
         public List<Recommendations> recList;
         protected void Page_Load(object sender, EventArgs e)
         {
-            BindData();
+            if(IsPostBack==false)
+                BindData();
         }
 
         protected void GVRecs_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int id = Convert.ToInt32(GVRecs.DataKeys[e.RowIndex].Value);
-
            
 
             Recommendations rec = new Recommendations();

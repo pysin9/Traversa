@@ -41,6 +41,7 @@ namespace Traversa2.Views.Places
                     lblerror.Text = "Recommendation has been received, Thank you!";
                     lblerror.ForeColor = System.Drawing.Color.Green;
                     lblerror.Text = "";
+                    RName.Text = "";
 
                 }
                 else

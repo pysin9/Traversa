@@ -35,7 +35,7 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Language:</label>
-                		<input class="form-control" type="text" name="language" placeholder="Enter language">
+                		<asp:Textbox runat="server" ID="language" class="col-lg-5" placeholder="Enter language"></asp:Textbox>
                     </div>
                 </div>
                 <div class="form-group">
@@ -53,7 +53,7 @@
                         </asp:DropDownList>
                     </div>
                 </div>
-                <asp:Button ID="btnUpdate" runat="server" Text="Update" />
+                <asp:Button ID="btnUpdate" runat="server" Text="Update" OnClick="btnUpdate_Click" />
 			 </form>
       </div> <!-- end panel-body -->
     </div> <!-- end panel -->

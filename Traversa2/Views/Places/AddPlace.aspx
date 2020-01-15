@@ -43,10 +43,12 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Image:</label>
-                              <asp:Button ID="btnSelectImage" runat="server" CssClass="col-lg-5" Text="Select" />       
+                        <asp:FileUpload ID="FileUpload" runat="server" />
                     </div>
+                    <asp:Label ID="uploadstatus" runat="server" Text=""></asp:Label>
                 </div>
-                    <asp:Button ID="btnSave" class="btnSave" Text="Save" runat="server"/>
+                    
+                    <asp:Button ID="btnSave" class="btnSave" Text="Save" runat="server" OnClick="btnSave_Click"/>
 			 </form>
       </div> <!-- end panel-body -->
     </div> <!-- end panel --> <!-- end container-fluid -->

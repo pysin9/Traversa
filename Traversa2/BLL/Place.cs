@@ -11,21 +11,26 @@ namespace Traversa2.BLL
         public string PName { get; set; }
         public string PDesc { get; set; }
         public string PLocation { get; set; }
-        public string category { get; set; }
-        public string image { get; set; }
+        public string Category { get; set; }
+        public string ImageData { get; set; }
 
         public Place()
         {
 
         }
 
-        public Place(string pname, string pdesc, string plocation, string cat, string img)
+        public Place(string pname, string pdesc, string plocation, string category, string imagedata)
         {
             this.PName = pname;
             this.PDesc = pdesc;
             this.PLocation = plocation;
-            this.category = cat;
-            this.image = img;
+            this.Category = category;
+        }
+
+        public int AddPlace()
+        {
+            PlaceDAO dao = new PlaceDAO();
+            return (dao.Insert(this));
         }
     }
 }

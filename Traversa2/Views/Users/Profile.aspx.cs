@@ -12,12 +12,19 @@ namespace Traversa2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string email = "test@gmail.com"; //retrieve using session
-            Travellers tv = new Travellers();
-            tv.GetbyEmail(email);
+            TravellerProfile tp = new TravellerProfile();
+        }
 
-            username.Text = tv.Name;
-            uemail.Text = tv.Email;
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+            string Uname = username.Text;
+            string Email = uemail.Text;
+            string FoodPref = foodpref.SelectedItem.ToString();
+            string Language = language.Text;
+
+            TravellerProfile tp = new TravellerProfile(Uname, Email, FoodPref, Language);
+            tp.UpdateProifle();
+            
         }
     }
 }

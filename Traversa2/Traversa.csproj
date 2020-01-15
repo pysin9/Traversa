@@ -132,10 +132,14 @@
   <ItemGroup>
     <Compile Include="BLL\CreateCategory.cs" />
     <Compile Include="BLL\Place.cs" />
+    <Compile Include="BLL\Rating.cs" />
     <Compile Include="BLL\Recommendation.cs" />
     <Compile Include="BLL\Recommendations.cs" />
+    <Compile Include="BLL\TravellerProfile.cs" />
     <Compile Include="BLL\Travellers.cs" />
     <Compile Include="DAL\CatDAO.cs" />
+    <Compile Include="DAL\PlaceDAO.cs" />
+    <Compile Include="DAL\RaitngDAO.cs" />
     <Compile Include="DAL\RecDAO.cs" />
     <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="Global.asax.cs">

@@ -90,7 +90,7 @@ namespace Traversa2.DAL
             return result;
         }
 
-        public int UpdateProfile(Travellers tv)
+        public int UpdateProfile(TravellerProfile tv)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
