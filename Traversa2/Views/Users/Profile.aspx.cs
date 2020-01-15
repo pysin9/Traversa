@@ -22,8 +22,8 @@ namespace Traversa2
             string FoodPref = foodpref.SelectedItem.ToString();
             string Language = language.Text;
 
-            TravellerProfile tp = new TravellerProfile(Uname, Email, FoodPref, Language);
-            tp.UpdateProifle();
+            //TravellerProfile tp = new TravellerProfile(Uname, Email, FoodPref, Language);
+            //tp.UpdateProifle();
             
         }
     }

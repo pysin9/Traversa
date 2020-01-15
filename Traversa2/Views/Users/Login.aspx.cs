@@ -38,13 +38,14 @@ namespace Traversa2.Views.Users
             
             else
             {
-                Travellers user = new Travellers();
+                TravellerProfile user = new TravellerProfile();
                 user = user.GetbyEmail(emailTB.Text);
                 if (user != null)
                 {
 
                     Session["Username"] = user.Name.ToString();
                     Session["Email"] = user.Email.ToString();
+                    Session["UserID"] = user.ID.ToString();
 
                     lblsuccess.Text = "Login Success";
                     lblsuccess.ForeColor = Color.Green;

@@ -36,7 +36,7 @@ namespace Traversa2.DAL
             return result;
         }
 
-        public Travellers SelectByEmail(string email)
+        public TravellerProfile SelectByEmail(string email)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -49,17 +49,21 @@ namespace Traversa2.DAL
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            Travellers user = null;
+            TravellerProfile user = null;
             int rec_cnt = ds.Tables[0].Rows.Count;
             if (rec_cnt == 1)
             {
                 DataRow row = ds.Tables[0].Rows[0];
+                int id = Convert.ToInt32(row["UserId"]);
                 string name = row["Username"].ToString();
-                string password = row["Password"].ToString();
                 string Email = row["Email"].ToString();
+                string password = row["Password"].ToString();
+                string foodpref = row["FoodPref"].ToString();
+                string language = row["Language"].ToString();
+                
 
 
-                user = new Travellers(name, password, Email);
+                user = new TravellerProfile(id, name, Email,  foodpref, language);
                 
 
             }
