@@ -16,13 +16,13 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "INSERT INTO Category (CatName) VALUES (@paraName)";
+            string sqlStmt = "INSERT INTO Category (CatName, CatImage) VALUES (@paraName, @paraImage)";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
             sqlCmd.Parameters.AddWithValue("@paraName", cat.CatName);
-            //sqlCmd.Parameters.AddWithValue("@paraImage", cat.CatImage);
+            sqlCmd.Parameters.AddWithValue("@paraImage", cat.CatImage);
 
             myConn.Open();
             result = sqlCmd.ExecuteNonQuery();
@@ -32,19 +32,19 @@ namespace Traversa2.DAL
             return result;
         }
 
-        public List<CreateCategory> GetEverything()
+        public List<CatergoriesID> GetEverything()
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            String sqlstmt = "SELECT CatID, CatName FROM Category";
+            String sqlstmt = "SELECT CatID, CatName, CatImage FROM Category";
 
             SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
 
             DataSet ds = new DataSet();
             da.Fill(ds);
 
-            List<CreateCategory> recList = new List<CreateCategory>();
+            List<CatergoriesID> recList = new List<CatergoriesID>();
 
             int rec_cnt = ds.Tables[0].Rows.Count;
             if (rec_cnt == 0)
@@ -56,9 +56,10 @@ namespace Traversa2.DAL
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
                     int catid = Convert.ToInt32(row["CatID"]);
-                    string rname = Convert.ToString(row["CatName"]);
-                    CreateCategory objRate = new CreateCategory();
-                    recList.Add(objRate);
+                    string catname = Convert.ToString(row["CatName"]);
+                    string catimage = Convert.ToString(row["CatImage"]);
+                    CatergoriesID categories = new CatergoriesID(catid, catname, catimage);
+                    recList.Add(categories);
                 }
             }
             return recList;
@@ -68,7 +69,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "Delete Category where CatId = @paraid";
+            string sqlStmt = "Delete Category where CatID = @paraid";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
@@ -80,6 +81,36 @@ namespace Traversa2.DAL
             myConn.Close();
 
             return result;
+        }
+
+        public CatergoriesID SelectByID(int CatID)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlstmt = "SELECT * From Category where CatID = @paraid";
+            SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
+
+            da.SelectCommand.Parameters.AddWithValue("@paraid", CatID);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            CatergoriesID user = null;
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            if (rec_cnt == 1)
+            {
+                DataRow row = ds.Tables[0].Rows[0];
+                int Id = Convert.ToInt32(row["CatId"]);
+                string name = row["CatName"].ToString();
+                string image = row["CatImage"].ToString();
+
+
+                user = new CatergoriesID(Id, name, image);
+
+
+            }
+            return user;
         }
     }
 }

@@ -10,17 +10,17 @@ namespace Traversa2.BLL
     {
         public string CatName { get; set; }
         //public HttpPostedFile CatImage { get; set; }
-        public int CatId { get; set; }
+        public string CatImage{ get; set; }
        
         public CreateCategory()
         {
 
         }
 
-        public CreateCategory(string catname)
+        public CreateCategory(string catname, string catimage)
         {
             CatName = catname;
-            //CatImage = catimage;
+            CatImage = catimage;
         }
 
         public int AddNewCategory()
@@ -29,16 +29,8 @@ namespace Traversa2.BLL
             return (dao.insertCat(this));
         }
 
-        public List<CreateCategory> GetAll()
-        {
-            CatDAO dao = new CatDAO();
-            return dao.GetEverything();
-        }
+        
 
-        public int DeleteSelected(int catId)
-        {
-            CatDAO dao = new CatDAO();
-            return dao.DeleteCat(CatId);
-        }
+    
     }
 }

@@ -113,10 +113,14 @@
     <Content Include="obj\Debug\Traversa2.pdb" />
     <Content Include="Stylesheet\category.css" />
     <Content Include="Stylesheet\PlaceForm.css" />
+    <Content Include="Views\uploads\chicken-satay-56a8a7643df78cf7729f6e56.jpg" />
+    <Content Include="Views\uploads\item_1.thumbnail.carousel-img.740.416.jpg" />
+    <Content Include="Views\uploads\mid_autumn_festival_south_bridge_road_singapore.jpg" />
     <Content Include="Views\Places\AddCategory.aspx" />
     <Content Include="Views\Places\AddPlace.aspx" />
     <Content Include="Views\Places\Category.aspx" />
     <Content Include="Views\Places\EditCategory.aspx" />
+    <Content Include="Views\Places\ViewAllCategory.aspx" />
     <Content Include="Views\Places\EditPlace.aspx" />
     <Content Include="Views\Places\Itinerary.aspx" />
     <Content Include="Views\Places\RecommendPlace.aspx" />
@@ -130,6 +134,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\CatergoriesID.cs" />
     <Compile Include="BLL\CreateCategory.cs" />
     <Compile Include="BLL\Place.cs" />
     <Compile Include="BLL\Rating.cs" />
@@ -196,6 +201,13 @@
     </Compile>
     <Compile Include="Views\Places\EditCategory.aspx.designer.cs">
       <DependentUpon>EditCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\ViewAllCategory.aspx.cs">
+      <DependentUpon>ViewAllCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\ViewAllCategory.aspx.designer.cs">
+      <DependentUpon>ViewAllCategory.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Places\EditPlace.aspx.cs">
       <DependentUpon>EditPlace.aspx</DependentUpon>

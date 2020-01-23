@@ -19,37 +19,62 @@ namespace Traversa2.Views.Places
 
         protected void btnCreate_Click(object sender, EventArgs e)
         {
+
+            var folder = Server.MapPath("~/uploads");
+            string fileName = Path.GetFileName(FileUploadImage.PostedFile.FileName);
+            string filePath = "~/uploads/" + fileName;
+            //string fileExtension = Path.GetExtension(FileUploadImage.FileName);
+
            
-            //HttpPostedFile postedFile = FileUploadImage.PostedFile;
-            //string filename = Path.GetFileName(postedFile.FileName);
-            //string fileExtension = Path.GetExtension(filename);
-            //int filesize = postedFile.ContentLength;
 
-            //if(fileExtension.ToLower() == ".jpg" || fileExtension.ToLower() == ".png" ||
-                //fileExtension.ToLower() == ".gif")
-            //{
-                CreateCategory cat = new CreateCategory(NameTB.Text);
 
-                int result = cat.AddNewCategory();
-                if (result == 1)
+            if (FileUploadImage.HasFile)
+            {
+                if (!Directory.Exists(folder))
                 {
-                    lblAlert.Text = "category created";
-                    lblAlert.ForeColor = Color.Green;
+                    Directory.CreateDirectory(folder);
                     
                 }
                 else
                 {
-                    lblAlert.Text = "Unable to create a category";
-                    lblAlert.ForeColor = Color.Red;
-                    
+                    lblAlert.Text = "Folder already exists";
                 }
-            //}
-            //else
-            
-            //{
-               // lblAlert.Text = "Only images(.jpg, .png, .gif) can be uploaded";
-                //lblAlert.ForeColor = Color.Red;
-            //}
+
+                if (NameTB.Text == "")
+                {
+                    lblAlert.Text = "Category name cannot be empty";
+                }
+                else
+                {
+                    FileUploadImage.PostedFile.SaveAs(Server.MapPath(filePath));
+
+
+                    CreateCategory cat = new CreateCategory(NameTB.Text, filePath);
+
+                    int result = cat.AddNewCategory();
+                    if (result == 1)
+                    {
+                        lblAlert.Text = "category created";
+                        lblAlert.ForeColor = Color.Green;
+
+                    }
+                    else
+                    {
+                        lblAlert.Text = "Unable to create a category";
+                        lblAlert.ForeColor = Color.Red;
+
+                    }
+                }
+
+               
+            }
+            else
+            {
+                lblAlert.Text = "Please choose a file to upload";
+                lblAlert.ForeColor = Color.Red;
+            }
+
+
         }
     }
 }

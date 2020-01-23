@@ -1,45 +1,32 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="EditCategory.aspx.cs" Inherits="Traversa2.Views.Places.EditCategory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarForAdmin.Master" AutoEventWireup="true" CodeBehind="EditCategory.aspx.cs" Inherits="Traversa2.Views.Places.EditCategory1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style>
-        .cold{
-            text-align:center;
-        }
-        .t{
-            font-weight: bold;
-        }
-    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class ="cold">
-        <label class=" t">Edit Category</label>
-        <br>
-        <asp:Label ID="LabelMessage" runat="server" Text=""></asp:Label>
-        <asp:GridView ID="GridViewCat" runat="server" AutoGenerateColumns="False"  CellPadding="4" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" OnRowDeleting="GridViewCat_RowDeleting">
-            <AlternatingRowStyle BackColor="White" />
-            <Columns>
-                <asp:BoundField HeaderText="id" Visible="False" DataField="CatId" />
-                <asp:BoundField HeaderText="Category Image" />
-                <asp:BoundField HeaderText="Category Name" DataField="CatName" />
-                <asp:CommandField ShowCancelButton="False" ShowEditButton="True" />
-                
-                
-                
-                <asp:CommandField ShowDeleteButton="True" />
-                
-                
-                
-            </Columns>
-            <EditRowStyle BackColor="#2461BF" />
-            <FooterStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-            <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
-            <PagerStyle BackColor="#2461BF" ForeColor="White" HorizontalAlign="Center" />
-            <RowStyle BackColor="#EFF3FB" />
-            <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
-            <SortedAscendingCellStyle BackColor="#F5F7FB" />
-            <SortedAscendingHeaderStyle BackColor="#6D95E1" />
-            <SortedDescendingCellStyle BackColor="#E9EBEF" />
-            <SortedDescendingHeaderStyle BackColor="#4870BE" />
-        </asp:GridView>
+     <div runat="server" id="alertSuccess" role="alert">
+        <asp:Label ID="lblAlert" runat="server" Text=""></asp:Label>
     </div>
-    
+    <div class="container ice">
+        <div class="card hot">
+            <div class="card-title text-center  T">Create Category</div>
+            <div class="card-body">
+                <form class="text-center">
+                    <div class="form-group row b">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Category Image:</label>
+                        <div class="col-sm-5">
+                            <asp:FileUpload ID="FileUploadImage" runat="server" />
+                        </div>
+                    </div>
+                    <div class="form-group row b">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Category Name:</label>
+                        <div class="col-sm-5">
+                            <asp:TextBox ID="NameTB" runat="server" type="text" class="form-control form-control-lg"  placeholder="Enter your password"></asp:TextBox>
+                        </div>
+                    </div>
+                    <div class="text-center col-sm-5 col-md-5 col-lg-6 f">
+                        <asp:Button ID="btnCreate" class="btn btn-success btn-round btn-lg btn-block" runat="server" Text="Create" OnClick="btnCreate_Click" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </asp:Content>

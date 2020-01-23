@@ -247,10 +247,6 @@ C:\School\year 2 sem 2\EADP\Project\Traversa14\Traversa2\bin\roslyn\vbc.exe.conf
 C:\School\year 2 sem 2\EADP\Project\Traversa14\Traversa2\bin\roslyn\vbc.rsp
 C:\School\year 2 sem 2\EADP\Project\Traversa14\Traversa2\bin\roslyn\VBCSCompiler.exe
 C:\School\year 2 sem 2\EADP\Project\Traversa14\Traversa2\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa.csprojAssemblyReference.cache
-C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa.csproj.CoreCompileInputs.cache
-C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa2.dll
-C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa2.pdb
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\bin\Traversa2.dll.config
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\bin\Traversa2.dll
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\bin\Traversa2.pdb
@@ -280,5 +276,8 @@ C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\bin\roslyn\vbc.rsp
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\bin\roslyn\VBCSCompiler.exe
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa.csproj.CoreCompileInputs.cache
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa2.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa2.pdb
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\kfhdfhkd\Traversa\Traversa2\obj\Debug\Traversa.csprojAssemblyReference.cache

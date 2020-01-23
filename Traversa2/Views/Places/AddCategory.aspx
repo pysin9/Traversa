@@ -15,12 +15,12 @@
                         <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Category Image:</label>
                         <div class="col-sm-5">
                             <asp:FileUpload ID="FileUploadImage" runat="server" />
-                        </div>
+                       </div>
                     </div>
                     <div class="form-group row b">
                         <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Category Name:</label>
                         <div class="col-sm-5">
-                            <asp:TextBox ID="NameTB" runat="server" type="text" class="form-control form-control-lg"  placeholder="Enter your password"></asp:TextBox>
+                            <asp:TextBox ID="NameTB" runat="server" type="text" class="form-control form-control-lg"  placeholder="Enter your category name"></asp:TextBox>
                         </div>
                     </div>
                     <div class="text-center col-sm-5 col-md-5 col-lg-6 f">
