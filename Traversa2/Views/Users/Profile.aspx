@@ -1,12 +1,24 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="Profile.aspx.cs" Inherits="Traversa2.Profile" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+
+
     <link href="../../Stylesheet/Profile.css" rel="stylesheet" />
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container" id="container">
   <div class=".col-lg-4 .col-lg-offset-2">
       <div class="card-heading" > Profile </div>
       <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+<%--<div class="alert alert-success">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Success!</strong> Profile successfully saved
+        </div>
+        <div class="alert alert-warning">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+        <strong>Oops!</strong> Profile not saved. Try later.
+    </div>--%>
       <div class="card-body">
 		    <form>
 			    <div class="form-group">
