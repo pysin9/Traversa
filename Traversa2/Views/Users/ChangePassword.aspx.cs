@@ -21,10 +21,9 @@ namespace Traversa2.Views.Users
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            int userid = 1; //get userid
-            string pass = Request.Form["password"];
-            string cfm = Request.Form["cfmpass"];
-            if (pass=="" || cfm=="")
+            string pass = password.Text;
+            string cfm = cfmpass.Text;
+            if (pass == "" || cfm == "")
             {
                 lblMsg.Text = "Field empty!";
             }
@@ -34,8 +33,21 @@ namespace Traversa2.Views.Users
             }
             else
             {
-                Travellers tv = new Travellers();
-                tv.ChangePassword(userid, pass);
+                int id = Convert.ToInt32(Session["UserID"]);
+                TravellerProfile tv = new TravellerProfile();
+                int rslt = tv.ChangePassword(id, pass);
+                if (rslt == 1)
+                {
+                    lblMsg.Text = "Successfully changed password!";
+                    lblMsg.ForeColor = System.Drawing.Color.Green;
+                }
+                else
+                {
+                    lblMsg.Text = "An error occured while changing your password. Please try again!";
+                    lblMsg.ForeColor = System.Drawing.Color.Red;
+                }
+                password.Text = "";
+                cfmpass.Text = "";
             }
 
         }

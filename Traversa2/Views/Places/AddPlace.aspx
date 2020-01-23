@@ -37,7 +37,9 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Category:</label>
-                		<asp:DropDownList ID="category" runat="server" CssClass="col-lg-5"></asp:DropDownList>
+                		<asp:DropDownList ID="category" runat="server" CssClass="col-lg-5">
+                            <asp:ListItem></asp:ListItem>
+                        </asp:DropDownList>
                     </div>
                 </div>
                 <div class="form-group">

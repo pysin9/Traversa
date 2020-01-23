@@ -22,6 +22,24 @@ namespace Traversa2.Views.Places {
         protected global::System.Web.UI.WebControls.Label lblerror;
         
         /// <summary>
+        /// asm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.ScriptManager asm;
+        
+        /// <summary>
+        /// r1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.Rating r1;
+        
+        /// <summary>
         /// RName control.
         /// </summary>
         /// <remarks>

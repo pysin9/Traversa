@@ -1,5 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="RecommendPlace.aspx.cs" Inherits="Traversa2.Views.Places.RecommendPlace" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .empty {
+            
+        }
+    </style>
     <link href="../../Stylesheet/PlaceForm.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -16,7 +23,19 @@
       <div class="card-heading" > Recommend a Place </div>
       <asp:Label ID="lblerror" runat="server" Text=""></asp:Label>
       <div class="card-body">
-		    <form action="#" method="post">
+		    <form action="RecommendPlace.aspx" method="post">
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <asp:ScriptManager ID="asm" runat="server" />
+                        <ajaxToolkit:Rating ID="r1" runat="server"
+                            CurrentRating="0"
+                            MaxRating="5"
+                            StarCssClass="ratingStar"
+                            WaitingStarCssClass="wait"
+                            FilledStarCssClass="filled"
+                            EmptyStarCssClass="empty"></ajaxToolkit:Rating> 
+                </div>
+			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Place of recommendation:</label>

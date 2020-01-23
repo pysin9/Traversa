@@ -13,6 +13,15 @@ namespace Traversa2 {
     public partial class Profile {
         
         /// <summary>
+        /// lblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblMsg;
+        
+        /// <summary>
         /// username control.
         /// </summary>
         /// <remarks>
@@ -31,13 +40,22 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.TextBox uemail;
         
         /// <summary>
-        /// language control.
+        /// lang control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox language;
+        protected global::System.Web.UI.WebControls.DropDownList lang;
+        
+        /// <summary>
+        /// travelstyle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList travelstyle;
         
         /// <summary>
         /// foodpref control.
