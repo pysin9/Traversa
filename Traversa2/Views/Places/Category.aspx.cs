@@ -15,9 +15,11 @@ namespace Traversa2.Views.Places
         {
             if (IsPostBack == false)
             {
-               CatergoriesID cat = new CatergoriesID();
-               categoryList = cat.GetAll();
+                CatergoriesID cat = new CatergoriesID();
+                categoryList = cat.GetAll();
 
+                DataList1.DataSource = categoryList;
+                DataList1.DataBind();
                 //foreach (var i in categoryList)
                 //{
                 //    Image1.ImageUrl = i.CatImage;

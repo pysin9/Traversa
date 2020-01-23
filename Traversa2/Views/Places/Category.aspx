@@ -33,18 +33,19 @@
     
     <br />
 
-    
-
-    <% foreach(var item in categoryList) { %>
-         <div class="card text-center" style="width: 18rem;">
-             <%--<asp:Image ID="Image1" ImageURL="<%= item.CatImage %>" CssClass="card-img-top" runat="server" />--%>
-            <img class="card-img-top" src="<%= item.CatImage %>"  src="../uploads/chicken-satay-56a8a7643df78cf7729f6e56.jpg"/>
-            <div class="card-body">
+    <asp:DataList ID="DataList1" runat="server">
+        <ItemTemplate>
+            <div class="card text-center" style="width: 18rem;">
+                <asp:Image ID="Image2" ImageUrl='<%# Bind("CatImage", "{0}") %>' runat="server" />
+                <div class="card-body">
          
-               <a href="#" class="card-link"> <%= item.CatName %></a>
+               <a href="#" class="card-link"> <%= Bind("CatName") %></a>
             </div>
          </div>
-    <% } %>
+        </ItemTemplate>
+    </asp:DataList>
+
+
    
     
 </asp:Content>

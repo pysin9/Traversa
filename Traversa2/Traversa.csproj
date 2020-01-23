@@ -113,9 +113,9 @@
     <Content Include="obj\Debug\Traversa2.pdb" />
     <Content Include="Stylesheet\category.css" />
     <Content Include="Stylesheet\PlaceForm.css" />
-    <Content Include="Views\uploads\chicken-satay-56a8a7643df78cf7729f6e56.jpg" />
-    <Content Include="Views\uploads\item_1.thumbnail.carousel-img.740.416.jpg" />
-    <Content Include="Views\uploads\mid_autumn_festival_south_bridge_road_singapore.jpg" />
+    <Content Include="uploads\chicken-satay-56a8a7643df78cf7729f6e56.jpg" />
+    <Content Include="uploads\item_1.thumbnail.carousel-img.740.416.jpg" />
+    <Content Include="uploads\mid_autumn_festival_south_bridge_road_singapore.jpg" />
     <Content Include="Views\Places\AddCategory.aspx" />
     <Content Include="Views\Places\AddPlace.aspx" />
     <Content Include="Views\Places\Category.aspx" />
