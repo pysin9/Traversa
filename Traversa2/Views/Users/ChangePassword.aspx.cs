@@ -23,33 +23,22 @@ namespace Traversa2.Views.Users
         {
             string pass = password.Text;
             string cfm = cfmpass.Text;
-            if (pass == "" || cfm == "")
+
+            int id = Convert.ToInt32(Session["UserID"]);
+            TravellerProfile tv = new TravellerProfile();
+            int rslt = tv.ChangePassword(id, pass);
+            if (rslt == 1)
             {
-                lblMsg.Text = "Field empty!";
-            }
-            if (pass != cfm)
-            {
-                lblMsg.Text = "Passwords do not match!";
+                lblMsg.Text = "Successfully changed password!";
+                lblMsg.ForeColor = System.Drawing.Color.Green;
             }
             else
             {
-                int id = Convert.ToInt32(Session["UserID"]);
-                TravellerProfile tv = new TravellerProfile();
-                int rslt = tv.ChangePassword(id, pass);
-                if (rslt == 1)
-                {
-                    lblMsg.Text = "Successfully changed password!";
-                    lblMsg.ForeColor = System.Drawing.Color.Green;
-                }
-                else
-                {
-                    lblMsg.Text = "An error occured while changing your password. Please try again!";
-                    lblMsg.ForeColor = System.Drawing.Color.Red;
-                }
-                password.Text = "";
-                cfmpass.Text = "";
+                lblMsg.Text = "An error occured while changing your password. Please try again!";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
             }
-
+            password.Text = "";
+            cfmpass.Text = "";
         }
     }
 }

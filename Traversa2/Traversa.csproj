@@ -116,6 +116,7 @@
     <Content Include="obj\Debug\Traversa2.pdb" />
     <Content Include="Stylesheet\category.css" />
     <Content Include="Stylesheet\PlaceForm.css" />
+    <Content Include="uploads\bugis street.jpg" />
     <Content Include="uploads\chicken-satay-56a8a7643df78cf7729f6e56.jpg" />
     <Content Include="uploads\item_1.thumbnail.carousel-img.740.416.jpg" />
     <Content Include="uploads\mid_autumn_festival_south_bridge_road_singapore.jpg" />
@@ -127,6 +128,7 @@
     <Content Include="Views\Places\EditPlace.aspx" />
     <Content Include="Views\Places\Itinerary.aspx" />
     <Content Include="Views\Places\RecommendPlace.aspx" />
+    <Content Include="Views\Places\ViewAllPlaces.aspx" />
     <Content Include="Views\Places\ViewAllRec.aspx" />
     <Content Include="Views\Users\ChangePassword.aspx" />
     <Content Include="Views\Users\Login.aspx" />
@@ -147,7 +149,7 @@
     <Compile Include="BLL\Travellers.cs" />
     <Compile Include="DAL\CatDAO.cs" />
     <Compile Include="DAL\PlaceDAO.cs" />
-    <Compile Include="DAL\RaitngDAO.cs" />
+    <Compile Include="DAL\RatingDAO.cs" />
     <Compile Include="DAL\RecDAO.cs" />
     <Compile Include="DAL\UserDAO.cs" />
     <Compile Include="Global.asax.cs">
@@ -232,6 +234,13 @@
     </Compile>
     <Compile Include="Views\Places\RecommendPlace.aspx.designer.cs">
       <DependentUpon>RecommendPlace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\ViewAllPlaces.aspx.cs">
+      <DependentUpon>ViewAllPlaces.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\ViewAllPlaces.aspx.designer.cs">
+      <DependentUpon>ViewAllPlaces.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Places\ViewAllRec.aspx.cs">
       <DependentUpon>ViewAllRec.aspx</DependentUpon>

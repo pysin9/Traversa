@@ -31,6 +31,15 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.TextBox username;
         
         /// <summary>
+        /// FVUname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVUname;
+        
+        /// <summary>
         /// uemail control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace Traversa2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox uemail;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
         
         /// <summary>
         /// lang control.
@@ -49,6 +67,15 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.DropDownList lang;
         
         /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
+        
+        /// <summary>
         /// travelstyle control.
         /// </summary>
         /// <remarks>
@@ -58,6 +85,15 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.DropDownList travelstyle;
         
         /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// foodpref control.
         /// </summary>
         /// <remarks>
@@ -65,6 +101,15 @@ namespace Traversa2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList foodpref;
+        
+        /// <summary>
+        /// FVFood control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVFood;
         
         /// <summary>
         /// btnUpdate control.

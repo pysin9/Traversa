@@ -21,12 +21,15 @@
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">New Password:</label>
                         <asp:TextBox ID="password" runat="server" placeholder="Enter new password" CssClass="col-lg-5"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="FVPass" runat="server" ErrorMessage="New password cannot be empty" CssClass="col-lg-3" ControlToValidate="password" ForeColor="Red"></asp:RequiredFieldValidator>
                     </div>
 			    </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Confirm Password:</label>
                 	    <asp:TextBox ID="cfmpass" runat="server" placeholder="Re-enter new password" CssClass="col-lg-5"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="FVCfm" runat="server" ErrorMessage="Retype password cannot be empty" CssClass="col-lg-3" ControlToValidate="cfmpass" ForeColor="Red"></asp:RequiredFieldValidator>
+                        <asp:CompareValidator ID="CVPass" runat="server" ErrorMessage="Passwords do not match" ControlToValidate="cfmpass" ControlToCompare="password" Operator="Equal" Type="String" CssClass="Col-lg-3" ForeColor="Red"></asp:CompareValidator>
                     </div>
                 </div>
                 <asp:Button ID="btnSubmit" runat="server" Text="Change" OnClick="btnSubmit_Click" />

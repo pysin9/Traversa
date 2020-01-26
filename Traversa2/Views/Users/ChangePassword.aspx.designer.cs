@@ -31,6 +31,15 @@ namespace Traversa2.Views.Users {
         protected global::System.Web.UI.WebControls.TextBox password;
         
         /// <summary>
+        /// FVPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVPass;
+        
+        /// <summary>
         /// cfmpass control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,24 @@ namespace Traversa2.Views.Users {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox cfmpass;
+        
+        /// <summary>
+        /// FVCfm control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVCfm;
+        
+        /// <summary>
+        /// CVPass control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CVPass;
         
         /// <summary>
         /// btnSubmit control.

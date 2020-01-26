@@ -6,32 +6,28 @@
         <div class="container" id="container">
   <div class=".col-lg-4 .col-lg-offset-2">
       <div class="card-heading" > Add a Place </div>
-      <%--<div class="alert alert-success">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Success!</strong> Profile successfully saved
-        </div>
-        <div class="alert alert-warning">
-        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        <strong>Oops!</strong> Profile not saved. Try later.
-    </div>--%>
+      <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
       <div class="card-body">
 		    <form>
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Name of Place:</label>
                 		    <asp:TextBox ID="Pname" runat="server" placeholder="Enter name of place" CssClass="col-lg-5"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="FVName" runat="server" ErrorMessage=" Name is empty!" ControlToValidate="PName" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                     </div>
 			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Description:</label>
                         <asp:TextBox ID="PDesc" runat="server" palceholder="Enter name of place" placeholder="Enter description of place" CssClass="col-lg-5"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="FVDesc" runat="server" ErrorMessage=" Description is empty!" ControlToValidate="PDesc" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                     </div>
 			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Location(s):</label>
-                            <asp:TextBox ID="PLocation" runat="server" palceholder="Enter location(s) of place" placeholder="Enter location(s) of place" CssClass="col-lg-5"></asp:TextBox>
+                            <asp:TextBox ID="PLocation" runat="server" placeholder="Enter Address(s) of place" CssClass="col-lg-5"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="FVLoca" runat="server" ErrorMessage=" Address is empty!" ControlToValidate="PLocation" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                    </div>
 			    </div>
                 <div class="form-group">
@@ -40,14 +36,15 @@
                 		<asp:DropDownList ID="category" runat="server" CssClass="col-lg-5">
                             <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="FVCat" runat="server" ErrorMessage="Please select a Category!" InitialValue="0" ControlToValidate="category" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                     </div>
                 </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Image:</label>
-                        <asp:FileUpload ID="FileUpload" runat="server" />
+                        <asp:FileUpload ID="FileUpload" runat="server" CssClass="col-lg-5"/>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="No image has been selected!" ControlToValidate="FileUpload" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                     </div>
-                    <asp:Label ID="uploadstatus" runat="server" Text=""></asp:Label>
                 </div>
                     
                     <asp:Button ID="btnSave" class="btnSave" Text="Save" runat="server" OnClick="btnSave_Click"/>

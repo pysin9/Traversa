@@ -15,9 +15,11 @@ namespace Traversa2.Views.Places
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            CatergoriesID cc = new CatergoriesID();
+            if (!IsPostBack)
+            {
+                CatergoriesID cc = new CatergoriesID();
                 catList = cc.GetAll();
-                              
+
                 category.Items.Clear();
                 category.Items.Insert(0, new ListItem("--Select--", "0"));
                 category.AppendDataBoundItems = true;
@@ -25,12 +27,40 @@ namespace Traversa2.Views.Places
                 category.DataValueField = "CatId";
                 category.DataSource = catList;
                 category.DataBind();
-       
+            }
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            string name = Pname.Text;
+            string desc = PDesc.Text;
+            string loca = PLocation.Text;
+            int cat = int.Parse(category.SelectedItem.Value);
 
+            var folder = Server.MapPath("~/uploads");
+            string fileName = Path.GetFileName(FileUpload.PostedFile.FileName);
+            string filePath = "~/uploads/" + fileName;
+
+            if (!Directory.Exists(folder))
+            {
+                Directory.CreateDirectory(folder);
+
+            }
+            FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
+
+            Place pl = new Place(name, desc, loca, cat, filePath);
+                    
+            int result = pl.AddPlace();
+            if (result == 1)
+            {
+                lblMsg.Text = "Place successfully added!";
+                lblMsg.ForeColor = System.Drawing.Color.Green;
+            }
+            else
+            {
+                lblMsg.Text = "An error occured while adding, try again.";
+                lblMsg.ForeColor = System.Drawing.Color.Red;
+            }
         }
     }
 }
