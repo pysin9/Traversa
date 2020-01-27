@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="EditPlace.aspx.cs" Inherits="Traversa2.Views.Places.EditPlace" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style>
+        .imgName{
+
+        }
+    </style>
     <link href="../../Stylesheet/PlaceForm.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -41,12 +46,18 @@
                 </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
-                        <label class="col-lg-3 control-label">Image:</label>
+                        <label class="col-lg-3 control-label ">New Image:</label>
                         <asp:FileUpload ID="FileUpload" runat="server" CssClass="col-lg-5"/>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="No image has been selected!" ControlToValidate="FileUpload" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
+                        <asp:Label ID="Label1" runat="server" Text="" CssClass="col-lg-3"></asp:Label>
                     </div>
                 </div>
-                    
+                 <div class="form-group">
+                    <div class="row justify-content-center">
+                        <label class="col-lg-3 control-label ">Current Image:</label>
+                        <asp:Label ID="imgName" runat="server" Text="" CssClass="col-lg-5"></asp:Label>      
+                        <asp:Label ID="Label2" runat="server" Text="" CssClass="col-lg-3"></asp:Label>
+                    </div>
+                </div>
                     <asp:Button ID="btnSave" class="btnSave" Text="Save" runat="server" OnClick="btnSave_Click"/>
 			 </form>
       </div> <!-- end panel-body -->

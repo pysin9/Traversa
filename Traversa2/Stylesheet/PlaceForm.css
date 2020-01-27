@@ -15,29 +15,3 @@ label {
     background-color: forestgreen;
     color: white;
 }
-.ratingStar {
-    font-size: 0pt;
-    width: 64px;
-    height: 59px;
-    margin: 5px;
-    padding: 5px;
-    cursor: pointer;
-    display: block;
-    background-repeat: no-repeat;
-    visibility: visible;
-}
-
-.empty {
-    
-    background-image: url('/images/emptystar.png');
-    visibility: visible;
-    width: 32px;
-    height: 32px;
-}
-
-.filled {
-    background-image:url('/images/starrating.png');
-    width: 32px;
-    height: 32px;
-    visibility: visible;
-}

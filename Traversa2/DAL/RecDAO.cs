@@ -11,18 +11,20 @@ namespace Traversa2.DAL
 {
     public class RecDAO
     {
-        public int Insert(Recommendation rec)
+        public int Insert(Recommendations rec)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "INSERT INTO Recommendation (RName, RReason) VALUES (@paraRName,@paraRReason)";
+            string sqlStmt = "INSERT INTO Recommendation (RName, RReason, Price, Quality) VALUES (@paraRName,@paraRReason, @paraPrice, @paraQuality)";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
             sqlCmd.Parameters.AddWithValue("@paraRName", rec.RName);
             sqlCmd.Parameters.AddWithValue("@paraRReason", rec.RReason);
+            sqlCmd.Parameters.AddWithValue("@paraPrice", rec.priceRate);
+            sqlCmd.Parameters.AddWithValue("@paraQuality", rec.qualityRate);
 
             myConn.Open();
             result = sqlCmd.ExecuteNonQuery();
@@ -55,7 +57,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            String sqlstmt = "SELECT RecID, RName, RReason FROM Recommendation";
+            String sqlstmt = "SELECT * FROM Recommendation";
 
             SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
 
@@ -76,7 +78,9 @@ namespace Traversa2.DAL
                     int recid = Convert.ToInt32(row["RecID"]);
                     string rname = Convert.ToString(row["RName"]);
                     string rreason = Convert.ToString(row["RReason"]);
-                    Recommendations objRate = new Recommendations(rname, rreason, recid);
+                    int price = Convert.ToInt32(row["Price"]);
+                    int quality = Convert.ToInt32(row["Quality"]);
+                    Recommendations objRate = new Recommendations(rname, rreason, recid, price, quality);
                     recList.Add(objRate);
                 }
             }

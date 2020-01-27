@@ -37,6 +37,9 @@ namespace Traversa2.Views.Places
                         PDesc.Text = pl.PDesc;
                         PLocation.Text = pl.PLocation;
                         category.SelectedValue = pl.CatId.ToString();
+                        string img = pl.ImagePath;
+                        img = img.Replace("~/uploads/", "");
+                        imgName.Text = img;
                     }
                     else
                     {
@@ -58,33 +61,59 @@ namespace Traversa2.Views.Places
             int cat = int.Parse(category.SelectedItem.Value);
             int plid = Convert.ToInt32(Session["PlaceId"]);
 
-            var folder = Server.MapPath("~/uploads");
-            string fileName = Path.GetFileName(FileUpload.PostedFile.FileName);
-            string filePath = "~/uploads/" + fileName;
-
-            if (!Directory.Exists(folder))
+            if (FileUpload.HasFile)
             {
-                Directory.CreateDirectory(folder);
+                var folder = Server.MapPath("~/uploads");
+                string fileName = Path.GetFileName(FileUpload.PostedFile.FileName);
+                string filePath = "~/uploads/" + fileName;
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
 
-            }
-            FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
+                }
+                FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
 
-            Place pl = new Place(name, desc, loca, cat, filePath);
+                Place pl = new Place(name, desc, loca, cat, filePath);
 
-            int result = pl.updateOne(plid);
-            if (result == 1)
-            {
-                lblMsg.Text = "Place successfully added!";
-                lblMsg.ForeColor = System.Drawing.Color.Green;
-                Pname.Text = "";
-                PDesc.Text = "";
-                PLocation.Text = "";
-                category.ClearSelection();
+                int result = pl.updateOne(plid);
+                if (result == 1)
+                {
+                    lblMsg.Text = "Place successfully added!";
+                    lblMsg.ForeColor = System.Drawing.Color.Green;
+                    Response.Redirect("ViewAllPlaces.aspx");
+                }
+                else
+                {
+                    lblMsg.Text = "An error occured while adding, try again.";
+                    lblMsg.ForeColor = System.Drawing.Color.Red;
+                }
             }
             else
             {
-                lblMsg.Text = "An error occured while adding, try again.";
-                lblMsg.ForeColor = System.Drawing.Color.Red;
+                var folder = Server.MapPath("~/uploads");
+                string fileName = imgName.Text;
+                string filePath = "~/uploads/" + fileName;
+                if (!Directory.Exists(folder))
+                {
+                    Directory.CreateDirectory(folder);
+
+                }
+                FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
+
+                Place pl = new Place(name, desc, loca, cat, filePath);
+
+                int result = pl.updateOne(plid);
+                if (result == 1)
+                {
+                    lblMsg.Text = "Place successfully updated!";
+                    lblMsg.ForeColor = System.Drawing.Color.Green;
+                    Response.Redirect("ViewAllPlaces.aspx");
+                }
+                else
+                {
+                    lblMsg.Text = "An error occured while updating";
+                    lblMsg.ForeColor = System.Drawing.Color.Red;
+                }
             }
         }
     }

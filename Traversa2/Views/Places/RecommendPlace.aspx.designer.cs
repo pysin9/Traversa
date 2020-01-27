@@ -22,22 +22,22 @@ namespace Traversa2.Views.Places {
         protected global::System.Web.UI.WebControls.Label lblerror;
         
         /// <summary>
-        /// asm control.
+        /// rdPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManager asm;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdPrice;
         
         /// <summary>
-        /// r1 control.
+        /// rdOverall control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.Rating r1;
+        protected global::System.Web.UI.WebControls.RadioButtonList rdOverall;
         
         /// <summary>
         /// RName control.

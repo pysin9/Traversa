@@ -20,6 +20,8 @@
                 <asp:BoundField DataField="RecID" HeaderText="Id" Visible="False" />
                 <asp:BoundField DataField="RName" HeaderText="Name of Place" />
                 <asp:BoundField DataField="RReason" HeaderText="Reason for Recommendation" />
+                <asp:BoundField DataField="priceRate" HeaderText="Price Rating" />
+                <asp:BoundField DataField="qualityRate" HeaderText="Overall Rating" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>
         </asp:GridView>

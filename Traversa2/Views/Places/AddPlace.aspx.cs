@@ -41,6 +41,8 @@ namespace Traversa2.Views.Places
             string fileName = Path.GetFileName(FileUpload.PostedFile.FileName);
             string filePath = "~/uploads/" + fileName;
 
+            imgName.Text = fileName.ToString();
+
             if (!Directory.Exists(folder))
             {
                 Directory.CreateDirectory(folder);
@@ -55,6 +57,11 @@ namespace Traversa2.Views.Places
             {
                 lblMsg.Text = "Place successfully added!";
                 lblMsg.ForeColor = System.Drawing.Color.Green;
+                Pname.Text = "";
+                PDesc.Text = "";
+                PLocation.Text = "";
+                category.ClearSelection();
+                imgName.Text = "";
             }
             else
             {

@@ -42,9 +42,10 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Image:</label>
-                        <asp:FileUpload ID="FileUpload" runat="server" CssClass="col-lg-5"/>
+                        <asp:FileUpload ID="FileUpload" runat="server" CssClass="col-lg-5"/>          
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="No image has been selected!" ControlToValidate="FileUpload" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                     </div>
+                    <asp:Label ID="imgName" runat="server" Text="" CssClass="col-lg-5"></asp:Label>
                 </div>
                     
                     <asp:Button ID="btnSave" class="btnSave" Text="Save" runat="server" OnClick="btnSave_Click"/>

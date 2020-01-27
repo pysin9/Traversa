@@ -26,14 +26,25 @@ namespace Traversa2.Views.Places
         {
             string name = RName.Text;
             string reason = Request.Form["RReason"];
+            int price = Convert.ToInt32(rdPrice.SelectedValue);
+            int quality = Convert.ToInt32(rdOverall.SelectedValue);
+
             if (reason =="" || name =="")
             {
                 lblerror.Text = "Please fill up all fields!";
                 lblerror.ForeColor = System.Drawing.Color.Red;
             }
+            if (price == 0)
+            {
+                lblerror.Text = "Price rating has not been selected";
+            }
+            if (quality == 0)
+            {
+                lblerror.Text = "Overall rating has not been selected";
+            }
             else
             {
-                Recommendation rec = new Recommendation(name, reason);
+                Recommendations rec = new Recommendations(name, reason, price, quality);
                 int rslt = rec.AddRecommendation();
                 lblerror.Text = rslt.ToString();
                 if (rslt == 1)

@@ -74,7 +74,6 @@
     <Content Include="App_Data\Traversa_log.ldf">
       <DependentUpon>Traversa.mdf</DependentUpon>
     </Content>
-    <Content Include="bin\AjaxControlToolkit.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\csi.exe" />
@@ -104,6 +103,8 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="Global.asax" />
     <Content Include="images\c.gif" />
+    <Content Include="images\no_star.png" />
+    <Content Include="images\thumbs.png" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
     <Content Include="js\bootstrap.js" />
@@ -118,8 +119,12 @@
     <Content Include="Stylesheet\PlaceForm.css" />
     <Content Include="uploads\bugis street.jpg" />
     <Content Include="uploads\chicken-satay-56a8a7643df78cf7729f6e56.jpg" />
+    <Content Include="uploads\clarke quay.jpg" />
+    <Content Include="uploads\dddonki.jpg" />
+    <Content Include="uploads\ecp.jpg" />
     <Content Include="uploads\item_1.thumbnail.carousel-img.740.416.jpg" />
     <Content Include="uploads\mid_autumn_festival_south_bridge_road_singapore.jpg" />
+    <Content Include="uploads\thumbs.png" />
     <Content Include="Views\Places\AddCategory.aspx" />
     <Content Include="Views\Places\AddPlace.aspx" />
     <Content Include="Views\Places\Category.aspx" />
@@ -130,6 +135,7 @@
     <Content Include="Views\Places\RecommendPlace.aspx" />
     <Content Include="Views\Places\ViewAllPlaces.aspx" />
     <Content Include="Views\Places\ViewAllRec.aspx" />
+    <Content Include="Views\Places\ViewOnePlace.aspx" />
     <Content Include="Views\Users\ChangePassword.aspx" />
     <Content Include="Views\Users\Login.aspx" />
     <Content Include="Views\Users\Profile.aspx" />
@@ -143,7 +149,6 @@
     <Compile Include="BLL\CreateCategory.cs" />
     <Compile Include="BLL\Place.cs" />
     <Compile Include="BLL\Rating.cs" />
-    <Compile Include="BLL\Recommendation.cs" />
     <Compile Include="BLL\Recommendations.cs" />
     <Compile Include="BLL\TravellerProfile.cs" />
     <Compile Include="BLL\Travellers.cs" />
@@ -248,6 +253,13 @@
     </Compile>
     <Compile Include="Views\Places\ViewAllRec.aspx.designer.cs">
       <DependentUpon>ViewAllRec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Places\ViewOnePlace.aspx.cs">
+      <DependentUpon>ViewOnePlace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Places\ViewOnePlace.aspx.designer.cs">
+      <DependentUpon>ViewOnePlace.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Users\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
