@@ -18,13 +18,13 @@ namespace Traversa2.Views.Users
 
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            
+
             string email = emailTB.Text;
             string password = passwordTB.Text;
-           
+
             lblError.Text = String.Empty;
 
-            
+
             if (email == "")
             {
                 lblError.Text += "Email is required <br>";
@@ -35,7 +35,7 @@ namespace Traversa2.Views.Users
                 lblError.Text += "Password is required <br>";
                 lblError.ForeColor = Color.Red;
             }
-            
+
             else
             {
                 TravellerProfile user = new TravellerProfile();
@@ -50,15 +50,23 @@ namespace Traversa2.Views.Users
                     lblsuccess.Text = "Login Success";
                     lblsuccess.ForeColor = Color.Green;
 
-                    Response.Redirect("Profile.aspx");
-                     
+                    if (emailTB.Text == "Admin@gmail.com")
+                    {
+                        Response.Redirect("../Home/AdminHomepage.aspx");
+                    }
+                    else
+                    {
+                        Response.Redirect("../Home/UserHomepage.aspx");
+                    }
+
+
                 }
                 else
                 {
                     lblError.Text = "Incorrect Email/Password";
                     lblError.ForeColor = Color.Red;
                 }
-                
+
             }
 
         }

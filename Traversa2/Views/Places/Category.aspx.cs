@@ -18,18 +18,22 @@ namespace Traversa2.Views.Places
                 CatergoriesID cat = new CatergoriesID();
                 categoryList = cat.GetAll();
 
-                DataList1.DataSource = categoryList;
-                DataList1.DataBind();
-                //foreach (var i in categoryList)
-                //{
-                //    Image1.ImageUrl = i.CatImage;
+                Session["catid"] = cat.CatId;
+                Session["Catname"] = cat.CatName;
 
-                //}
+                DataListCategory.DataSource = categoryList;
+                DataListCategory.DataBind();
+
 
 
             }
 
 
+        }
+
+        protected void LinkButtonCategory_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Itinerary.aspx");
         }
     }
 }

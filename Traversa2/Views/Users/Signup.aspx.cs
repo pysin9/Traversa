@@ -65,6 +65,8 @@ namespace Traversa2
                         lblSuccess.Text = "User created";
                         lblSuccess.ForeColor = Color.Green;
                         alertSuccess.Visible = true;
+
+                        Response.Redirect("Login.aspx");
                     }
                     else
                     {

@@ -31,13 +31,31 @@ namespace Traversa2.Views.Places {
         protected global::System.Web.UI.WebControls.Label lblAlert;
         
         /// <summary>
-        /// FileUploadImage control.
+        /// FileUploadCat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadImage;
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadCat;
+        
+        /// <summary>
+        /// LabelImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelImage;
+        
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
         /// NameTB control.

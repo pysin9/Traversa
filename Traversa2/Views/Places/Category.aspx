@@ -33,14 +33,13 @@
     
     <br />
 
-    <asp:DataList ID="DataList1" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+    <asp:DataList ID="DataListCategory" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" >
         <ItemTemplate >
-            <div class="card text-center r" style="width: 16.5rem;
-    height: 17rem;">
+            <div class="card text-center r" style="width: 16.5rem; height: 17rem;">
                 <asp:Image ID="Image2" class="card-img-top" ImageUrl='<%# Bind("CatImage", "{0}") %>' runat="server" height="211px"  width="262.5px"/>
                 <br />
                 <div class="card-body">
-                   <asp:LinkButton ID="LinkButton1" runat="server" Text='<%# Bind("CatName") %>'></asp:LinkButton>
+                   <asp:LinkButton ID="LinkButtonCategory" runat="server" Text='<%# Bind("CatName") %>' CommandName="Categoryname" OnClick="LinkButtonCategory_Click"></asp:LinkButton>
                 </div>
                 </div>
         </ItemTemplate>

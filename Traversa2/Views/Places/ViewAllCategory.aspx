@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="ViewAllCategory.aspx.cs" Inherits="Traversa2.Views.Places.EditCategory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarForAdmin.Master" AutoEventWireup="true" CodeBehind="ViewAllCategory.aspx.cs" Inherits="Traversa2.Views.Places.EditCategory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .cold{
@@ -24,19 +24,20 @@
         <label class=" t">Edit Category</label>
         <br>
         <asp:Label ID="LabelMessage" runat="server" Text=""></asp:Label>
-        <asp:GridView ID="GridViewCat" runat="server" AutoGenerateColumns="False"  CellPadding="4" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" OnRowDeleting="GridViewCat_RowDeleting" DataKeyNames="CatId" 
-            OnRowEditing="GridViewCat_RowEditing"  >
+        <asp:GridView ID="GridViewCat" runat="server" AutoGenerateColumns="False"  CellPadding="4" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" OnRowDeleting="GridViewCat_RowDeleting" DataKeyNames="CatId" OnSelectedIndexChanged="GridViewCat_SelectedIndexChanged" 
+            >
             <AlternatingRowStyle BackColor="White" />
             <Columns>
                 <asp:BoundField HeaderText="id" Visible="False" DataField="CatId" />
                 <asp:ImageField DataImageUrlField="CatImage" HeaderText="Category Image"  ControlStyle-Width="500" ControlStyle-Height = "350"  >
+<ControlStyle Height="350px" Width="500px"></ControlStyle>
                 </asp:ImageField>
                 <asp:BoundField HeaderText="Category Name" DataField="CatName" />
-                <asp:CommandField  ShowEditButton="True" />
+                <asp:CommandField HeaderText="Edit" SelectText="Edit" ShowSelectButton="True" />
                 
                 
                 
-                <asp:CommandField ShowDeleteButton="True" ButtonType="Button""/>
+                <asp:CommandField ShowDeleteButton="True" />
                 
                 
                 

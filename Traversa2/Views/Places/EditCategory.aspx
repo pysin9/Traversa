@@ -13,7 +13,14 @@
                     <div class="form-group row b">
                         <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Category Image:</label>
                         <div class="col-sm-5">
-                            <asp:FileUpload ID="FileUploadImage" runat="server" />
+                            <asp:FileUpload ID="FileUploadCat" runat="server" />
+                        </div>
+                    </div>
+                    <div class="form-group row b">
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Category Current Image:</label>
+                        <div class="col-sm-5">
+                            <asp:Label ID="LabelImage" runat="server" Text=""></asp:Label>
+                            <asp:Label ID="Label2" runat="server" Text="Label"></asp:Label>
                         </div>
                     </div>
                     <div class="form-group row b">
