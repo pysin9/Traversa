@@ -105,7 +105,7 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-2 control-label">Date From:</label>
-                        <asp:TextBox ID="DateFrom" runat="server" CssClass="auto-style1"  TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="DateFrom" runat="server" CssClass="auto-style1" OnTextChanged="DateFrom_TextChanged" TextMode="Date"></asp:TextBox>
                         <label class="col-lg-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;Date To:  </label>
                         <asp:TextBox ID="DateTo" runat="server" CssClass="col-lg-2" TextMode="Date"></asp:TextBox>
                     </div>
