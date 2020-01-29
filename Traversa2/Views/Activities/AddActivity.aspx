@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="AddActivity.aspx.cs" Inherits="Traversa2.Views.Hosts.AddActivity" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="AddActivity.aspx.cs" Inherits="Traversa2.Views.Activities.AddActivity" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/PlaceForm.css" rel="stylesheet" type="text/css" />
@@ -29,45 +29,63 @@
             padding-left: 15px;
             padding-right: 15px;
         }
+        .auto-style3 {
+            left: 0px;
+            top: 0px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div class="container" id="container">
   <div class=".col-lg-4 .col-lg-offset-2">
       <div class="card-heading" > Activity </div>
-
+      <asp:Label ID="LblMsg" runat="server"></asp:Label>
       <div class="card-body">
 		    <form>
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Title:</label>
-                		    <asp:TextBox ID="ATitle" runat="server" placeholder="" CssClass="col-lg-5"></asp:TextBox>
+                		    <asp:TextBox ID="AName" runat="server" placeholder="Enter title of activity" CssClass="col-lg-5"></asp:TextBox>
+                    </div>
+			    </div>
+                <div class="form-group">
+                    <div class="row justify-content-center">
+					    <label class="col-lg-3 control-label">Description:</label>
+                        <asp:TextBox ID="ADesc" runat="server" placeholder="Enter description of activity" CssClass="col-lg-5"></asp:TextBox>
                     </div>
 			    </div>
 			    <div class="form-group">
                     <div class="row justify-content-center">
 					    <label class="col-lg-3 control-label">Location:</label>
-                        <asp:TextBox ID="ALocation" runat="server" placeholder="Enter description of place" CssClass="col-lg-5"></asp:TextBox>
+                        <asp:TextBox ID="ALocation" runat="server" placeholder="Enter location where activity is held at" CssClass="col-lg-5"></asp:TextBox>
                     </div>
-			    </div>
-			    <div class="form-group">
-                    <div class="row justify-content-center">
-              	        <label class="col-lg-3 control-label">No. of People:</label>
-                            <asp:TextBox ID="APeople" runat="server" placeholder="Enter location(s) of place" CssClass="col-lg-5"></asp:TextBox>
-                   </div>
 			    </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Category:</label>
-                		<asp:DropDownList ID="ACategory" runat="server" CssClass="auto-style2">
-                            <asp:ListItem>- Select -</asp:ListItem>
-                            <asp:ListItem>Food</asp:ListItem>
-                            <asp:ListItem>Music</asp:ListItem>
-                            <asp:ListItem>Art</asp:ListItem>
-                            <asp:ListItem>Beauty</asp:ListItem>
+                		<asp:DropDownList ID="category" runat="server" CssClass="col-lg-5">
+                            <asp:ListItem></asp:ListItem>
                         </asp:DropDownList>
                     </div>
                 </div>
+
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <label class="col-lg-3 control-label">Image:</label>
+                        <asp:FileUpload ID="FileUpload" runat="server" CssClass="auto-style1"/>          
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="No image has been selected!" ControlToValidate="FileUpload" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
+                    </div>
+                    <asp:Label ID="imgName" runat="server" Text="" CssClass="col-lg-5"></asp:Label>
+                </div>
+    
+			    <div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-3 control-label">No. of People:</label>
+                            <asp:TextBox ID="APeople" runat="server" placeholder="Enter the range of people required for activity" CssClass="col-lg-5"></asp:TextBox>
+                   </div>
+			    </div>
+                
+
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Language:</label>
@@ -92,7 +110,7 @@
                  <div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-3 control-label">Price:</label>
-                        <asp:TextBox ID="APrice" runat="server" CssClass="col-lg-5"></asp:TextBox>
+                        <asp:TextBox ID="APrice" runat="server" placeholder="Enter the price per person" CssClass="col-lg-5"></asp:TextBox>
                     </div>
                 </div>
 
@@ -105,13 +123,13 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <label class="col-lg-2 control-label">Date From:</label>
-                        <asp:TextBox ID="DateFrom" runat="server" CssClass="auto-style1" OnTextChanged="DateFrom_TextChanged" TextMode="Date"></asp:TextBox>
+                        <asp:TextBox ID="DateFrom" runat="server" CssClass="auto-style1" TextMode="Date"></asp:TextBox>
                         <label class="col-lg-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;Date To:  </label>
                         <asp:TextBox ID="DateTo" runat="server" CssClass="col-lg-2" TextMode="Date"></asp:TextBox>
                     </div>
                 </div>
 
-                 <div class="form-group">
+                <!--<div class="form-group">
                     <div class="row justify-content-center">
               	        <label class="col-lg-8 control-label">Description:</label>
                     </div>
@@ -119,9 +137,9 @@
 
                  <div class="form-group">
                     <div class="row justify-content-center">
-                        <textarea id="TextAreaDesc" class="col-lg-8 form-control" style="margin-left:35px;" rows="2" placeholder="Provide a detailed description of the activity you will be doing. If your activity includes bringing people to multiple places, describe those places as per your planned itinerary."></textarea>
+                        <textarea id="ADesc" class="col-lg-8 form-control" style="margin-left:35px;" rows="2" placeholder="Provide a detailed description of the activity you will be doing. If your activity includes bringing people to multiple places, describe those places as per your planned itinerary."></textarea>
                     </div>
-                </div>
+                </div>-->
 
                  <div class="form-group">
                     <div class="row justify-content-center">
@@ -180,12 +198,12 @@
                 </div>
 
                 
-                <asp:Label ID="LblMsg" runat="server" ForeColor="Red"></asp:Label>
+                
                 <br />
                 <br />
-                <br />
-                <asp:Button ID="Save" runat="server" Text="Save" OnClick="Save_Click" />
-                <asp:Button ID="Exit" runat="server" Text="Exit" />
+                <br /> 
+                <asp:Button ID="Save" runat="server" Text="Save" class="btnSave" OnClick="Save_Click"/>
+                <asp:Button ID="Exit" runat="server" Text="Exit" class="btnSave" OnClick="Exit_Click" />
 			 </form>
       </div> <!-- end panel-body -->
     </div> <!-- end panel --> <!-- end container-fluid -->

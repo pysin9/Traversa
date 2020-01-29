@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Traversa2.Views.Hosts
+namespace Traversa2.Views.Activities
 {
-    public partial class AddActivity : System.Web.UI.Page
+    public partial class ViewActivity : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

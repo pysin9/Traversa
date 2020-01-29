@@ -125,8 +125,12 @@
     <Content Include="uploads\item_1.thumbnail.carousel-img.740.416.jpg" />
     <Content Include="uploads\mid_autumn_festival_south_bridge_road_singapore.jpg" />
     <Content Include="uploads\thumbs.png" />
+    <Content Include="Views\Activities\ActivityList.aspx" />
+    <Content Include="Views\Activities\AddActivity.aspx" />
+    <Content Include="Views\Activities\EditActivity.aspx" />
+    <Content Include="Views\Activities\ViewActivity.aspx" />
+    <Content Include="Views\Activities\ViewAllActivities.aspx" />
     <Content Include="Views\Events\AddEvent.aspx" />
-    <Content Include="Views\Hosts\AddActivity.aspx" />
     <Content Include="Views\Places\AddCategory.aspx" />
     <Content Include="Views\Places\AddPlace.aspx" />
     <Content Include="Views\Places\Category.aspx" />
@@ -147,6 +151,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\Activity.cs" />
     <Compile Include="BLL\CatergoriesID.cs" />
     <Compile Include="BLL\CreateCategory.cs" />
     <Compile Include="BLL\Place.cs" />
@@ -154,6 +159,7 @@
     <Compile Include="BLL\Recommendations.cs" />
     <Compile Include="BLL\TravellerProfile.cs" />
     <Compile Include="BLL\Travellers.cs" />
+    <Compile Include="DAL\ActivityDAO.cs" />
     <Compile Include="DAL\CatDAO.cs" />
     <Compile Include="DAL\PlaceDAO.cs" />
     <Compile Include="DAL\RatingDAO.cs" />
@@ -186,19 +192,47 @@
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Views\Activities\ActivityList.aspx.cs">
+      <DependentUpon>ActivityList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Activities\ActivityList.aspx.designer.cs">
+      <DependentUpon>ActivityList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activities\AddActivity.aspx.cs">
+      <DependentUpon>AddActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Activities\AddActivity.aspx.designer.cs">
+      <DependentUpon>AddActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activities\EditActivity.aspx.cs">
+      <DependentUpon>EditActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Activities\EditActivity.aspx.designer.cs">
+      <DependentUpon>EditActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activities\ViewActivity.aspx.cs">
+      <DependentUpon>ViewActivity.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Activities\ViewActivity.aspx.designer.cs">
+      <DependentUpon>ViewActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activities\ViewAllActivities.aspx.cs">
+      <DependentUpon>ViewAllActivities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Activities\ViewAllActivities.aspx.designer.cs">
+      <DependentUpon>ViewAllActivities.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Events\AddEvent.aspx.cs">
       <DependentUpon>AddEvent.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\Events\AddEvent.aspx.designer.cs">
       <DependentUpon>AddEvent.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Hosts\AddActivity.aspx.cs">
-      <DependentUpon>AddActivity.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Hosts\AddActivity.aspx.designer.cs">
-      <DependentUpon>AddActivity.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Places\AddCategory.aspx.cs">
       <DependentUpon>AddCategory.aspx</DependentUpon>
@@ -348,7 +382,6 @@
   <ItemGroup>
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
-    <Folder Include="Views\Activity\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
