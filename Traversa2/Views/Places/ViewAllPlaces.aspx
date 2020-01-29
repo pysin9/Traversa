@@ -30,5 +30,8 @@
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>
         </asp:GridView>
+        <br />
+        <asp:Button ID="btnAdd" runat="server" Text="Add New" OnClick="btnAdd_Click"/>
     </div>
+
 </asp:Content>

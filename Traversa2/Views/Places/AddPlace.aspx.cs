@@ -62,6 +62,7 @@ namespace Traversa2.Views.Places
                 PLocation.Text = "";
                 category.ClearSelection();
                 imgName.Text = "";
+                Response.Redirect("ViewAllPlaces.aspx");
             }
             else
             {

@@ -50,5 +50,10 @@ namespace Traversa2.Views.Places
             Session["PlaceId"] = row.Cells[0].Text;
             Response.Redirect("EditPlace.aspx");
         }
+
+        protected void btnAdd_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("AddPlace.aspx");
+        }
     }
 }

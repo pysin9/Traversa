@@ -14,7 +14,7 @@ namespace Traversa2.Views.Places
         {
             if (IsPostBack == false)
             {
-                int id = 13;
+                int id = 4;
                 //Convert.ToInt32(Session["PlaceId"]);
                 Place pl = new Place();
                 pl = pl.retrieveOne(id);
