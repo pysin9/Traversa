@@ -54,10 +54,10 @@
                         <li class="nav-item text-center">
                             <asp:LinkButton ID="LinkButtonAll" CssClass="text-center f" Font-Size="Large" runat="server">All</asp:LinkButton>
                         </li>
-                        <asp:DataList ID="DataListCategory" runat="server"><ItemStyle HorizontalAlign="center" />
+                        <asp:DataList ID="DataListCategory" OnItemCommand="DataListCategory_ItemCommand" runat="server"><ItemStyle HorizontalAlign="center" />
                             <ItemTemplate >
                                 <li class="nav-item">
-                                     <asp:LinkButton ID="LinkButtonCat" CssClass="text-center f" runat="server" Text='<%# Bind("CatName") %>' Font-Size="Large" OnClick="LinkButtonCat_Click"></asp:LinkButton>
+                                     <asp:LinkButton ID="LinkButtonCat"  CommandName="select" CssClass="text-center f" runat="server" CommandArgument='<%# Eval("CatId") %>' Text='<%# Bind("CatName") %>' Font-Size="Large" OnClick="LinkButtonCat_Click"></asp:LinkButton>
                                 </li>
                             </ItemTemplate>
                         </asp:DataList>
@@ -74,6 +74,7 @@
              <br />
              <br />
             <br />
+             <asp:Label ID="Label13"  runat="server" Text=""></asp:Label>
             <asp:DataList ID="DataListPlaces" runat="server"  CssClass="i">
                   <ItemTemplate>
                       <div class="container i">

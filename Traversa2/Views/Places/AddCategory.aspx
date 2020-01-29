@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="AddCategory.aspx.cs" Inherits="Traversa2.Views.Places.AddCategory" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarForAdmin.Master" AutoEventWireup="true" CodeBehind="AddCategory.aspx.cs" Inherits="Traversa2.Views.Places.AddCategory" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/login.css" rel="stylesheet" />
 </asp:Content>

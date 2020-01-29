@@ -71,5 +71,11 @@ namespace Traversa2.BLL
             PlaceDAO dao = new PlaceDAO();
             return dao.UpdatePlace(this, id);
         }
+
+        public List<Place> GetAllPlacesByCat(int catId)
+        {
+            PlaceDAO dao = new PlaceDAO();
+            return dao.SelectByCat(catId);
+        }
     }
 }
