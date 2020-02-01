@@ -17,8 +17,27 @@ namespace Traversa2
             }
             else
             {
-                ScriptManager.RegisterStartupScript(this, this.GetType(),"alert","alert('You need to login first to access this page');window.location ='Login.aspx';",true);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('You need to login first to access this page');window.location ='/Views/Users/Login.aspx';", true);
             }
+        }
+
+        protected void LinkButtonProfile_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Profile.aspx");
+        }
+
+        protected void LinkButtonLogout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            Session.Remove("Username");
+            Session.Remove("Email");
+            Session.Remove("UserID");
+            Response.Redirect("/Views/Users/Login.aspx");
+        }
+
+        protected void LinkButtonItin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/MyItinenary/Viewitinerary.aspx");
         }
     }
 }

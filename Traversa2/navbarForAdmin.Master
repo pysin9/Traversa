@@ -40,9 +40,9 @@
                       Itinerary
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="/Views/Places/ViewAllCategory.aspx">Create Category</a>
-                      <a class="dropdown-item" href="/Views/Places/ViewAllCategory.aspx">View All Category</a>
-                        <a class="dropdown-item" href="/Views/Places/Category.aspx">User's view</a>
+                        <asp:LinkButton ID="LinkButtonCategory" class="dropdown-item" runat="server" Text="Create Category" OnClick="LinkButtonCategory_Click"></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButtonVCat" class="dropdown-item" runat="server" Text="View All" OnClick="LinkButtonVCat_Click"></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButtonUser" class="dropdown-item" runat="server" Text="User's view" OnClick="LinkButtonUser_Click"></asp:LinkButton>
                     </div>
                  </li>
                     <li class="nav-item dropdown">
@@ -50,8 +50,8 @@
                       Places
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="/Views/Places/AddPlace.aspx">Add Places</a>
-                      <a class="dropdown-item" href="/Views/Places/ViewAllPlaces.aspx">View All Places</a>
+                        <asp:LinkButton ID="LinkButtonAddPl" class="dropdown-item" runat="server" Text="Add Place" OnClick="LinkButtonAddPl_Click"></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButtonViewPl" class="dropdown-item" runat="server" Text="View Places" OnClick="LinkButtonViewPl_Click"></asp:LinkButton>
                     </div>
                  </li>
                   <li class="nav-item">
@@ -65,10 +65,10 @@
                       <asp:Label ID="UsernameLBL" runat="server" Text=""></asp:Label>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="Views/Users/Profile.aspx">Profile</a>
-                      <a class="dropdown-item" href="#">Favourite</a>
-                      <a class="dropdown-item" href="#">View Cart</a>
-                      <a class="dropdown-item" href="#">Logout</a>
+                      <asp:LinkButton ID="LinkButtonprofile" class="dropdown-item" runat="server" Text="Profile" ></asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonFav" class="dropdown-item" runat="server" Text="Favourite"></asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonCart" class="dropdown-item" runat="server" Text="View Cart"></asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonLogout" class="dropdown-item" runat="server" Text="Logout" OnClick="LinkButtonLogout_Click"></asp:LinkButton>
                     </div>
                  </li>
                 </ul>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="Category.aspx.cs" Inherits="Traversa2.Views.Places.Category" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="Viewitinerary.aspx.cs" Inherits="Traversa2.Views.MyItinenary.Viewitinerary" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/category.css" rel="stylesheet" />
     <style>
@@ -17,19 +17,17 @@
             display: inline-block;
         }
         .u{
-            left: 669px;
+            left: 10px;
             position:relative;
             display:inline-block;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
-    <h5 class="r">List of Categories: </h5>
+     <br />
+    <h5 class="r">My Itinerary: </h5>
     <div class="u">
-        
-        <input class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search">
-        <asp:Button ID="BtnSearch" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Search" />
+        <asp:LinkButton ID="LinkButtonCreate" class="btn btn-outline-info" runat="server" Text="Create"></asp:LinkButton>
     </div>
     
     <br />
@@ -37,16 +35,15 @@
     <asp:DataList ID="DataListCategory" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" >
         <ItemTemplate >
             <div class="card text-center r" style="width: 16.5rem; height: 17rem;">
-                <asp:Image ID="Image2" class="card-img-top" ImageUrl='<%# Bind("CatImage", "{0}") %>' runat="server" height="211px"  width="262.5px"/>
+                <asp:Image ID="Image2" class="card-img-top"  runat="server" height="211px"  width="262.5px" Visible="false"/>
                 <br />
                 <div class="card-body">
-                   <asp:LinkButton ID="LinkButtonCategory" runat="server" Text='<%# Bind("CatName") %>' CommandName="Categoryname" OnClick="LinkButtonCategory_Click"></asp:LinkButton>
+                   <asp:LinkButton ID="LinkButtonView" runat="server" Text="See" Visible="false"></asp:LinkButton>
                 </div>
                 </div>
         </ItemTemplate>
     </asp:DataList>
-
-
-   
-    
+    <div class="text-center container">
+        <asp:Label ID="LabelMessage" runat="server" Text="Nothing to see here"></asp:Label>
+    </div>
 </asp:Content>
