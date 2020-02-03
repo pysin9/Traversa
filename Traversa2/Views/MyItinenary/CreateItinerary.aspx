@@ -41,6 +41,11 @@
         .g{
             text-transform:capitalize;
         }
+         .auto-style1 {
+             position: relative;
+             left: 93px;
+             top: 0px;
+         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -76,7 +81,7 @@
              <br />
             <br />
              <asp:Label ID="Label13"  runat="server" Text=""></asp:Label>
-            <asp:DataList ID="DataListPlaces" runat="server"  CssClass="i">
+            <asp:DataList ID="DataListPlaces" runat="server"  CssClass="auto-style1" OnItemCommand="DataListPlaces_ItemCommand">
                   <ItemTemplate>
                       <div class="container i">
                           <div class="card" style="width:600px; height: 13.3rem;">
@@ -94,7 +99,7 @@
                                               <br />
                                               <br />
                                             <div class="card-action">
-                                            <asp:LinkButton ID="LinkButtonPlaces" runat="server" OnClick="LinkButtonPlaces_Click" >+</asp:LinkButton>
+                                            <asp:LinkButton ID="LinkButtonPlaces" runat="server"   CommandName="choose" CommandArgument='<%# Eval("PlaceId") %>' >+</asp:LinkButton>
                                             </div>
                                         </div>
                                     </div>

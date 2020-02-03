@@ -13,5 +13,13 @@ namespace Traversa2.Views.MyItinenary
         {
 
         }
+
+        protected void LinkButtonCreate_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("CreateItinerary.aspx");
+        }
+
+        
+        
     }
 }

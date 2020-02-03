@@ -22,8 +22,11 @@ namespace Traversa2.Views.Places
                     CatergoriesID ca = new CatergoriesID();
                     ca = ca.Select(id);
 
-                    //DataListk.DataSource = cTlist;
-                    //DataListk.DataBind();
+                    CatergoriesID cat = new CatergoriesID();
+                    cTlist = cat.Catbyid(id);
+
+                    DataListk.DataSource = cTlist;
+                    DataListk.DataBind();
 
                     TextBoxName.Text = ca.CatName;
                     string img = ca.CatImage;

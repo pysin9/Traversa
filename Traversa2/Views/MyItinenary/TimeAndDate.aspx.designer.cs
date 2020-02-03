@@ -13,30 +13,30 @@ namespace Traversa2.Views.MyItinenary {
     public partial class TimeAndDate {
         
         /// <summary>
-        /// emailTB control.
+        /// DataList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox emailTB;
+        protected global::System.Web.UI.WebControls.DataList DataList1;
         
         /// <summary>
-        /// passwordTB control.
+        /// CalendarIT control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox passwordTB;
+        protected global::System.Web.UI.WebControls.Calendar CalendarIT;
         
         /// <summary>
-        /// btnLogin control.
+        /// LinkButton1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLogin;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton1;
     }
 }

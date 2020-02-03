@@ -4,27 +4,29 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container ice">
         <div class="card hot">
-            <div class="card-title text-center  T">Login</div>
+            <div class="card-title text-center  T">Create Itinerary</div>
             <div class="card-body">
                 <form class="text-center">
+                    <asp:DataList ID="DataList1" runat="server">
+                        <ItemTemplate>
+                            <div class="form-group row b">
+                                <asp:Label ID="Label1" runat="server" for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg" Text=''></asp:Label>
+                                <div class="col-sm-5">
+                                    <asp:Image ID="Image1" runat="server" />
+                                </div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:DataList>
                     <div class="form-group row b">
-                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Email:</label>
+                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg"></label>
                         <div class="col-sm-5">
-                            <asp:TextBox ID="emailTB" runat="server" type="email" class="form-control form-control-lg" placeholder="Enter your email"></asp:TextBox>
-                        </div>
-                    </div>
-                    <div class="form-group row b">
-                        <label for="colFormLabelLg" class="col-sm-2 col-form-label col-form-label-lg">Password:</label>
-                        <div class="col-sm-5">
-                            <asp:TextBox ID="passwordTB" runat="server" type="password" class="form-control form-control-lg"  placeholder="Enter your password"></asp:TextBox>
+                            <asp:Calendar ID="CalendarIT" runat="server" ondayrender="CalendarIT_DayRender"></asp:Calendar>
                         </div>
                     </div>
                     <div class="text-center col-sm-5 col-md-5 col-lg-6 f">
-                        <asp:Button ID="btnLogin" class="btn btn-success btn-round btn-lg btn-block" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                        <asp:LinkButton ID="LinkButton1" runat="server">LinkButton</asp:LinkButton>
                     </div>
-                    <div class="text-center">
-                        <a href="Signup.aspx" class="btn btn-link">Don't have an account?<u>Register now!</u></a>
-                    </div>
+                    
                 </form>
             </div>
         </div>

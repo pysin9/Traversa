@@ -161,6 +161,7 @@
     <Compile Include="BLL\Activity.cs" />
     <Compile Include="BLL\CatergoriesID.cs" />
     <Compile Include="BLL\CreateCategory.cs" />
+    <Compile Include="BLL\Itinerary.cs" />
     <Compile Include="BLL\Place.cs" />
     <Compile Include="BLL\Rating.cs" />
     <Compile Include="BLL\Recommendations.cs" />
@@ -168,6 +169,7 @@
     <Compile Include="BLL\Travellers.cs" />
     <Compile Include="DAL\ActivityDAO.cs" />
     <Compile Include="DAL\CatDAO.cs" />
+    <Compile Include="DAL\ItinDAO.cs" />
     <Compile Include="DAL\PlaceDAO.cs" />
     <Compile Include="DAL\RatingDAO.cs" />
     <Compile Include="DAL\RecDAO.cs" />

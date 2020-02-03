@@ -40,15 +40,6 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonEXP;
         
         /// <summary>
-        /// LinkButtonCreate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonCreate;
-        
-        /// <summary>
         /// UsernameLBL control.
         /// </summary>
         /// <remarks>
@@ -83,6 +74,15 @@ namespace Traversa2 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonCart;
+        
+        /// <summary>
+        /// LinkButtonIt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonIt;
         
         /// <summary>
         /// LinkButtonLogout control.

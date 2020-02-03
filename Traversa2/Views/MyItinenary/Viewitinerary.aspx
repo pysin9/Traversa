@@ -25,7 +25,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <br />
-    <h5 class="r">My Itinerary: </h5>
+    <div class="container">
+        <h5 class="r">My Itinerary: </h5>
     <div class="u">
         <asp:LinkButton ID="LinkButtonCreate" class="btn btn-outline-info" runat="server" Text="Create" OnClick="LinkButtonCreate_Click"></asp:LinkButton>
     </div>
@@ -38,7 +39,7 @@
                 <asp:Image ID="Image2" class="card-img-top"  runat="server" height="211px"  width="262.5px" Visible="false"/>
                 <br />
                 <div class="card-body">
-                   <asp:LinkButton ID="LinkButtonView" runat="server" Text="See" Visible="false"></asp:LinkButton>
+                   <asp:LinkButton ID="LinkButtonView" runat="server" Text="See" Visible="false" Font-Bold="True" Font-Size="Larger" ></asp:LinkButton>
                 </div>
                 </div>
         </ItemTemplate>
@@ -49,4 +50,6 @@
     <div class="text-center container">
         <asp:Label ID="LabelMessage" runat="server" Text="Nothing to see here"></asp:Label>
     </div>
+    </div>
+    
 </asp:Content>

@@ -35,9 +35,7 @@ namespace Traversa2
             Response.Redirect("/Views/Users/Login.aspx");
         }
 
-        
-
-        protected void LinkButtonCreate_Click(object sender, EventArgs e)
+        protected void LinkButtonIt_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Views/MyItinenary/Viewitinerary.aspx");
         }

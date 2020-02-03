@@ -53,7 +53,21 @@ namespace Traversa2.Views.MyItinenary
 
         protected void LinkButtonAll_Click(object sender, EventArgs e)
         {
-            
+            Place pl = new Place();
+            plList = pl.GetAllPlaces();
+
+            DataListPlaces.DataSource = plList;
+            DataListPlaces.DataBind();
+        }
+
+        protected void DataListPlaces_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "select")
+            {
+                int plId = Convert.ToInt32(e.CommandArgument);
+                Session["PlaceId"] = plId.ToString();
+                Response.Redirect("TimeAndDate.aspx");
+            }
         }
     }
 }
