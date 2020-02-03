@@ -13,22 +13,31 @@ namespace Traversa2.Views.Places {
     public partial class EditCategory1 {
         
         /// <summary>
-        /// alertSuccess control.
+        /// LblErrorr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl alertSuccess;
+        protected global::System.Web.UI.WebControls.Label LblErrorr;
         
         /// <summary>
-        /// lblAlert control.
+        /// DataListk control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAlert;
+        protected global::System.Web.UI.WebControls.DataList DataListk;
+        
+        /// <summary>
+        /// LabelCatName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelCatName;
         
         /// <summary>
         /// FileUploadCat control.
@@ -40,39 +49,21 @@ namespace Traversa2.Views.Places {
         protected global::System.Web.UI.WebControls.FileUpload FileUploadCat;
         
         /// <summary>
-        /// LabelImage control.
+        /// TextBoxName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelImage;
+        protected global::System.Web.UI.WebControls.TextBox TextBoxName;
         
         /// <summary>
-        /// Label2 control.
+        /// LinkButtonCreate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
-        /// NameTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox NameTB;
-        
-        /// <summary>
-        /// btnCreate control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCreate;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonCreate;
     }
 }

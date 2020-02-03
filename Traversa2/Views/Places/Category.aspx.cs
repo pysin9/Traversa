@@ -18,9 +18,6 @@ namespace Traversa2.Views.Places
                 CatergoriesID cat = new CatergoriesID();
                 categoryList = cat.GetAll();
 
-                Session["catid"] = cat.CatId;
-                Session["Catname"] = cat.CatName;
-
                 DataListCategory.DataSource = categoryList;
                 DataListCategory.DataBind();
 
@@ -31,9 +28,17 @@ namespace Traversa2.Views.Places
 
         }
 
-        protected void LinkButtonCategory_Click(object sender, EventArgs e)
+
+
+        protected void DataListCategory_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            Response.Redirect("Itinerary.aspx");
+            if (e.CommandName.Equals("Go"))
+            {
+                int CatId = Convert.ToInt32(e.CommandArgument);
+                Session["catid"] = CatId.ToString();
+
+                Response.Redirect("Itinerary.aspx");
+            }
         }
     }
 }

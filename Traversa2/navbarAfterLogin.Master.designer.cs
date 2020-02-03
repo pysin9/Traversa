@@ -40,13 +40,13 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonEXP;
         
         /// <summary>
-        /// LinkButtonItin control.
+        /// LinkButtonCreate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonItin;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonCreate;
         
         /// <summary>
         /// UsernameLBL control.

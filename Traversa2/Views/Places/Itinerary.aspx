@@ -51,13 +51,14 @@
              <nav class="col-md-2 d-none d-md-block sidebar b" style="background-color: aliceblue">
                  <div class="sidebar-sticky">
                     <ul class="nav flex-column">
-                        <li class="nav-item text-center">
-                            <asp:LinkButton ID="LinkButtonAll" CssClass="text-center f" Font-Size="Large" runat="server">All</asp:LinkButton>
-                        </li>
+                         <li class="nav-item text-center">
+                                   <asp:LinkButton ID="LinkButtonAll" CssClass="text-center f" Font-Size="Large" runat="server" OnClick="LinkButtonAll_Click">All</asp:LinkButton>
+                          </li>
                         <asp:DataList ID="DataListCategory" OnItemCommand="DataListCategory_ItemCommand" runat="server"><ItemStyle HorizontalAlign="center" />
                             <ItemTemplate >
+                                
                                 <li class="nav-item">
-                                     <asp:LinkButton ID="LinkButtonCat"  CommandName="select" CssClass="text-center f" runat="server" CommandArgument='<%# Eval("CatId") %>' Text='<%# Bind("CatName") %>' Font-Size="Large" OnClick="LinkButtonCat_Click"></asp:LinkButton>
+                                     <asp:LinkButton ID="LinkButtonCat"  CommandName="select" CssClass="text-center f" runat="server" CommandArgument='<%# Eval("CatId") %>' Text='<%# Bind("CatName") %>' Font-Size="Large"></asp:LinkButton>
                                 </li>
                             </ItemTemplate>
                         </asp:DataList>
@@ -65,7 +66,7 @@
                 </div>
             </nav>
             <div class="r">
-                <asp:Label ID="LabelNAme" class="r" runat="server" Text=""></asp:Label>
+                <asp:Label ID="LabelNAme" class="r" runat="server" Text="Choose a the places to go"></asp:Label>
                 <div class="u">
                     <input class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search">
                     <asp:Button ID="BtnSearch" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Search" />

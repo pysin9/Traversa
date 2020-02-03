@@ -24,6 +24,12 @@ namespace Traversa2.BLL
             CatImage = catImage;
         }
 
+        public CatergoriesID(string catname, string catimage)
+        {
+            CatImage = catimage;
+            CatName = catname;
+        }
+
 
         public List<CatergoriesID> GetAll()
         {
@@ -35,6 +41,24 @@ namespace Traversa2.BLL
         {
             CatDAO dao = new CatDAO();
             return dao.DeleteCat(catId);
+        }
+
+        public List<CatergoriesID> Catbyid(int ca)
+        {
+            CatDAO dao = new CatDAO();
+            return dao.SelectOne(ca);
+        }
+
+        public int Updateee(int id)
+        {
+            CatDAO dao = new CatDAO();
+            return dao.UpdateCat(this, id);
+        }
+
+        public CatergoriesID Select(int id)
+        {
+            CatDAO dao = new CatDAO();
+            return dao.getOne(id);
         }
     }
 }

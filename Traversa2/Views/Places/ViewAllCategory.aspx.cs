@@ -41,14 +41,7 @@ namespace Traversa2.Views.Places
             BindData();
         }
 
-        protected void GridViewCat_RowEditing(object sender, GridViewEditEventArgs e)
-        {
-            int catid = GridViewCat.EditIndex;
-            //GridViewRow row = GridViewCat.Rows[catid];
-
-            Session["CatId"] = catid;
-            LabelMessage.Text = catid.ToString();
-        }
+        
 
         protected void GridViewCat_SelectedIndexChanged(object sender, EventArgs e)
         {

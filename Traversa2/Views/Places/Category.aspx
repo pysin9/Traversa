@@ -25,7 +25,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
-    <h5 class="r">List of Categories: </h5>
+    <div class="container">
+         <div class=".col-lg-4 .col-lg-offset-2">
+             <h5 class="r">List of Categories: </h5>
     <div class="u">
         
         <input class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search">
@@ -33,18 +35,21 @@
     </div>
     
     <br />
-
-    <asp:DataList ID="DataListCategory" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" >
+    <asp:DataList ID="DataListCategory" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" OnItemCommand="DataListCategory_ItemCommand" >
         <ItemTemplate >
             <div class="card text-center r" style="width: 16.5rem; height: 17rem;">
                 <asp:Image ID="Image2" class="card-img-top" ImageUrl='<%# Bind("CatImage", "{0}") %>' runat="server" height="211px"  width="262.5px"/>
                 <br />
+                
                 <div class="card-body">
-                   <asp:LinkButton ID="LinkButtonCategory" runat="server" Text='<%# Bind("CatName") %>' CommandName="Categoryname" OnClick="LinkButtonCategory_Click"></asp:LinkButton>
+                   <asp:LinkButton ID="LinkButtonCategory" runat="server" Text='<%# Bind("CatName") %>' CommandName="Go" CommandArgument='<%# Eval("CatId") %>' ></asp:LinkButton>
                 </div>
                 </div>
         </ItemTemplate>
-    </asp:DataList>
+    </asp:DataList> 
+         </div>
+    </div>
+    
 
 
    

@@ -65,10 +65,10 @@
                       <asp:Label ID="UsernameLBL" runat="server" Text=""></asp:Label>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <asp:LinkButton ID="LinkButtonprofile" class="dropdown-item" runat="server" Text="Profile" ></asp:LinkButton>
+                      <asp:LinkButton ID="LinkButtonprofile" class="dropdown-item" runat="server" Text="Profile" OnClick="LinkButtonprofile_Click" ></asp:LinkButton>
                          <asp:LinkButton ID="LinkButtonFav" class="dropdown-item" runat="server" Text="Favourite"></asp:LinkButton>
                          <asp:LinkButton ID="LinkButtonCart" class="dropdown-item" runat="server" Text="View Cart"></asp:LinkButton>
-                         <asp:LinkButton ID="LinkButtonLogout" class="dropdown-item" runat="server" Text="Logout" OnClick="LinkButtonLogout_Click"></asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonlogout" class="dropdown-item" runat="server" Text="Logout" OnClick="LinkButtonlogout_Click"></asp:LinkButton>
                     </div>
                  </li>
                 </ul>

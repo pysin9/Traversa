@@ -27,12 +27,12 @@
      <br />
     <h5 class="r">My Itinerary: </h5>
     <div class="u">
-        <asp:LinkButton ID="LinkButtonCreate" class="btn btn-outline-info" runat="server" Text="Create"></asp:LinkButton>
+        <asp:LinkButton ID="LinkButtonCreate" class="btn btn-outline-info" runat="server" Text="Create" OnClick="LinkButtonCreate_Click"></asp:LinkButton>
     </div>
     
     <br />
-
-    <asp:DataList ID="DataListCategory" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" >
+    <div class="container">
+        <asp:DataList ID="DataListCategory" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" >
         <ItemTemplate >
             <div class="card text-center r" style="width: 16.5rem; height: 17rem;">
                 <asp:Image ID="Image2" class="card-img-top"  runat="server" height="211px"  width="262.5px" Visible="false"/>
@@ -43,6 +43,9 @@
                 </div>
         </ItemTemplate>
     </asp:DataList>
+    </div>
+
+    
     <div class="text-center container">
         <asp:Label ID="LabelMessage" runat="server" Text="Nothing to see here"></asp:Label>
     </div>

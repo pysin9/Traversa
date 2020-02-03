@@ -70,6 +70,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Traversa.mdf" />
+    <Content Include="App_Data\Traversa_log.ldf">
+      <DependentUpon>Traversa.mdf</DependentUpon>
+    </Content>
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
     <Content Include="bin\roslyn\csc.exe" />
     <Content Include="bin\roslyn\csi.exe" />
@@ -127,6 +131,13 @@
     <Content Include="Views\Activities\ViewActivity.aspx" />
     <Content Include="Views\Activities\ViewAllActivities.aspx" />
     <Content Include="Views\Events\AddEvent.aspx" />
+    <Content Include="Views\Home\AdminHomepage.aspx" />
+    <Content Include="Views\Home\Home.aspx" />
+    <Content Include="Views\Home\UserHomepage.aspx" />
+    <Content Include="Views\MyItinenary\CreateItinerary.aspx" />
+    <Content Include="Views\MyItinenary\EditItinerary.aspx" />
+    <Content Include="Views\MyItinenary\TimeAndDate.aspx" />
+    <Content Include="Views\MyItinenary\Viewitinerary.aspx" />
     <Content Include="Views\Places\AddCategory.aspx" />
     <Content Include="Views\Places\AddPlace.aspx" />
     <Content Include="Views\Places\Category.aspx" />
@@ -229,6 +240,55 @@
     </Compile>
     <Compile Include="Views\Events\AddEvent.aspx.designer.cs">
       <DependentUpon>AddEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\AdminHomepage.aspx.cs">
+      <DependentUpon>AdminHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\AdminHomepage.aspx.designer.cs">
+      <DependentUpon>AdminHomepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Home\UserHomepage.aspx.cs">
+      <DependentUpon>UserHomepage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Home\UserHomepage.aspx.designer.cs">
+      <DependentUpon>UserHomepage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyItinenary\CreateItinerary.aspx.cs">
+      <DependentUpon>CreateItinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MyItinenary\CreateItinerary.aspx.designer.cs">
+      <DependentUpon>CreateItinerary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyItinenary\EditItinerary.aspx.cs">
+      <DependentUpon>EditItinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MyItinenary\EditItinerary.aspx.designer.cs">
+      <DependentUpon>EditItinerary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyItinenary\TimeAndDate.aspx.cs">
+      <DependentUpon>TimeAndDate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MyItinenary\TimeAndDate.aspx.designer.cs">
+      <DependentUpon>TimeAndDate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyItinenary\Viewitinerary.aspx.cs">
+      <DependentUpon>Viewitinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MyItinenary\Viewitinerary.aspx.designer.cs">
+      <DependentUpon>Viewitinerary.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Places\AddCategory.aspx.cs">
       <DependentUpon>AddCategory.aspx</DependentUpon>
@@ -376,7 +436,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
     <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>

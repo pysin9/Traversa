@@ -28,7 +28,7 @@
             >
             <AlternatingRowStyle BackColor="White" />
             <Columns>
-                <asp:BoundField HeaderText="id" Visible="False" DataField="CatId" />
+                <asp:BoundField HeaderText="id" DataField="CatId" />
                 <asp:ImageField DataImageUrlField="CatImage" HeaderText="Category Image"  ControlStyle-Width="500" ControlStyle-Height = "350"  >
 <ControlStyle Height="350px" Width="500px"></ControlStyle>
                 </asp:ImageField>

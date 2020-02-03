@@ -21,7 +21,7 @@ namespace Traversa2
 
         protected void LinkButtonViewPl_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Views/Places/ViewAllPlace.aspx");
+            Response.Redirect("/Views/Places/ViewAllPlace.aspx");
         }
 
         protected void LinkButtonUser_Click(object sender, EventArgs e)
@@ -41,7 +41,7 @@ namespace Traversa2
 
         protected void LinkButtonprofile_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Profile.aspx");
+            Response.Redirect("/Views/Users/Profile.aspx");
         }
 
         protected void LinkButtonlogout_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace Traversa2
 
         protected void LinkButtonhome_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Homepage.aspx");
+            Response.Redirect("/Views/Home/Home.aspx");
         }
 
         protected void LinkButtonMap_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace Traversa2
 
         protected void LinkButtonItinerary_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Category.aspx");
+            Response.Redirect("/Views/Places/Category.aspx");
         }
 
         protected void btnLogin_Click(object sender, EventArgs e)

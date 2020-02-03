@@ -24,10 +24,11 @@ namespace Traversa2.Views.Places
 
                 if (Session["catid"] != null)
                 {
-                    //LabelNAme.Text = Session["Catname"].ToString();
-                    DataListPlaces.DataSource = null;
+                    int Catid = Convert.ToInt32(Session["catid"]);
+                    Label13.Text = Catid.ToString();
+
                     Place pl = new Place();
-                    placeList = pl.GetAllPlaces();
+                    placeList = pl.GetAllPlacesByCat(Catid);
 
                     DataListPlaces.DataSource = placeList;
                     DataListPlaces.DataBind();
@@ -39,41 +40,9 @@ namespace Traversa2.Views.Places
 
 
             }
-            else
-            {
-                CatergoriesID cat = new CatergoriesID();
-                categoryList = cat.GetAll();
-
-                DataListCategory.DataSource = categoryList;
-                DataListCategory.DataBind();
-
-                if (Session["catid"] != null)
-                {
-                    //LabelNAme.Text = Session["Catname"].ToString();
-                    DataListPlaces.DataSource = null;
-                    Place pl = new Place();
-                    placeList = pl.GetAllPlaces();
-
-                    DataListPlaces.DataSource = placeList;
-                    DataListPlaces.DataBind();
-                }
-                else
-                {
-
-                }
-            }
-        }
-
-        protected void LinkButtonCat_Click(object sender, EventArgs e)
-        {
-            //int id;
-            //Place pl = new Place();
-            //placeList = pl.GetAllPlacesByCat(id);
-
-            //DataListPlaces.DataSource = placeList;
-            //DataListPlaces.DataBind();
 
         }
+
 
         protected void LinkButtonPlaces_Click(object sender, EventArgs e)
         {
@@ -89,22 +58,25 @@ namespace Traversa2.Views.Places
         {
             if (e.CommandName == "select")
             {
-
-                //string itemID = e.CommandArgument.ToString();
-                //Label13.Text = itemID;
-
-                //int id;
-                //bool bIsConverted = int.TryParse(e.CommandArgument.ToString(), out id);
                 int CatId = Convert.ToInt32(e.CommandArgument);
-                Label13.Text = CatId.ToString();
 
 
-                //Place pl = new Place();
-                //placeList = pl.GetAllPlacesByCat(CatId);
 
-                //DataListPlaces.DataSource = placeList;
-                //DataListPlaces.DataBind();
+                Place pl = new Place();
+                placeList = pl.GetAllPlacesByCat(CatId);
+
+                DataListPlaces.DataSource = placeList;
+                DataListPlaces.DataBind();
             }
+        }
+
+        protected void LinkButtonAll_Click(object sender, EventArgs e)
+        {
+            Place pl = new Place();
+            placeList = pl.GetAllPlaces();
+
+            DataListPlaces.DataSource = placeList;
+            DataListPlaces.DataBind();
         }
     }
 }
