@@ -34,7 +34,7 @@
                      <a class="nav-link ft" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link ft" href="#">Map</a>
+                    <a class="nav-link ft" href="/Views/Map/Map.aspx">Map</a>
                   </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="/Views/Places/Category.aspx" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -58,7 +58,7 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <asp:LinkButton ID="LinkButtonProfile" class="dropdown-item" runat="server" Text="Profile" OnClick="LinkButtonProfile_Click"></asp:LinkButton>
                          <asp:LinkButton ID="LinkButtonFav" class="dropdown-item" runat="server" Text="Favourite"></asp:LinkButton>
-                         <asp:LinkButton ID="LinkButtonCart" class="dropdown-item" runat="server" Text="View Cart"></asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonCart" class="dropdown-item" href="/Views/Purchase/Cart.aspx" runat="server" Text="View Cart"></asp:LinkButton>
                         <asp:LinkButton ID="LinkButtonIt" runat="server" class="dropdown-item" OnClick="LinkButtonIt_Click">Create itinerary</asp:LinkButton>
                          <asp:LinkButton ID="LinkButtonLogout" class="dropdown-item" runat="server" Text="Logout" OnClick="LinkButtonLogout_Click"></asp:LinkButton>
                     </div>

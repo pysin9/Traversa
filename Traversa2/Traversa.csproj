@@ -115,7 +115,11 @@
     <Content Include="obj\Debug\Traversa2.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Traversa2.dll" />
     <Content Include="obj\Debug\Traversa2.pdb" />
+    <Content Include="Stylesheet\cart.css" />
     <Content Include="Stylesheet\category.css" />
+    <Content Include="Stylesheet\checkout.css" />
+    <Content Include="Stylesheet\history.css" />
+    <Content Include="Stylesheet\map.css" />
     <Content Include="Stylesheet\PlaceForm.css" />
     <Content Include="uploads\bugis street.jpg" />
     <Content Include="uploads\chicken-satay-56a8a7643df78cf7729f6e56.jpg" />
@@ -134,6 +138,7 @@
     <Content Include="Views\Home\AdminHomepage.aspx" />
     <Content Include="Views\Home\Home.aspx" />
     <Content Include="Views\Home\UserHomepage.aspx" />
+    <Content Include="Views\Map\Map.aspx" />
     <Content Include="Views\MyItinenary\CreateItinerary.aspx" />
     <Content Include="Views\MyItinenary\EditItinerary.aspx" />
     <Content Include="Views\MyItinenary\TimeAndDate.aspx" />
@@ -149,6 +154,9 @@
     <Content Include="Views\Places\ViewAllPlaces.aspx" />
     <Content Include="Views\Places\ViewAllRec.aspx" />
     <Content Include="Views\Places\ViewOnePlace.aspx" />
+    <Content Include="Views\Purchase\Cart.aspx" />
+    <Content Include="Views\Purchase\Checkout.aspx" />
+    <Content Include="Views\Purchase\History.aspx" />
     <Content Include="Views\Users\ChangePassword.aspx" />
     <Content Include="Views\Users\Login.aspx" />
     <Content Include="Views\Users\Profile.aspx" />
@@ -264,6 +272,13 @@
     <Compile Include="Views\Home\UserHomepage.aspx.designer.cs">
       <DependentUpon>UserHomepage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Map\Map.aspx.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Map\Map.aspx.designer.cs">
+      <DependentUpon>Map.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\MyItinenary\CreateItinerary.aspx.cs">
       <DependentUpon>CreateItinerary.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -368,6 +383,27 @@
     </Compile>
     <Compile Include="Views\Places\ViewOnePlace.aspx.designer.cs">
       <DependentUpon>ViewOnePlace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Purchase\Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Purchase\Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Purchase\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Purchase\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Purchase\History.aspx.cs">
+      <DependentUpon>History.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Purchase\History.aspx.designer.cs">
+      <DependentUpon>History.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Users\ChangePassword.aspx.cs">
       <DependentUpon>ChangePassword.aspx</DependentUpon>
