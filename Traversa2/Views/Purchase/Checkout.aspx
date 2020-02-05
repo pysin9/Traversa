@@ -9,7 +9,7 @@
     </div>
     <br />
     <div class="card-body text-center">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" HorizontalAlign="Center" Height="250px" Width="1000px">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" HorizontalAlign="Center" Height="250px" Width="1000px" OnRowDataBound="GridView1_RowDataBound">
             <Columns>
                 <asp:BoundField DataField="aid" HeaderText="Activity ID" />
                 <asp:BoundField DataField="aname" HeaderText="Activity Name" />
@@ -27,6 +27,7 @@
             <SortedDescendingHeaderStyle BackColor="#00547E" />
         </asp:GridView>
         <br />
+        <asp:Label ID="lbl_TotalAmt" runat="server" Text="Label"></asp:Label>
         <br />
         <h6>You May Also Like</h6>
         <div>

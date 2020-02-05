@@ -12,6 +12,7 @@ namespace Traversa2.Views.Purchase
 {
     public partial class Checkout : System.Web.UI.Page
     {
+        double totalAmt = 0;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack == false) // means displaying the page for first time
@@ -41,6 +42,18 @@ namespace Traversa2.Views.Purchase
         protected void btnPlaceOrder_Click(object sender, EventArgs e)
         {
             Response.Redirect("History.aspx");
+        }
+
+        protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                string amtS = e.Row.Cells[2].Text;
+                totalAmt += Convert.ToDouble(amtS);
+                lbl_TotalAmt.Text = totalAmt.ToString();
+
+            }
+
         }
     }
 }
