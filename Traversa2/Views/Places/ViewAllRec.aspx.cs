@@ -39,5 +39,13 @@ namespace Traversa2.Views.Places
             GVRecs.DataSource = recList;
             GVRecs.DataBind();
         }
+
+        protected void GVRecs_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            GridViewRow row = GVRecs.SelectedRow;
+            Session["PName"] = row.Cells[1].Text.ToString();
+            String test = Session["PName"].ToString();
+            Response.Redirect("AddPlace.aspx");
+        }
     }
 }

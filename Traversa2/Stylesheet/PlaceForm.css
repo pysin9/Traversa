@@ -15,3 +15,8 @@ label {
     background-color: forestgreen;
     color: white;
 }
+
+.btnCancel {
+    background-color: red;
+    color: white;
+}

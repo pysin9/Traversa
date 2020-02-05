@@ -16,10 +16,23 @@ namespace Traversa2.BLL
 
         public int PlId { get; set; }
         public double AvgRating { get; set; }
+        public String CatName { get; set; }
 
         public Place()
         {
 
+        }
+
+        public Place(int plid, string pname, string pdesc, string plocation, int catid, string imagepath, double avgrating, string catname)
+        {
+            this.PName = pname;
+            this.PDesc = pdesc;
+            this.PLocation = plocation;
+            this.CatId = catid;
+            this.ImagePath = imagepath;
+            this.PlId = plid;
+            this.AvgRating = avgrating;
+            this.CatName = catname;
         }
 
         public Place(int plid, string pname, string pdesc, string plocation, int catid, string imagepath, double avgrating)

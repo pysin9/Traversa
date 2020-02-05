@@ -12,7 +12,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
         <div id="divider">
-        <label id="lbl">All Recommendations</label>
+        <label id="lbl">All Places</label>
         <br>
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
         <asp:GridView ID="GVPlace" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" OnRowDeleting="GVPlace_RowDeleting" DataKeyNames="PlId" OnSelectedIndexChanged="GVPlace_SelectedIndexChanged">
@@ -25,7 +25,7 @@
                     <ControlStyle Height="100px" Width="100px" />
                 </asp:ImageField>
                 <asp:BoundField HeaderText="Average Rating" DataField="AvgRating" ReadOnly="True" />
-                <asp:BoundField HeaderText="Category" DataField="CatId" ReadOnly="True" />
+                <asp:BoundField HeaderText="Category" DataField="CatName" ReadOnly="True" />
                 <asp:CommandField SelectText="Edit" ShowSelectButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>

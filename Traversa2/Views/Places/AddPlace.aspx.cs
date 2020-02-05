@@ -15,6 +15,11 @@ namespace Traversa2.Views.Places
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["PName"] != null)
+            {
+                Pname.Text = Session["PName"].ToString();
+                Session["PName"] = "";
+            }
             if (!IsPostBack)
             {
                 CatergoriesID cc = new CatergoriesID();
@@ -69,6 +74,11 @@ namespace Traversa2.Views.Places
                 lblMsg.Text = "An error occured while adding, try again.";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
             }
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("ViewAllPlaces.aspx");
         }
     }
 }

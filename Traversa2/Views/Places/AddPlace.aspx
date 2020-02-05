@@ -47,7 +47,7 @@
                     </div>
                     <asp:Label ID="imgName" runat="server" Text="" CssClass="col-lg-5"></asp:Label>
                 </div>
-                    
+                    <asp:Button ID="btnCancel" class="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" CausesValidation="False" />
                     <asp:Button ID="btnSave" class="btnSave" Text="Save" runat="server" OnClick="btnSave_Click"/>
 			 </form>
       </div> <!-- end panel-body -->

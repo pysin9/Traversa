@@ -58,6 +58,7 @@
                         <asp:Label ID="Label2" runat="server" Text="" CssClass="col-lg-3"></asp:Label>
                     </div>
                 </div>
+                    <asp:Button ID="btnCancel" class="btnCancel" runat="server" Text="Cancel" OnClick="btnCancel_Click" CausesValidation="False" />
                     <asp:Button ID="btnSave" class="btnSave" Text="Save" runat="server" OnClick="btnSave_Click"/>
 			 </form>
       </div> <!-- end panel-body -->

@@ -59,7 +59,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            String sqlstmt = "SELECT * FROM Place";
+            String sqlstmt = "SELECT PName, PDesc, Location, Image, PlaceId, AvgRating, Place.CatId, CatName FROM Place INNER JOIN Category ON Place.CatId = Category.CatId";
 
             SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
 
@@ -77,6 +77,7 @@ namespace Traversa2.DAL
             {
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
+                    string catname = row["CatName"].ToString();
                     int plid = Convert.ToInt32(row["PlaceId"]);
                     string pname = row["PName"].ToString();
                     string pdesc = row["PDesc"].ToString();
@@ -85,7 +86,7 @@ namespace Traversa2.DAL
                     double avgrate = Convert.ToDouble(row["AvgRating"]);
                     int catid = Convert.ToInt32(row["CatId"]);
 
-                    Place objRate = new Place(plid, pname, pdesc, ploca, catid, image, avgrate);
+                    Place objRate = new Place(plid, pname, pdesc, ploca, catid, image, avgrate, catname);
                     plList.Add(objRate);
                 }
             }
