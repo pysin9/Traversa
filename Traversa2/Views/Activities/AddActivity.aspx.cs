@@ -32,10 +32,10 @@ namespace Traversa2.Views.Activities
 
         protected void Exit_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("HostView.aspx");
         }
 
-        protected void Save_Click(object sender, EventArgs e)
+        protected void Submit_Click(object sender, EventArgs e)
         {
             string name = AName.Text;
             string desc = ADesc.Text;
@@ -46,6 +46,14 @@ namespace Traversa2.Views.Activities
             string fileName = Path.GetFileName(FileUpload.PostedFile.FileName);
             string filePath = "~/uploads/" + fileName;
 
+            string ppl = APeople.Text;
+            string cost = APrice.Text;
+            string pvditem = AProvided.Text;
+            string bringitem = ABring.Text;
+
+
+
+
             imgName.Text = fileName.ToString();
 
             if (!Directory.Exists(folder))
@@ -55,24 +63,46 @@ namespace Traversa2.Views.Activities
             }
             FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
 
-            Activity ac = new Activity(name, desc, loca, cat, filePath);
+            Activity ac = new Activity(name, desc, loca, cat, filePath, ppl, cost, pvditem, bringitem);
 
             int result = ac.AddActivity();
             if (result == 1)
             {
                 LblMsg.Text = "Activity successfully added!";
+                Response.Redirect("HostView.aspx");
                 LblMsg.ForeColor = System.Drawing.Color.Green;
                 AName.Text = "";
                 ADesc.Text = "";
                 ALocation.Text = "";
                 category.ClearSelection();
                 imgName.Text = "";
+
+                APeople.Text = "";
+                APrice.Text = "";
+                AProvided.Text = "";
+                ABring.Text = "";
             }
             else
             {
                 LblMsg.Text = "An error occured while adding, try again.";
                 LblMsg.ForeColor = System.Drawing.Color.Red;
             }
+
+        }
+
+        protected void CheckBoxNothing_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBoxSomething.Enabled = false;
+            //TextAreaProvided.ReadOnly = true;
+        }
+
+        protected void ABring_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ABring_TextChanged1(object sender, EventArgs e)
+        {
 
         }
     }

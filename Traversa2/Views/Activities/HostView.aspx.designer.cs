@@ -7,11 +7,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Traversa2.Views.Activities {
-    
-    
-    public partial class ViewAllActivities {
-        
+namespace Traversa2.Views.Activities
+{
+
+
+    public partial class HostView
+    {
+
         /// <summary>
         /// lblMsg control.
         /// </summary>
@@ -20,14 +22,23 @@ namespace Traversa2.Views.Activities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblMsg;
-        
+
         /// <summary>
-        /// GridView1 control.
+        /// btnAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+
+        /// <summary>
+        /// GVActivity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GVActivity;
     }
 }

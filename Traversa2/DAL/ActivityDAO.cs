@@ -16,7 +16,8 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "INSERT INTO Activity (ActName, ActDesc, Location, CatId, Image) VALUES (@paraAName,@paraADesc, @paraALocation, @paraCatid, @paraimage)";
+            string sqlStmt = "INSERT INTO Activity (ActName, ActDesc, Location, CatId, Image, ActPpl, ActPrice, ActProvided, ActToBring) VALUES (@paraAName,@paraADesc, @paraALocation, @paraCatid, @paraimage," +
+                " @paraAPeople, @paraAPrice, @paraAProvided, @paraABring)";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
@@ -26,6 +27,10 @@ namespace Traversa2.DAL
             sqlCmd.Parameters.AddWithValue("@paraALocation", ac.ALocation);
             sqlCmd.Parameters.AddWithValue("@paraCatid", ac.CatId);
             sqlCmd.Parameters.AddWithValue("@paraimage", ac.ImagePath);
+            sqlCmd.Parameters.AddWithValue("@paraAPeople", ac.APeople);
+            sqlCmd.Parameters.AddWithValue("@paraAPrice", ac.APrice);
+            sqlCmd.Parameters.AddWithValue("@paraAProvided", ac.AProvided);
+            sqlCmd.Parameters.AddWithValue("@paraABring", ac.ABring);
 
             myConn.Open();
             result = sqlCmd.ExecuteNonQuery();
@@ -83,8 +88,12 @@ namespace Traversa2.DAL
                     string aloca = row["Location"].ToString();
                     string image = row["Image"].ToString();
                     int catid = Convert.ToInt32(row["CatId"]);
+                    string appl = row["ActPpl"].ToString();
+                    string acost = row["ActPrice"].ToString();
+                    string apvditem = row["ActProvided"].ToString();
+                    string abringitem = row["ActToBring"].ToString();
 
-                    Activity objRate = new Activity(acid, aname, adesc, aloca, catid, image);
+                    Activity objRate = new Activity(acid, aname, adesc, aloca, catid, image, appl, acost, apvditem, abringitem);
                     acList.Add(objRate);
                 }
             }
@@ -114,9 +123,13 @@ namespace Traversa2.DAL
                 string location = row["Location"].ToString();
                 string image = row["Image"].ToString();
                 int catid = Convert.ToInt32(row["CatId"].ToString());
+                string appl = row["ActPpl"].ToString();
+                string acost = row["ActPrice"].ToString();
+                string apvditem = row["ActProvided"].ToString();
+                string abringitem = row["ActToBring"].ToString();
 
 
-                activity = new Activity(aname, adesc, location, catid, image);
+                activity = new Activity(aname, adesc, location, catid, image, appl, acost, apvditem, abringitem);
 
 
             }
@@ -128,7 +141,8 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "UPDATE Activity SET ActName = @paraaname, ActDesc = @paraadesc, Location = @paraloca, CatId = @paracatid, Image = @paraimage where ActId =  @paraacid";
+            string sqlStmt = "UPDATE Activity SET ActName = @paraaname, ActDesc = @paraadesc, Location = @paraloca, CatId = @paracatid, Image = @paraimage, " +
+                "ActPpl = @paraappl, ActPrice = @paraacost, ActProvided = @paraapvditem, ActToBring = @paraabringitem where ActId =  @paraacid";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
@@ -142,6 +156,11 @@ namespace Traversa2.DAL
             sqlCmd.Parameters.AddWithValue("@paraloca", ac.ALocation);
             sqlCmd.Parameters.AddWithValue("@paracatid", ac.CatId);
             sqlCmd.Parameters.AddWithValue("@paraimage", ac.ImagePath);
+            sqlCmd.Parameters.AddWithValue("@paraappl", ac.APeople);
+            sqlCmd.Parameters.AddWithValue("@paraacost", ac.APrice);
+            sqlCmd.Parameters.AddWithValue("@parapvditem", ac.AProvided);
+            sqlCmd.Parameters.AddWithValue("@paraabringitem", ac.ABring);
+
 
             myConn.Open();
             result = sqlCmd.ExecuteNonQuery();

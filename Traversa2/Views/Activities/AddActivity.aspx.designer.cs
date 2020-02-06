@@ -31,6 +31,15 @@ namespace Traversa2.Views.Activities {
         protected global::System.Web.UI.WebControls.TextBox AName;
         
         /// <summary>
+        /// FVAName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVAName;
+        
+        /// <summary>
         /// ADesc control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace Traversa2.Views.Activities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ADesc;
+        
+        /// <summary>
+        /// FVADesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVADesc;
         
         /// <summary>
         /// ALocation control.
@@ -49,6 +67,15 @@ namespace Traversa2.Views.Activities {
         protected global::System.Web.UI.WebControls.TextBox ALocation;
         
         /// <summary>
+        /// FVALocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVALocation;
+        
+        /// <summary>
         /// category control.
         /// </summary>
         /// <remarks>
@@ -58,31 +85,13 @@ namespace Traversa2.Views.Activities {
         protected global::System.Web.UI.WebControls.DropDownList category;
         
         /// <summary>
-        /// FileUpload control.
+        /// FVCategory control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
-        
-        /// <summary>
-        /// RequiredFieldValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
-        
-        /// <summary>
-        /// imgName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label imgName;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVCategory;
         
         /// <summary>
         /// APeople control.
@@ -94,22 +103,13 @@ namespace Traversa2.Views.Activities {
         protected global::System.Web.UI.WebControls.TextBox APeople;
         
         /// <summary>
-        /// ALanguage control.
+        /// FVPpl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ALanguage;
-        
-        /// <summary>
-        /// AOthers control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AOthers;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVPpl;
         
         /// <summary>
         /// APrice control.
@@ -121,22 +121,58 @@ namespace Traversa2.Views.Activities {
         protected global::System.Web.UI.WebControls.TextBox APrice;
         
         /// <summary>
-        /// DateFrom control.
+        /// FVPrice control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DateFrom;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVPrice;
         
         /// <summary>
-        /// DateTo control.
+        /// ADate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DateTo;
+        protected global::System.Web.UI.WebControls.TextBox ADate;
+        
+        /// <summary>
+        /// FVDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVDate;
+        
+        /// <summary>
+        /// FileUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUpload;
+        
+        /// <summary>
+        /// FVImage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVImage;
+        
+        /// <summary>
+        /// imgName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label imgName;
         
         /// <summary>
         /// CheckBoxNothing control.
@@ -175,6 +211,24 @@ namespace Traversa2.Views.Activities {
         protected global::System.Web.UI.WebControls.Label Something;
         
         /// <summary>
+        /// AProvided control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox AProvided;
+        
+        /// <summary>
+        /// RequiredFieldValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// NothingToBring control.
         /// </summary>
         /// <remarks>
@@ -209,6 +263,24 @@ namespace Traversa2.Views.Activities {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// ABring control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ABring;
+        
+        /// <summary>
+        /// RequiredFieldValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// Save control.
