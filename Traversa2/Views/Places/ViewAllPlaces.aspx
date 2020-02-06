@@ -26,6 +26,7 @@
                 </asp:ImageField>
                 <asp:BoundField HeaderText="Average Rating" DataField="AvgRating" ReadOnly="True" />
                 <asp:BoundField HeaderText="Category" DataField="CatName" ReadOnly="True" />
+                <asp:BoundField DataField="Region" HeaderText="Region" />
                 <asp:CommandField SelectText="Edit" ShowSelectButton="True" />
                 <asp:CommandField ShowDeleteButton="True" />
             </Columns>

@@ -41,6 +41,7 @@ namespace Traversa2.Views.Places
             string desc = PDesc.Text;
             string loca = PLocation.Text;
             int cat = int.Parse(category.SelectedItem.Value);
+            string reg = region.SelectedItem.Value;
 
             var folder = Server.MapPath("~/uploads");
             string fileName = Path.GetFileName(FileUpload.PostedFile.FileName);
@@ -55,7 +56,7 @@ namespace Traversa2.Views.Places
             }
             FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
 
-            Place pl = new Place(name, desc, loca, cat, filePath);
+            Place pl = new Place(name, desc, loca, cat, filePath, reg);
                     
             int result = pl.AddPlace();
             if (result == 1)
@@ -67,6 +68,7 @@ namespace Traversa2.Views.Places
                 PLocation.Text = "";
                 category.ClearSelection();
                 imgName.Text = "";
+                region.ClearSelection();
                 Response.Redirect("ViewAllPlaces.aspx");
             }
             else

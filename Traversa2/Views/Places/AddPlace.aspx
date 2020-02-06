@@ -41,6 +41,20 @@
                 </div>
                 <div class="form-group">
                     <div class="row justify-content-center">
+              	        <label class="col-lg-3 control-label">Region:</label>
+                		<asp:DropDownList ID="region" runat="server" CssClass="col-lg-5">
+                            <asp:ListItem Value="0">--Select--</asp:ListItem>
+                            <asp:ListItem>North</asp:ListItem>
+                            <asp:ListItem>South</asp:ListItem>
+                            <asp:ListItem>East</asp:ListItem>
+                            <asp:ListItem>West</asp:ListItem>
+                            <asp:ListItem>Central</asp:ListItem>
+                        </asp:DropDownList>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please select a Region!" InitialValue="0" ControlToValidate="category" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row justify-content-center">
                         <label class="col-lg-3 control-label">Image:</label>
                         <asp:FileUpload ID="FileUpload" runat="server" CssClass="col-lg-5"/>          
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="No image has been selected!" ControlToValidate="FileUpload" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>

@@ -28,14 +28,20 @@
         </tr>
         <tr>
             <td class="auto-style1">
-                <asp:Image ID="image" runat="server" style="width:200px; height:200px; display:block; margin-left:auto; margin-right:auto;"/>
+                <asp:Image ID="image" runat="server" style="width:230px; height:230px; display:block; margin-left:auto; margin-right:auto;"/>
             </td>
             <td>
                 <asp:Label ID="Label1" runat="server" Text="Address(es): " style="font-size:21px;"></asp:Label>
                 <asp:Label ID="location" runat="server" Text="" style="font-size:21px;"></asp:Label>
                 <br />
+                <asp:Label ID="Label11" runat="server" Text="Region: " style="font-size:21px;"></asp:Label>
+                <asp:Label ID="region" runat="server" Text="" style="font-size:21px;"></asp:Label>
+                <br />
                 <asp:Label ID="Label2" runat="server" Text="Avg Rating: " style="font-size:21px;"></asp:Label>
                 <asp:Label ID="avgrating" runat="server" Text="" style="font-size:21px;"></asp:Label>
+                <br />
+                <asp:Label ID="Label10" runat="server" Text="Category: "  style="font-size:21px;"></asp:Label>
+                <asp:Label ID="category" runat="server" Text=""  style="font-size:21px;"></asp:Label>
                 <br />
                 <br />
                 <asp:Label ID="desc" runat="server" Text="" style="font-size:21px;"></asp:Label>
@@ -70,7 +76,7 @@
             </td>
             <td>
                  <asp:RadioButtonList ID="rdRate" runat="server" RepeatDirection="Horizontal" Width="499px">
-                    <asp:ListItem Value="1">1</asp:ListItem>
+                    <asp:ListItem Value="1" Selected="True">1</asp:ListItem>
                     <asp:ListItem Value="2">2</asp:ListItem>
                     <asp:ListItem Value="3">3</asp:ListItem>
                     <asp:ListItem Value="4">4</asp:ListItem>

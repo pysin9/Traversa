@@ -16,8 +16,7 @@ namespace Traversa2.Views.Places
         {
             if (IsPostBack == false)
             {
-                int placeid = 5;
-                //Convert.ToInt32(Session["PlaceId"]);
+                int placeid = Convert.ToInt32(Session["PlaceId"]);
                 Place pl = new Place();
                 pl = pl.retrieveOne(placeid);
                 name.Text = pl.PName;
@@ -25,14 +24,15 @@ namespace Traversa2.Views.Places
                 location.Text = pl.PLocation;
                 avgrating.Text = pl.AvgRating.ToString();
                 image.ImageUrl = pl.ImagePath;
+                category.Text = pl.CatName;
+                region.Text = pl.Region;
 
                 Rating rte = new Rating();
                 ratelist = rte.GetAllWherePlaceId(placeid);
                 DataList1.DataSource = ratelist;
                 DataList1.DataBind();
 
-                //int userid = Convert.ToInt32(Session["UserId"]);
-                int userid = 3;
+                int userid = Convert.ToInt32(Session["UserId"]);
                 rte = rte.GetOneOnId(userid, placeid);
                 if (rte != null)
                 {
@@ -52,10 +52,8 @@ namespace Traversa2.Views.Places
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            //int userid = Convert.ToInt32(Session["UserId"]);
-            // int placeid = Convert.ToInt32(Session["place"]);
-            int userid = 3;
-            int placeid = 5;
+            int userid = Convert.ToInt32(Session["UserId"]);
+            int placeid = Convert.ToInt32(Session["place"]);
 
             int rating = Convert.ToInt32(rdRate.SelectedValue);
             string com = Request.Form["comment"];
@@ -70,6 +68,11 @@ namespace Traversa2.Views.Places
             {
                 rate.Update();
             }
+            Place pl = new Place();
+            pl = pl.getavgrating(placeid);
+            double avgrating = Convert.ToDouble(pl.AvgRating);
+            Place place = new Place();
+            place.updaterating(placeid, avgrating);
             Response.Redirect("ViewOnePlace.aspx");
         }
     }

@@ -37,6 +37,7 @@ namespace Traversa2.Views.Places
                         PDesc.Text = pl.PDesc;
                         PLocation.Text = pl.PLocation;
                         category.SelectedValue = pl.CatId.ToString();
+                        region.SelectedValue = pl.Region;
                         string img = pl.ImagePath;
                         img = img.Replace("~/uploads/", "");
                         imgName.Text = img;
@@ -60,6 +61,7 @@ namespace Traversa2.Views.Places
             string loca = PLocation.Text;
             int cat = int.Parse(category.SelectedItem.Value);
             int plid = Convert.ToInt32(Session["PlaceId"]);
+            string reg = region.SelectedItem.Value;
 
             if (FileUpload.HasFile)
             {
@@ -73,7 +75,7 @@ namespace Traversa2.Views.Places
                 }
                 FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
 
-                Place pl = new Place(name, desc, loca, cat, filePath);
+                Place pl = new Place(name, desc, loca, cat, filePath, reg);
 
                 int result = pl.updateOne(plid);
                 if (result == 1)
@@ -100,18 +102,18 @@ namespace Traversa2.Views.Places
                 }
                 FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
 
-                Place pl = new Place(name, desc, loca, cat, filePath);
+                Place pl = new Place(name, desc, loca, cat, filePath, reg);
 
                 int result = pl.updateOne(plid);
                 if (result == 1)
                 {
-                    lblMsg.Text = "Place successfully updated!";
+                    lblMsg.Text = "Place successfully added!";
                     lblMsg.ForeColor = System.Drawing.Color.Green;
                     Response.Redirect("ViewAllPlaces.aspx");
                 }
                 else
                 {
-                    lblMsg.Text = "An error occured while updating";
+                    lblMsg.Text = "An error occured while adding, try again.";
                     lblMsg.ForeColor = System.Drawing.Color.Red;
                 }
             }
