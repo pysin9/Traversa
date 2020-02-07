@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="CreateItinerary.aspx.cs" Inherits="Traversa2.Views.MyItinenary.CreateItinerary" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-     <style>
-        .b{
+        <style>
+       .b{
                 position: relative;
                 top: 83px;
         }
@@ -32,7 +32,7 @@
         .i{
            position: relative;
           
-           left: 93px;
+           left: 190px;
         }
         .h{
             position:relative;
@@ -41,17 +41,12 @@
         .g{
             text-transform:capitalize;
         }
-         .auto-style1 {
-             position: relative;
-             left: 93px;
-             top: 0px;
-         }
-    </style>
+         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <br />
-    <div class ="container">
-    <div class="container-fluid">
+     <br />
+    <div class="container">
+        <div class="container-fluid">
         <div class="row">
              <nav class="col-md-2 d-none d-md-block sidebar b" style="background-color: aliceblue">
                  <div class="sidebar-sticky">
@@ -71,41 +66,68 @@
                 </div>
             </nav>
             <div class="r">
-                <asp:Label ID="LabelNAme" class="r" runat="server" Text="Choose a Place for your itinerary: "></asp:Label>
                 <div class="u">
                     <input class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search">
                     <asp:Button ID="BtnSearch" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Search" />
+                    <br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="Label13"  runat="server" Text=""></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:Label ID="LabelNAme" class="r" runat="server" Text=""></asp:Label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <asp:Button ID="ButtonAdd" runat="server" Text="Add" OnClick="ButtonAdd_Click" />
                 </div>
             </div>
              <br />
              <br />
             <br />
-             <asp:Label ID="Label13"  runat="server" Text=""></asp:Label>
-            <asp:DataList ID="DataListPlaces" runat="server"  CssClass="auto-style1" OnItemCommand="DataListPlaces_ItemCommand">
+            <asp:DataList ID="DataListIt" runat="server"  CssClass="i" OnItemCommand="DataListIt_ItemCommand" >
                   <ItemTemplate>
-                      <div class="container i">
-                          <div class="card" style="width:600px; height: 13.3rem;">
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <asp:Image ID="ImagePlaces" runat="server" ImageUrl='<%# Bind("ImagePath", "{0}") %>' height="211px"  width="262.5px" />
-                                    </div>
-                                      <div class="col-md-8">
-                                          <div class="card-body h">
-                                             <asp:Label ID="Label1" CssClass="card-title g" runat="server" Text='<%# Bind("PName") %>' Font-Bold="True" Font-Size="Larger" ForeColor="Silver"></asp:Label>
-                                            <br />
-                                            <br />
-                                            <asp:Label ID="Label2" CssClass="card-text" runat="server" Text='<%# Bind("PDesc") %>'></asp:Label>
-                                            <br />
-                                              <br />
-                                              <br />
-                                            <div class="card-action">
-                                            <asp:LinkButton ID="LinkButtonPlaces" runat="server"   CommandName="choose" CommandArgument='<%# Eval("PlaceId") %>' >+</asp:LinkButton>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          <div class="row">
+                              <div class="col-lg-10">
+                                 <table style="width: 70%; border:2px solid grey" id="table">
+                                    <tr>
+                                        <td class="auto-style5">&nbsp;</td>
+                                        <td class="auto-style5">
+                                            <asp:Label ID="name" runat="server" Text='<%# Bind("PName") %>' style="font-weight:bold; font-size:20px; text-align:center;"></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <td class="auto-style5">
+                                        <asp:Image ID="image" runat="server" style="width:200px; height:200px; display:block; margin-left:auto; margin-right:auto;" ImageUrl='<%# Bind("ImagePath", "{0}") %>'/>
+                                    </td>
+                                    <td class="auto-style4">
+                                        <asp:Label ID="Label1" runat="server" Text="Descriptions: " style="font-size:18px;"></asp:Label>
+                                        <asp:Label ID="PlLabel" runat="server" Visible="false" Text='<%# Bind("PlId") %>'> </asp:Label>
+                                        
+                                        <br />
+                                        <asp:Label ID="desc" runat="server"  style="font-size:18px;" Text='<%# Bind("PDesc") %>'></asp:Label>
+                                        <br />
+                                        <asp:LinkButton ID="LinkButtonPlaces" runat="server" style="font-size:21px;" CommandName="viewPlace" CommandArgument='<%# Eval("PlId") %>'>See more details</asp:LinkButton>
+                                         
+                                    </td>
+                                        <td>
+                                             &nbsp;&nbsp;&nbsp;&nbsp;
+                                            <%-- <asp:CheckBox ID="CheckBoxAdd" class="r" runat="server" Width="100px" Height="100px"  />--%>
+                                            <asp:ImageButton ID="ImageButtonAd" runat="server" Width="50px" Height="50px" ImageUrl="~/images/plus--v1.png" CommandArgument='<%# Eval("PlId") %>' CommandName="AddPl"/>
+                                        </td>
+     
+                                   </tr>
+                                <tr>
+                                    <td class="auto-style5">
+                                        &nbsp;</td>
+                                    <td class="auto-style4">
+                                        &nbsp;</td>
+                                </tr>
+                                        <tr>
+                                    <td class="auto-style5">
+                                        &nbsp;</td>
+                                    <td class="auto-style4">
+                                        &nbsp;</td>
+                                </tr>
+                            </table>
+                               </div>
                           </div>
+                      
+                      
 
                                
                         
@@ -113,5 +135,6 @@
             </asp:DataList>
         </div>
     </div>
-        </div>
+    </div>
+    
 </asp:Content>

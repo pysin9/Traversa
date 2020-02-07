@@ -66,9 +66,9 @@ namespace Traversa2.Views.Places
                 int result = pl.Updateee(plid);
                 if (result == 1)
                 {
-                    LblErrorr.Text = "Place successfully added!";
+                    LblErrorr.Text = "Category successfully updated";
                     LblErrorr.ForeColor = System.Drawing.Color.Green;
-                    Response.Redirect("ViewAllPlaces.aspx");
+                    Response.Redirect("ViewAllCategory.aspx");
                 }
                 else
                 {
@@ -93,9 +93,9 @@ namespace Traversa2.Views.Places
                 int result = pl.Updateee(plid);
                 if (result == 1)
                 {
-                    LblErrorr.Text = "Place successfully updated!";
+                    LblErrorr.Text = "Category successfully updated!";
                     LblErrorr.ForeColor = System.Drawing.Color.Green;
-                    Response.Redirect("ViewAllPlaces.aspx");
+                    Response.Redirect("ViewAllCategory.aspx");
                 }
                 else
                 {

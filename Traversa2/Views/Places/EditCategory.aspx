@@ -5,7 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
      <div class="container ice">
-         <asp:Label ID="LblErrorr" runat="server" Text="Label"></asp:Label>
+         <asp:Label ID="LblErrorr" runat="server" ></asp:Label>
         <div class="card hot">
             <div class="card-title text-center  T">Create Category</div>
             <div class="card-body">
@@ -36,7 +36,7 @@
                                 </div>
                             </div>
                             <div class="text-center col-sm-5 col-md-5 col-lg-6 f">
-                                <asp:LinkButton ID="LinkButtonCreate" runat="server" CssClass="btn btn-success btn-round btn-lg btn-block" >Create</asp:LinkButton>
+                                <asp:LinkButton ID="LinkButtonCreate" runat="server" CssClass="btn btn-success btn-round btn-lg btn-block" OnClick="LinkButtonCreate_Click">Create</asp:LinkButton>
                             </div>
                   
                     

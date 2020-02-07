@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="Itinerary.aspx.cs" Inherits="Traversa2.Views.Places.Itinerary" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
-        .b{
+       .b{
                 position: relative;
                 top: 83px;
         }
@@ -15,7 +15,7 @@
             display: inline-block;
         }
          .u{
-            left: 669px;
+            left: 469px;
             position:relative;
             display:inline-block;
         }
@@ -31,8 +31,8 @@
         }
         .i{
            position: relative;
-           top: 39px;
-           right: 112px;
+          
+           left: 190px;
         }
         .h{
             position:relative;
@@ -40,6 +40,29 @@
         }
         .g{
             text-transform:capitalize;
+        }
+         .auto-style1 {
+             position: relative;
+             left: 93px;
+             top: 0px;
+         }
+        .auto-style2 {
+            width: 144%;
+        }
+        .auto-style3 {
+            position: relative;
+            left: 4px;
+            top: 4px;
+            width: 209px;
+        }
+        .auto-style6 {
+            width: 332px;
+        }
+        .auto-style7 {
+            position: relative;
+            left: 93px;
+            top: 0px;
+            width: 209px;
         }
     </style>
     
@@ -66,7 +89,7 @@
                 </div>
             </nav>
             <div class="r">
-                <asp:Label ID="LabelNAme" class="r" runat="server" Text="Choose a the places to go"></asp:Label>
+                <asp:Label ID="LabelNAme" class="r" runat="server" Text=""></asp:Label>
                 <div class="u">
                     <input class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search">
                     <asp:Button ID="BtnSearch" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Search" />
@@ -76,31 +99,48 @@
              <br />
             <br />
              <asp:Label ID="Label13"  runat="server" Text=""></asp:Label>
-            <asp:DataList ID="DataListPlaces" runat="server"  CssClass="i">
+            <asp:DataList ID="DataListPlaces" runat="server"  CssClass="i" OnItemCommand="DataListPlaces_ItemCommand">
                   <ItemTemplate>
-                      <div class="container i">
-                          <div class="card" style="width:600px; height: 13.3rem;">
-                                <div class="row no-gutters">
-                                    <div class="col-md-4">
-                                        <asp:Image ID="ImagePlaces" runat="server" ImageUrl='<%# Bind("ImagePath", "{0}") %>' height="211px"  width="262.5px" />
-                                    </div>
-                                      <div class="col-md-8">
-                                          <div class="card-body h">
-                                             <asp:Label ID="Label1" CssClass="card-title g" runat="server" Text='<%# Bind("PName") %>' Font-Bold="True" Font-Size="Larger" ForeColor="Silver"></asp:Label>
-                                            <br />
-                                            <br />
-                                            <asp:Label ID="Label2" CssClass="card-text" runat="server" Text='<%# Bind("PDesc") %>'></asp:Label>
-                                            <br />
-                                              <br />
-                                              <br />
-                                            <div class="card-action">
-                                            <asp:LinkButton ID="LinkButtonPlaces" runat="server" OnClick="LinkButtonPlaces_Click">See more details</asp:LinkButton>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                          <div class="row">
+                              <div class="col-lg-10">
+                                 <table style="width: 90%; border:2px solid grey" id="table">
+                                    <tr>
+                                        <td class="auto-style5">&nbsp;</td>
+                                        <td class="auto-style5">
+                                            <asp:Label ID="name" runat="server" Text='<%# Bind("PName") %>' style="font-weight:bold; font-size:30px; text-align:center;"></asp:Label>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    <td class="auto-style5">
+                                        <asp:Image ID="image" runat="server" style="width:200px; height:200px; display:block; margin-left:auto; margin-right:auto;" ImageUrl='<%# Bind("ImagePath", "{0}") %>'/>
+                                    </td>
+                                    <td class="auto-style4">
+                                        <asp:Label ID="Label1" runat="server" Text="Address(es): " style="font-size:21px;"></asp:Label>
+                                       
+                                        
+                                        <br />
+                                        <asp:Label ID="desc" runat="server"  style="font-size:21px;" Text='<%# Bind("PDesc") %>'></asp:Label>
+                                        <br />
+                                        <asp:LinkButton ID="LinkButtonPlaces" runat="server" style="font-size:21px;" CommandName="viewPlace" CommandArgument='<%# Eval("PlId") %>'>See more details</asp:LinkButton>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="auto-style5">
+                                        &nbsp;</td>
+                                    <td class="auto-style4">
+                                        &nbsp;</td>
+                                </tr>
+                                        <tr>
+                                    <td class="auto-style5">
+                                        &nbsp;</td>
+                                    <td class="auto-style4">
+                                        &nbsp;</td>
+                                </tr>
+                            </table>
+                               </div>
                           </div>
+                      
+                      
 
                                
                         

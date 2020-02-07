@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Traversa2.BLL;
+using System.Drawing;
 
 namespace Traversa2.Views.MyItinenary
 {
@@ -12,28 +13,41 @@ namespace Traversa2.Views.MyItinenary
     {
         public List<Place> plList;
         public List<CatergoriesID> categoryList;
+        public List<int> PPList = new List<int>();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(IsPostBack == false)
+            if (IsPostBack == false)
             {
-                Place pl = new Place();
-                plList = pl.GetAllPlaces();
 
-                DataListPlaces.DataSource = plList;
-                DataListPlaces.DataBind();
 
                 CatergoriesID cat = new CatergoriesID();
                 categoryList = cat.GetAll();
 
                 DataListCategory.DataSource = categoryList;
                 DataListCategory.DataBind();
+
+                if (Session["catid"] != null)
+                {
+                    int Catid = Convert.ToInt32(Session["catid"]);
+                    Label13.Text = Catid.ToString();
+
+                    Place pl = new Place();
+                    plList = pl.GetAllPlacesByCat(Catid);
+
+                    DataListIt.DataSource = plList;
+                    DataListIt.DataBind();
+                }
+                else
+                {
+                    Place pl = new Place();
+                    plList = pl.GetAllPlaces();
+
+                    DataListIt.DataSource = plList;
+                    DataListIt.DataBind();
+                }
             }
         }
 
-        protected void LinkButtonPlaces_Click(object sender, EventArgs e)
-        {
-
-        }
 
         protected void DataListCategory_ItemCommand(object source, DataListCommandEventArgs e)
         {
@@ -46,8 +60,8 @@ namespace Traversa2.Views.MyItinenary
                 Place pl = new Place();
                 plList = pl.GetAllPlacesByCat(CatId);
 
-                DataListPlaces.DataSource = plList;
-                DataListPlaces.DataBind();
+                DataListIt.DataSource = plList;
+                DataListIt.DataBind();
             }
         }
 
@@ -56,18 +70,52 @@ namespace Traversa2.Views.MyItinenary
             Place pl = new Place();
             plList = pl.GetAllPlaces();
 
-            DataListPlaces.DataSource = plList;
-            DataListPlaces.DataBind();
+            DataListIt.DataSource = plList;
+            DataListIt.DataBind();
         }
 
-        protected void DataListPlaces_ItemCommand(object source, DataListCommandEventArgs e)
+        protected void DataListIt_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            if (e.CommandName == "select")
+
+
+            if (e.CommandName == "viewPlace")
             {
-                int plId = Convert.ToInt32(e.CommandArgument);
-                Session["PlaceId"] = plId.ToString();
-                Response.Redirect("TimeAndDate.aspx");
+                int PlaceID = Convert.ToInt32(e.CommandArgument);
+
+
+                Session["PId"] = PlaceID.ToString();
+                Response.Redirect("/Views/Places/ViewOnePlace.aspx");
             }
+
+            if (e.CommandName == "AddPl")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+                if (PPList.Contains(id))
+                {
+                    Label13.Text = "You have already added to your itinerary";
+                }
+                else
+                {
+                    PPList.Add(id);
+                }
+
+
+
+                if (PPList.Count > 9)
+                {
+                    Label13.Text = "You can only choose up to 10 places";
+                }
+
+
+            }
+        }
+
+        protected void ButtonAdd_Click(object sender, EventArgs e)
+        {
+            Session["Listid"] = PPList;
+            Response.Redirect("ViewItinerary.aspx");
         }
     }
 }
+
+

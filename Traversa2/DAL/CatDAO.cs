@@ -101,13 +101,13 @@ namespace Traversa2.DAL
             if (rec_cnt == 1)
             {
                 DataRow row = ds.Tables[0].Rows[0];
-                string name= row["CatName"].ToString();
+                string name = row["CatName"].ToString();
                 string image = row["CatImage"].ToString();
-                
+
                 int catid = Convert.ToInt32(row["CatId"].ToString());
 
 
-                ca = new CatergoriesID(catid,name, image);
+                ca = new CatergoriesID(catid, name, image);
 
 
             }
@@ -139,12 +139,12 @@ namespace Traversa2.DAL
             {
                 foreach (DataRow row in ds.Tables[0].Rows)
                 {
-                   
+
                     string name = row["CatName"].ToString();
                     string image = row["CatImage"].ToString();
                     int catid = Convert.ToInt32(row["CatId"]);
 
-                    CatergoriesID cat = new CatergoriesID(catId, name, image); 
+                    CatergoriesID cat = new CatergoriesID(catId, name, image);
                     plList.Add(cat);
                 }
             }
@@ -156,7 +156,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "UPDATE Category SET CatName = @parapname, CatImage = @paraimage, where CatId =  @paraplid";
+            string sqlStmt = "UPDATE Category SET CatName = @parapname, CatImage = @paraimage WHERE CatId =  @paraplid";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
@@ -165,9 +165,9 @@ namespace Traversa2.DAL
             sqlCmd = new SqlCommand(sqlStmt.ToString(), myConn);
 
             sqlCmd.Parameters.AddWithValue("@paraplid", id);
-            sqlCmd.Parameters.AddWithValue("@parapname",ca.CatName);
+            sqlCmd.Parameters.AddWithValue("@parapname", ca.CatName);
             sqlCmd.Parameters.AddWithValue("@paraimage", ca.CatImage);
-           
+
 
             myConn.Open();
             result = sqlCmd.ExecuteNonQuery();

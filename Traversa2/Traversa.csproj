@@ -124,7 +124,9 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="Global.asax" />
     <Content Include="images\c.gif" />
+    <Content Include="images\calendar-512.png" />
     <Content Include="images\no_star.png" />
+    <Content Include="images\plus--v1.png" />
     <Content Include="images\thumbs.png" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
@@ -230,6 +232,13 @@
     </Compile>
     <Compile Include="navbarForAdmin.Master.designer.cs">
       <DependentUpon>navbarForAdmin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="navbarForHost.Master.cs">
+      <DependentUpon>navbarForHost.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="navbarForHost.Master.designer.cs">
+      <DependentUpon>navbarForHost.Master</DependentUpon>
     </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -518,6 +527,7 @@
     <Content Include="obj\Debug\Traversa2.csprojAssemblyReference.cache" />
     <Content Include="navbarForAdmin.Master" />
     <Content Include="navbarAfterLogin.Master" />
+    <Content Include="navbarForHost.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

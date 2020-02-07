@@ -35,7 +35,11 @@ namespace Traversa2.Views.Places
                 }
                 else
                 {
+                    Place pl = new Place();
+                    placeList = pl.GetAllPlaces();
 
+                    DataListPlaces.DataSource = placeList;
+                    DataListPlaces.DataBind();
                 }
 
 
@@ -44,15 +48,7 @@ namespace Traversa2.Views.Places
         }
 
 
-        protected void LinkButtonPlaces_Click(object sender, EventArgs e)
-        {
-            Place pl = new Place();
-            placeList = pl.GetAllPlaces();
 
-            Session["PId"] = pl.PlId;
-
-            Response.Redirect("ViewOnePlace.aspx");
-        }
 
         protected void DataListCategory_ItemCommand(object source, DataListCommandEventArgs e)
         {
@@ -77,6 +73,18 @@ namespace Traversa2.Views.Places
 
             DataListPlaces.DataSource = placeList;
             DataListPlaces.DataBind();
+        }
+
+        protected void DataListPlaces_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "viewPlace")
+            {
+                int PlaceID = Convert.ToInt32(e.CommandArgument);
+
+
+                Session["PlaceId"] = PlaceID.ToString();
+                Response.Redirect("ViewOnePlace.aspx");
+            }
         }
     }
 }
