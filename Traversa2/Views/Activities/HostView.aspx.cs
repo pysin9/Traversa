@@ -34,11 +34,11 @@ namespace Traversa2.Views.Activities
 
         protected void GVActivity_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            int id = Convert.ToInt32(GVActivity.DataKeys[e.RowIndex].Value);
 
+            int id = Convert.ToInt32(GVActivity.DataKeys[e.RowIndex].Value);
             Activity rec = new Activity();
             rec.deleteOne(id);
-            lblMsg.Text = "Successfully deleted!";
+            lblMsg.Text = "Activity successfully deleted!";
             lblMsg.ForeColor = System.Drawing.Color.Green;
             BindData();
         }

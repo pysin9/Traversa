@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Traversa2.BLL;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Traversa2.Views.Activities
 {
@@ -14,18 +17,41 @@ namespace Traversa2.Views.Activities
         {
             if (IsPostBack == false)
             {
-                int id = 4;
-
+                int actid = 7;
                 Activity ac = new Activity();
-                ac = ac.retrieveOne(id);
+                ac = ac.retrieveOne(actid);
+                name.Text = ac.AName;
+                desc.Text = ac.ADesc;
+                location.Text = ac.ALocation;
+                image.ImageUrl = ac.ImagePath;
 
-                Mon.Text = ac.APrice;
+                people.Text = ac.APeople;
+                price.Text = ac.APrice;
+
             }
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Cart.aspx");
+            void AddToCart(string aid, string qty)
+            {
+                string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+                SqlConnection myConn = new SqlConnection(DBConnect);
+
+
+                string sqlStmt = "INSERT INTO ShoppingCart (aidToBuy, qty) values (@aid, @qty)";
+
+                int result = 0;    // Execute NonQuery return an integer value
+                SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+                sqlCmd.Parameters.AddWithValue("@aid", aid);
+                sqlCmd.Parameters.AddWithValue("@qty", qty);
+                myConn.Open();
+                result = sqlCmd.ExecuteNonQuery();
+
+                myConn.Close();
+
+            }
         }
     }
 }
