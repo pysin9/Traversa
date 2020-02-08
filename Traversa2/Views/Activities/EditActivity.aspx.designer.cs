@@ -22,6 +22,15 @@ namespace Traversa2.Views.Activities {
         protected global::System.Web.UI.WebControls.Label LblMsg;
         
         /// <summary>
+        /// lblAcId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblAcId;
+        
+        /// <summary>
         /// AName control.
         /// </summary>
         /// <remarks>

@@ -29,9 +29,10 @@ namespace Traversa2.Views.Activities
                 category.DataBind();
                 if (Session["ActId"] != null)
                 {
-                    int id = Convert.ToInt32(Session["ActId"]);
+                    int activityid = Convert.ToInt32(Session["ActId"]);
+                    lblAcId.Text = activityid.ToString();
                     Activity ac = new Activity();
-                    ac = ac.retrieveOne(id);
+                    ac = ac.retrieveOne(activityid);
                     if (ac != null)
                     {
                         AName.Text = ac.AName;
