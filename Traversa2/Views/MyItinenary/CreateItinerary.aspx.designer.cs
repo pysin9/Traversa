@@ -31,6 +31,15 @@ namespace Traversa2.Views.MyItinenary {
         protected global::System.Web.UI.WebControls.DataList DataListCategory;
         
         /// <summary>
+        /// LabelNAme control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelNAme;
+        
+        /// <summary>
         /// BtnSearch control.
         /// </summary>
         /// <remarks>
@@ -49,30 +58,12 @@ namespace Traversa2.Views.MyItinenary {
         protected global::System.Web.UI.WebControls.Label Label13;
         
         /// <summary>
-        /// LabelNAme control.
+        /// DataListPlaces control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelNAme;
-        
-        /// <summary>
-        /// ButtonAdd control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ButtonAdd;
-        
-        /// <summary>
-        /// DataListIt control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataListIt;
+        protected global::System.Web.UI.WebControls.DataList DataListPlaces;
     }
 }

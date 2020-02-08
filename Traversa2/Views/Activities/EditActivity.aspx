@@ -1,9 +1,21 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="EditActivity.aspx.cs" Inherits="Traversa2.Views.Activities.EditActivity" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="AddActivity.aspx.cs" Inherits="Traversa2.Views.Activities.AddActivity" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/PlaceForm.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
-        
+        .auto-style1 {
+            position: relative;
+            width: 100%;
+            min-height: 1px;
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 16.666667%;
+            flex: 0 0 16.666667%;
+            max-width: 16.666667%;
+            left: 0px;
+            top: 0px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
         .auto-style2 {
             position: relative;
             width: 100%;
@@ -17,131 +29,183 @@
             padding-left: 15px;
             padding-right: 15px;
         }
-
-        </style>
+        .auto-style3 {
+            left: 0px;
+            top: 0px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container" id="container">
-        <div class=".col-lg-4 .col-lg-offset-2">
-            <div class="card-heading">Activity </div>
-            <asp:Label ID="LblMsg" runat="server"></asp:Label>
-            <div class="card-body">
-                <form>
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Title:</label>
-                            <asp:TextBox ID="AName" runat="server" placeholder="Enter title of activity" CssClass="col-lg-5"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVAName" runat="server" ErrorMessage="Title is empty!" ControlToValidate="AName" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+        <div class="container" id="container">
+  <div class=".col-lg-4 .col-lg-offset-2">
+      <div class="card-heading" > Activity </div>
+      <asp:Label ID="LblMsg" runat="server"></asp:Label>
+      <div class="card-body">
+		    <form>
+			    <div class="form-group">
+                    <div class="row justify-content-center">
+					    <label class="col-lg-3 control-label">Title:</label>
+                		    <asp:TextBox ID="AName" runat="server" placeholder="Enter title of activity" CssClass="col-lg-5"></asp:TextBox>
                     </div>
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Description:</label>
-                            <asp:TextBox ID="ADesc" runat="server" placeholder="Enter description of activity" CssClass="col-lg-5" TextMode="MultiLine"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVADesc" runat="server" ErrorMessage="Description is empty!" ControlToValidate="ADesc" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+			    </div>
+                <div class="form-group">
+                    <div class="row justify-content-center">
+					    <label class="col-lg-3 control-label">Description:</label>
+                        <asp:TextBox ID="ADesc" runat="server" placeholder="Enter description of activity" CssClass="col-lg-5"></asp:TextBox>
                     </div>
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Location:</label>
-                            <asp:TextBox ID="ALocation" runat="server" placeholder="Enter location where activity is held at" CssClass="col-lg-5"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVALocation" runat="server" ErrorMessage="Location is empty!" ControlToValidate="ALocation" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+			    </div>
+			    <div class="form-group">
+                    <div class="row justify-content-center">
+					    <label class="col-lg-3 control-label">Location:</label>
+                        <asp:TextBox ID="ALocation" runat="server" placeholder="Enter location where activity is held at" CssClass="col-lg-5"></asp:TextBox>
                     </div>
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Category:</label>
-                            <asp:DropDownList ID="category" runat="server" CssClass="col-lg-5">
-                                <asp:ListItem></asp:ListItem>
-                            </asp:DropDownList>
-                            <asp:RequiredFieldValidator ID="FVCategory" runat="server" ErrorMessage="Category is not selected!" ControlToValidate="category" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+			    </div>
+                <div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-3 control-label">Category:</label>
+                		<asp:DropDownList ID="category" runat="server" CssClass="col-lg-5">
+                            <asp:ListItem></asp:ListItem>
+                        </asp:DropDownList>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">No. of People:</label>
-                            <asp:TextBox ID="APeople" runat="server" placeholder="Enter number of people required for activity" CssClass="col-lg-5"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVPpl" runat="server" ErrorMessage="No. of people is empty!" ControlToValidate="APeople" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <label class="col-lg-3 control-label">Image:</label>
+                        <asp:FileUpload ID="FileUpload" runat="server" CssClass="auto-style1"/>          
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="No image has been selected!" ControlToValidate="FileUpload" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                     </div>
+                    <asp:Label ID="imgName" runat="server" Text="" CssClass="col-lg-5"></asp:Label>
+                </div>
+    
+			    <div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-3 control-label">No. of People:</label>
+                            <asp:TextBox ID="APeople" runat="server" placeholder="Enter the range of people required for activity" CssClass="col-lg-5"></asp:TextBox>
+                   </div>
+			    </div>
+                
 
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Price (S$):</label>
-                            <asp:TextBox ID="APrice" runat="server" placeholder="Enter the price per person" CssClass="col-lg-5"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVPrice" runat="server" ErrorMessage="Price is empty!" ControlToValidate="APrice" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <label class="col-lg-3 control-label">Language:</label>
+                        <asp:DropDownList ID="ALanguage" runat="server" CssClass="col-lg-5">
+                            <asp:ListItem></asp:ListItem>
+                            <asp:ListItem>English</asp:ListItem>
+                            <asp:ListItem>Chinese</asp:ListItem>
+                            <asp:ListItem>Malay</asp:ListItem>
+                            <asp:ListItem>Indian</asp:ListItem>
+                            <asp:ListItem>Korean</asp:ListItem>
+                            <asp:ListItem>Japanese</asp:ListItem>
+                            <asp:ListItem>Others</asp:ListItem>
+                        </asp:DropDownList>
                     </div>
-
-
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Date:</label>
-                            <asp:TextBox ID="ADate" runat="server" CssClass="col-lg-5" placeholder="Enter date of activity" TextMode="Date"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVDate" runat="server" ErrorMessage="No date has been selected!" ControlToValidate="ADate" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+                </div>
+                <!--<div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-3 control-label">Please Specify:</label>
+                        <asp:TextBox ID="AOthers" runat="server" CssClass="col-lg-5"></asp:TextBox>
                     </div>
-
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Image:</label>  
-                            <asp:FileUpload ID="FileUpload" runat="server" CssClass="auto-style2" />
-                            <asp:RequiredFieldValidator ID="FVImage" runat="server" ErrorMessage="No image has been selected!" ControlToValidate="FileUpload" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
-                        <asp:Label ID="imgName" runat="server" Text="" CssClass="col-lg-5"></asp:Label>
+                </div>-->
+                 <div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-3 control-label">Price:</label>
+                        <asp:TextBox ID="APrice" runat="server" placeholder="Enter the price per person" CssClass="col-lg-5"></asp:TextBox>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-11 control-label" id="labelP">What can you Provide:</label>
-                            
-                        </div>
+                <div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-8 control-label">Add Schedule:</label>
                     </div>
+                </div>
 
-                    <asp:RadioButtonList ID="RBtnProvided" runat="server" RepeatDirection="Vertical">
-                        <asp:ListItem Value="ProvidedNothing">Nothing</asp:ListItem>
-                        <asp:ListItem Value="ProvidedSomething">I wish to provide something.</asp:ListItem>
-                    </asp:RadioButtonList>
-
-
-                     <div class="form-group">
-                        <div class="row justify-content-center">
-                            <asp:TextBox ID="AProvided" runat="server" placeholder="List things you will be providing for this activity, eg. transportation, food, tickets, etc..." CssClass="col-lg-8" TextMode="MultiLine"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVProvided" runat="server" ErrorMessage="No items listed!" ControlToValidate="AProvided" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <label class="col-lg-2 control-label">Date From:</label>
+                        <asp:TextBox ID="DateFrom" runat="server" CssClass="auto-style1" TextMode="Date"></asp:TextBox>
+                        <label class="col-lg-2 control-label">&nbsp;&nbsp;&nbsp;&nbsp;Date To:  </label>
+                        <asp:TextBox ID="DateTo" runat="server" CssClass="col-lg-2" TextMode="Date"></asp:TextBox>
                     </div>
-                    
+                </div>
 
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-11 control-label" id="labelB">Things to Bring:</label>
-                        </div>
+                <!--<div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-8 control-label">Description:</label>
                     </div>
+                </div>
 
-                    <asp:RadioButtonList ID="RBtnBring" runat="server" RepeatDirection="Vertical">
-                        <asp:ListItem Value="BringNothing">Nothing</asp:ListItem>
-                        <asp:ListItem Value="BringSomething">I wish to provide something.</asp:ListItem>
-                    </asp:RadioButtonList>
-
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <asp:TextBox ID="ABring" runat="server" placeholder="List items/things participants are required to bring for this activity to commence." CssClass="col-lg-8" TextMode="MultiLine"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="No items listed!" ControlToValidate="ABring" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
+                 <div class="form-group">
+                    <div class="row justify-content-center">
+                        <textarea id="ADesc" class="col-lg-8 form-control" style="margin-left:35px;" rows="2" placeholder="Provide a detailed description of the activity you will be doing. If your activity includes bringing people to multiple places, describe those places as per your planned itinerary."></textarea>
                     </div>
+                </div>-->
 
-                    <br />
-                    <br />
-                    <br />
-                    <asp:Button ID="Save" runat="server" Text="Submit" class="btnSave" OnClick="Submit_Click" />
-                    <asp:Button ID="Exit" runat="server" Text="Exit" class="btnCancel" OnClick="Exit_Click" CausesValidation="False" />
-                </form>
-            </div>
-            <!-- end panel-body -->
-        </div>
-        <!-- end panel -->
-        <!-- end container-fluid -->
-    </div>
+                 <div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-8 control-label">What can you Provide:</label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <asp:CheckBox ID="CheckBoxNothing" runat="server" CssClass="" />
+                        <asp:Label ID="Nothing" runat="server" style="margin-right:605px;" CssClass="">Nothing</asp:Label>
+                    </div>
+                </div>
+
+                 
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <asp:CheckBox ID="CheckBoxSomething" runat="server" CssClass="" />
+                        <asp:Label ID="Something" runat="server" style="margin-right:463px;"  CssClass="">I wish to provide something.</asp:Label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <textarea id="TextAreaProvided" class="col-lg-8 form-control" style="margin-left:35px;" rows="1" placeholder="List things you will be providing for this activity, eg. transportation, food, tickets, etc..."></textarea>
+                    </div>
+                </div>
+               
+
+                <div class="form-group">
+                    <div class="row justify-content-center">
+              	        <label class="col-lg-8 control-label">Things to Bring:</label>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <asp:CheckBox ID="NothingToBring" runat="server" CssClass="" />
+                        <asp:Label ID="hgfhgf" runat="server" style="margin-right:605px;" CssClass="">Nothing</asp:Label>
+                    </div>
+                </div>
+                 
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <asp:CheckBox ID="BringSomething" runat="server" CssClass="" />
+                        <asp:Label ID="Label1" runat="server" style="margin-right:240px;" CssClass="">Participants are required to bring something for this activity.</asp:Label>
+                    </div>
+                </div>    
+
+                <div class="form-group">
+                    <div class="row justify-content-center">
+                        <textarea id="TextAreaThings" class="col-lg-8 form-control" style="margin-left:35px;" rows="1" placeholder="List items/things participants are required to bring for this activity to commence."></textarea>
+                    </div>
+                </div>
+
+                
+                
+                <br />
+                <br />
+                <br /> 
+                <asp:Button ID="Save" runat="server" Text="Save" class="btnSave" OnClick="Save_Click"/>
+                <asp:Button ID="Exit" runat="server" Text="Exit" class="btnSave" OnClick="Exit_Click" />
+			 </form>
+      </div> <!-- end panel-body -->
+    </div> <!-- end panel --> <!-- end container-fluid -->
+</div>
 </asp:Content>
-

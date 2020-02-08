@@ -19,6 +19,10 @@ namespace Traversa2.Views.Places
                 BindData();
                 lblMsg.Text = "";
             }
+            else
+            {
+                BindData();
+            }
 
         }
 

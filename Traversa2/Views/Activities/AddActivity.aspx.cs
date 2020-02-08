@@ -11,7 +11,6 @@ namespace Traversa2.Views.Activities
 {
     public partial class AddActivity : System.Web.UI.Page
     {
-
         public List<CatergoriesID> catList;
 
         protected void Page_Load(object sender, EventArgs e)
@@ -53,6 +52,8 @@ namespace Traversa2.Views.Activities
             string bringitem = ABring.Text;
 
 
+
+
             imgName.Text = fileName.ToString();
 
             if (!Directory.Exists(folder))
@@ -68,7 +69,7 @@ namespace Traversa2.Views.Activities
             if (result == 1)
             {
                 LblMsg.Text = "Activity successfully added!";
-
+                Response.Redirect("HostView.aspx");
                 LblMsg.ForeColor = System.Drawing.Color.Green;
                 AName.Text = "";
                 ADesc.Text = "";
@@ -80,8 +81,6 @@ namespace Traversa2.Views.Activities
                 APrice.Text = "";
                 AProvided.Text = "";
                 ABring.Text = "";
-
-                Response.Redirect("HostView.aspx");
             }
             else
             {
@@ -91,5 +90,20 @@ namespace Traversa2.Views.Activities
 
         }
 
+        protected void CheckBoxNothing_CheckedChanged(object sender, EventArgs e)
+        {
+            CheckBoxSomething.Enabled = false;
+            //TextAreaProvided.ReadOnly = true;
+        }
+
+        protected void ABring_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void ABring_TextChanged1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

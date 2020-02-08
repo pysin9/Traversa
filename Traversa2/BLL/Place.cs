@@ -109,5 +109,10 @@ namespace Traversa2.BLL
             PlaceDAO dao = new PlaceDAO();
             return dao.UpdateRating(id, rating);
         }
+        public List<Place> GetBySearch(string substring)
+        {
+            PlaceDAO dao = new PlaceDAO();
+            return dao.SearchFor(substring);
+        }
     }
 }

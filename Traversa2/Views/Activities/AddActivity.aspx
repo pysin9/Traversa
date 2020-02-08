@@ -61,14 +61,14 @@
                     <div class="form-group">
                         <div class="row justify-content-center">
                             <label class="col-lg-3 control-label">No. of People:</label>
-                            <asp:TextBox ID="APeople" runat="server" placeholder="Enter number of people required for activity" CssClass="col-lg-5"></asp:TextBox>
+                            <asp:TextBox ID="APeople" runat="server" placeholder="Enter range of people required for activity" CssClass="col-lg-5"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="FVPpl" runat="server" ErrorMessage="No. of people is empty!" ControlToValidate="APeople" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Price (S$):</label>
+                            <label class="col-lg-3 control-label">Price/1 per: (S$)</label>
                             <asp:TextBox ID="APrice" runat="server" placeholder="Enter the price per person" CssClass="col-lg-5"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="FVPrice" runat="server" ErrorMessage="Price is empty!" ControlToValidate="APrice" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                         </div>
@@ -99,16 +99,26 @@
                         </div>
                     </div>
 
-                    <asp:RadioButtonList ID="RBtnProvided" runat="server">
-                        <asp:ListItem Value="ProvidedNothing">Nothing</asp:ListItem>
-                        <asp:ListItem Value="ProvidedSomething">I wish to provide something.</asp:ListItem>
-                    </asp:RadioButtonList>
+                    <div class="form-group">
+                        <div class="row justify-content-center">
+                            <asp:CheckBox ID="CheckBoxNothing" runat="server" CssClass="" OnCheckedChanged="CheckBoxNothing_CheckedChanged" />
+                            <asp:Label ID="Nothing" runat="server" Style="margin-right: 880px;" CssClass="">Nothing</asp:Label>                        
+                        </div>
+                    </div>
 
+
+                    <div class="form-group">
+                        <div class="row justify-content-center">
+                            <asp:CheckBox ID="CheckBoxSomething" runat="server" CssClass=""  />
+                            <asp:Label ID="Something" runat="server" Style="margin-right: 740px;" CssClass="">I wish to provide something.</asp:Label>
+                           
+                        </div>
+                    </div>
 
                      <div class="form-group">
                         <div class="row justify-content-center">
                             <asp:TextBox ID="AProvided" runat="server" placeholder="List things you will be providing for this activity, eg. transportation, food, tickets, etc..." CssClass="col-lg-8" TextMode="MultiLine"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVProvided" runat="server" ErrorMessage="No items listed!" ControlToValidate="AProvided" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
+                            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="No items listed!" ControlToValidate="AProvided" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                         </div>
                     </div>
                     
@@ -119,14 +129,27 @@
                         </div>
                     </div>
 
-                    <asp:RadioButtonList ID="RBtnBring" runat="server" RepeatDirection="Vertical">
-                        <asp:ListItem Value="BringNothing">Nothing</asp:ListItem>
-                        <asp:ListItem Value="BringSomething">I wish to provide something.</asp:ListItem>
-                    </asp:RadioButtonList>
 
                     <div class="form-group">
                         <div class="row justify-content-center">
-                            <asp:TextBox ID="ABring" runat="server" placeholder="List items/things participants are required to bring for this activity to commence." CssClass="col-lg-8" TextMode="MultiLine"></asp:TextBox>
+                            <asp:CheckBox ID="NothingToBring" runat="server" CssClass="" />
+                            <asp:Label ID="hgfhgf" runat="server" Style="margin-right: 880px;" CssClass="">Nothing</asp:Label>
+                            
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row justify-content-center">
+                            <asp:CheckBox ID="BringSomething" runat="server" CssClass="" />
+                            <asp:Label ID="Label1" runat="server" Style="margin-right: 515px;" CssClass="">Participants are required to bring something for this activity.</asp:Label>
+                           
+                        </div>
+                    </div>
+                 
+
+                    <div class="form-group">
+                        <div class="row justify-content-center">
+                            <asp:TextBox ID="ABring" runat="server" placeholder="List items/things participants are required to bring for this activity to commence." CssClass="col-lg-8" TextMode="MultiLine" OnTextChanged="ABring_TextChanged1"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="No items listed!" ControlToValidate="ABring" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                         </div>
                     </div>
@@ -135,7 +158,7 @@
                     <br />
                     <br />
                     <asp:Button ID="Save" runat="server" Text="Submit" class="btnSave" OnClick="Submit_Click" />
-                    <asp:Button ID="Exit" runat="server" Text="Exit" class="btnCancel" OnClick="Exit_Click" CausesValidation="False" />
+                    <asp:Button ID="Exit" runat="server" Text="Exit" class="btnSave" OnClick="Exit_Click" />
                 </form>
             </div>
             <!-- end panel-body -->

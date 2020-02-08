@@ -85,11 +85,6 @@ namespace Traversa2.BLL
             return dao.UpdateActivity(this, id);
         }
 
-        public List<Activity> GetAllActivityByCategory(int catId)
-        {
-            ActivityDAO dao = new ActivityDAO();
-            return dao.SelectByCat(catId);
-        }
 
     }
 }

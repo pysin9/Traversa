@@ -47,9 +47,6 @@
       <HintPath>..\..\..\..\..\..\Users\Marp\Documents\ASP.NET AJAX Control Toolkit\Bin\AjaxControlToolkit.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -59,24 +56,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -124,9 +103,7 @@
     <Content Include="css\bootstrap.min.css" />
     <Content Include="Global.asax" />
     <Content Include="images\c.gif" />
-    <Content Include="images\calendar-512.png" />
     <Content Include="images\no_star.png" />
-    <Content Include="images\plus--v1.png" />
     <Content Include="images\thumbs.png" />
     <Content Include="js\bootstrap.bundle.js" />
     <Content Include="js\bootstrap.bundle.min.js" />
@@ -158,10 +135,6 @@
     <Content Include="Views\Activities\HostView.aspx" />
     <Content Include="Views\Activities\ViewActivity.aspx" />
     <Content Include="Views\Events\AddEvent.aspx" />
-    <Content Include="Views\Events\EditEvent.aspx" />
-    <Content Include="Views\Events\EventList.aspx" />
-    <Content Include="Views\Events\ViewAllEvents.aspx" />
-    <Content Include="Views\Events\ViewEvent.aspx" />
     <Content Include="Views\Home\AdminHomepage.aspx" />
     <Content Include="Views\Home\Home.aspx" />
     <Content Include="Views\Home\UserHomepage.aspx" />
@@ -233,13 +206,6 @@
     <Compile Include="navbarForAdmin.Master.designer.cs">
       <DependentUpon>navbarForAdmin.Master</DependentUpon>
     </Compile>
-    <Compile Include="navbarForHost.Master.cs">
-      <DependentUpon>navbarForHost.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="navbarForHost.Master.designer.cs">
-      <DependentUpon>navbarForHost.Master</DependentUpon>
-    </Compile>
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
@@ -284,34 +250,6 @@
     </Compile>
     <Compile Include="Views\Events\AddEvent.aspx.designer.cs">
       <DependentUpon>AddEvent.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Events\EditEvent.aspx.cs">
-      <DependentUpon>EditEvent.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Events\EditEvent.aspx.designer.cs">
-      <DependentUpon>EditEvent.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Events\EventList.aspx.cs">
-      <DependentUpon>EventList.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Events\EventList.aspx.designer.cs">
-      <DependentUpon>EventList.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Events\ViewAllEvents.aspx.cs">
-      <DependentUpon>ViewAllEvents.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Events\ViewAllEvents.aspx.designer.cs">
-      <DependentUpon>ViewAllEvents.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Events\ViewEvent.aspx.cs">
-      <DependentUpon>ViewEvent.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Views\Events\ViewEvent.aspx.designer.cs">
-      <DependentUpon>ViewEvent.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Home\AdminHomepage.aspx.cs">
       <DependentUpon>AdminHomepage.aspx</DependentUpon>
@@ -527,7 +465,6 @@
     <Content Include="obj\Debug\Traversa2.csprojAssemblyReference.cache" />
     <Content Include="navbarForAdmin.Master" />
     <Content Include="navbarAfterLogin.Master" />
-    <Content Include="navbarForHost.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
