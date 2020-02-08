@@ -69,7 +69,7 @@ namespace Traversa2.Views.Places
                 category.ClearSelection();
                 imgName.Text = "";
                 region.ClearSelection();
-                Response.Redirect("ViewAllPlaces.aspx");
+                Response.Redirect("~/Views/Places/ViewAllPlaces.aspx");
             }
             else
             {
@@ -80,7 +80,7 @@ namespace Traversa2.Views.Places
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewAllPlaces.aspx");
+            Response.Redirect("~/Views/Places/ViewAllPlaces.aspx");
         }
     }
 }

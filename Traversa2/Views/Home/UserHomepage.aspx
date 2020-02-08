@@ -29,7 +29,7 @@
          <div class=".col-lg-4 .col-lg-offset-2">
              <h5 class="r">Popular by Ratings: </h5>
     <br />
-    <asp:DataList ID="DatalistRating" runat="server" RepeatColumns="3" RepeatDirection="Horizontal">
+    <asp:DataList ID="DatalistRating" runat="server" RepeatColumns="3" RepeatDirection="Horizontal"  OnItemCommand="DataListCategory_ItemCommand">
         <ItemTemplate >
             <div class="card text-center r" style="width: 13rem; height: 15rem;">
                 <asp:Image ID="Image2" class="card-img-top" ImageUrl='<%# Bind("ImagePath", "{0}") %>' runat="server" height="165px"  width="206px"/>

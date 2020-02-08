@@ -45,7 +45,7 @@ namespace Traversa2.Views.Places
             GridViewRow row = GVRecs.SelectedRow;
             Session["PName"] = row.Cells[1].Text.ToString();
             String test = Session["PName"].ToString();
-            Response.Redirect("AddPlace.aspx");
+            Response.Redirect("~/Views/Places/AddPlace.aspx");
         }
     }
 }

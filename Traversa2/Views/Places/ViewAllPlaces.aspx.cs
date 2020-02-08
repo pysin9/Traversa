@@ -52,12 +52,12 @@ namespace Traversa2.Views.Places
         {
             GridViewRow row = GVPlace.SelectedRow;
             Session["PlaceId"] = row.Cells[0].Text;
-            Response.Redirect("EditPlace.aspx");
+            Response.Redirect("~/Views/Places/EditPlace.aspx");
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)
         {
-            Response.Redirect("AddPlace.aspx");
+            Response.Redirect("~/Views/Places/AddPlace.aspx");
         }
     }
 }

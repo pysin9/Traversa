@@ -22,5 +22,16 @@ namespace Traversa2.Views.Home
                 DatalistRating.DataBind();
             }
         }
+
+        protected void DataListCategory_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("Go"))
+            {
+                int placeid = Convert.ToInt32(e.CommandArgument);
+                Session["PlaceId"] = placeid.ToString();
+
+                Response.Redirect("~/Views/Places/ViewOnePlace.aspx");
+            }
+        }
     }
 }

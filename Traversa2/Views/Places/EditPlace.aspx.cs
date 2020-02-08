@@ -44,12 +44,12 @@ namespace Traversa2.Views.Places
                     }
                     else
                     {
-                        Response.Redirect("AddPlace.aspx");
+                        Response.Redirect("~/Views/Places/AddPlace.aspx");
                     }
                 }
                 else
                 {
-                    Response.Redirect("AddPlace.aspx");
+                    Response.Redirect("~/Views/Places/AddPlace.aspx");
                 }
             }
         }
@@ -109,7 +109,7 @@ namespace Traversa2.Views.Places
                 {
                     lblMsg.Text = "Place successfully added!";
                     lblMsg.ForeColor = System.Drawing.Color.Green;
-                    Response.Redirect("ViewAllPlaces.aspx");
+                    Response.Redirect("~/Views/Places/ViewAllPlaces.aspx");
                 }
                 else
                 {
@@ -121,7 +121,7 @@ namespace Traversa2.Views.Places
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
-            Response.Redirect("ViewAllPlaces.aspx");
+            Response.Redirect("~/Views/Places/ViewAllPlaces.aspx");
         }
     }
 }

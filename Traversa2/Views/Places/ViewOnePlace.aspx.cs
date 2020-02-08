@@ -33,11 +33,23 @@ namespace Traversa2.Views.Places
                 DataList1.DataBind();
 
                 int userid = Convert.ToInt32(Session["UserId"]);
-                rte = rte.GetOneOnId(userid, placeid);
-                if (rte != null)
+                int Num;
+                bool isnum = Int32.TryParse(userid.ToString(), out Num);
+                if (isnum)
                 {
-                    userrate.Text = rte.Rate.ToString();
-                    usercomment.Text = rte.Review.ToString();
+                    rte = rte.GetOneOnId(userid, placeid);
+                    if (rte != null)
+                    {
+                        userrate.Text = rte.Rate.ToString();
+                        usercomment.Text = rte.Review.ToString();
+                    }
+                    else
+                    {
+                        userrate.Visible = false;
+                        usercomment.Visible = false;
+                        Label7.Visible = false;
+                        Label9.Visible = false;
+                    }
                 }
                 else
                 {
@@ -45,6 +57,7 @@ namespace Traversa2.Views.Places
                     usercomment.Visible = false;
                     Label7.Visible = false;
                     Label9.Visible = false;
+                    thediv.Visible = false;
                 }
 
             }
@@ -73,7 +86,7 @@ namespace Traversa2.Views.Places
             double avgrating = Convert.ToDouble(pl.AvgRating);
             Place place = new Place();
             place.updaterating(placeid, avgrating);
-            Response.Redirect("ViewOnePlace.aspx");
+            Response.Redirect("~/Views/Places/ViewOnePlace.aspx");
         }
     }
 }

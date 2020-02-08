@@ -61,6 +61,7 @@
         </tr>
     </table>
     <hr/>
+    <div runat="server" id ="thediv">
     <div style="margin-left: auto; margin-right: auto; text-align: center;">
         <asp:Label ID="Label5" runat="server" Text="Write a review!" style="font-size:25px; text-align:center;"></asp:Label>
     </div>
@@ -93,6 +94,7 @@
             </td>
         </tr>
     </table>
+        </div>
     <div style="margin-left: auto; margin-right: auto; text-align: center;">
        <asp:Button ID="btnSubmit" runat="server" Text="Submit" style="background-color:green; color: white;" OnClick="btnSubmit_Click"/>
     </div>
