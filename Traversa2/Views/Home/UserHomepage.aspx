@@ -16,6 +16,10 @@
         .r{
             display: inline-block;
         }
+        .card-body
+        {
+            padding:0em;
+        }
     </style>
      <link href="../../Stylesheet/map.css" rel="stylesheet" />
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
