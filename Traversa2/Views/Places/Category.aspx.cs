@@ -40,5 +40,16 @@ namespace Traversa2.Views.Places
                 Response.Redirect("Itinerary.aspx");
             }
         }
+		
+		protected void BtnSearch_Click(object sender, EventArgs e)
+        {
+            string substring = TextBoxSearch.Text;
+            CatergoriesID cat = new CatergoriesID();
+            categoryList = cat.GetBySearch(substring);
+
+            DataListCategory.DataSource = categoryList;
+            DataListCategory.DataBind();
+
+        }
     }
 }

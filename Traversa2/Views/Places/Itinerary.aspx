@@ -68,7 +68,7 @@
             <div class="r">
                 <asp:Label ID="LabelNAme" class="r" runat="server" Text="Choose a the places to go"></asp:Label>
                 <div class="u">
-                    <input class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search">
+                    <asp:TextBox ID="TextBoxSearch" class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search" runat="server"></asp:TextBox>
                     <asp:Button ID="BtnSearch" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Search" />
                 </div>
             </div>
@@ -94,7 +94,7 @@
                                               <br />
                                               <br />
                                             <div class="card-action">
-                                            <asp:LinkButton ID="LinkButtonPlaces" runat="server" OnClick="LinkButtonPlaces_Click">See more details</asp:LinkButton>
+                                            <asp:Button ID="BtnSearch" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Search" OnClick="BtnSearch_Click" />
                                             </div>
                                         </div>
                                     </div>

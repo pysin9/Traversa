@@ -30,8 +30,8 @@
              <h5 class="r">List of Categories: </h5>
     <div class="u">
         
-        <input class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search">
-        <asp:Button ID="BtnSearch" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Search" />
+        <asp:TextBox ID="TextBoxSearch" class="form-control mr-sm-2 t" type="search" placeholder="Search" aria-label="Search" runat="server"></asp:TextBox>
+        <asp:Button ID="BtnSearch" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Search" OnClick="BtnSearch_Click" />
     </div>
     
     <br />

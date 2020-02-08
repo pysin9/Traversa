@@ -78,5 +78,15 @@ namespace Traversa2.Views.Places
             DataListPlaces.DataSource = placeList;
             DataListPlaces.DataBind();
         }
+		
+		protected void BtnSearch_Click(object sender, EventArgs e)
+        {
+            string substring = TextBoxSearch.Text;
+            Place pl = new Place();
+            placeList = pl.GetBySearch(substring);
+
+            DataListPlaces.DataSource = placeList;
+            DataListPlaces.DataBind();
+        }
     }
 }

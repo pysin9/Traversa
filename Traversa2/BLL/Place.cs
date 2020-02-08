@@ -114,5 +114,11 @@ namespace Traversa2.BLL
             PlaceDAO dao = new PlaceDAO();
             return dao.SearchFor(substring);
         }
+
+        public List<Place> GetTop3Rating()
+        {
+            PlaceDAO dao = new PlaceDAO();
+            return dao.gettoprating();
+        }
     }
 }

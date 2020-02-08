@@ -60,5 +60,11 @@ namespace Traversa2.BLL
             CatDAO dao = new CatDAO();
             return dao.getOne(id);
         }
+		
+		public List<CatergoriesID> GetBySearch(string substring)
+        {
+            CatDAO dao = new CatDAO();
+            return dao.SearchFor(substring);
+        }
     }
 }

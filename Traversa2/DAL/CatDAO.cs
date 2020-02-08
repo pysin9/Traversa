@@ -176,5 +176,41 @@ namespace Traversa2.DAL
 
             return result;
         }
+		
+		public List<CatergoriesID> SearchFor(string substring)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            String sqlstmt = "SELECT * FROM Category where CatName LIKE @query";
+
+            SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
+
+            da.SelectCommand.Parameters.AddWithValue("@query", "%" + substring + "%");
+
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            List<CatergoriesID> plList = new List<CatergoriesID>();
+
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            if (rec_cnt == 0)
+            {
+                plList = null;
+            }
+            else
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    int catid = Convert.ToInt32(row["CatId"]);
+                    string catname = row["CatName"].ToString();
+                    string catimage = row["CatImage"].ToString();
+
+                    CatergoriesID objRate = new CatergoriesID(catid, catname, catimage);
+                    plList.Add(objRate);
+                }
+            }
+            return plList;
+        }
     }
 }
