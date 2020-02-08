@@ -23,6 +23,10 @@
             display:inline-block;
           
         }
+        .T {
+            font-size: 40px;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+         }
     </style>
     <script>
 
@@ -31,8 +35,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <br />
-    <asp:Label ID="LabeID" runat="server" Text="" ></asp:Label>
-    <asp:Label ID="Labelerr" runat="server" Text=""></asp:Label>
+    <div class="text-center">
+        <asp:Label ID="Labelerr" runat="server" Text=""></asp:Label>
+    </div>
     <div class="container">
         <h5 class="r">My Itinerary: </h5>
         <div class="u">

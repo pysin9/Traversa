@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="nav navbar-nav ml-auto">
                   <li class="nav-item">
-                     <a class="nav-link ft" href="#">Home</a>
+                     <a class="nav-link ft" href="/Views/Home/UserHomepage.aspx">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link ft" href="/Views/Map/Map.aspx">Map</a>
@@ -43,7 +43,7 @@
                   
                  </li>
                   <li class="nav-item">
-                    <a class="nav-link ft" href="Views/Activities/ActivityList.aspx">Activity</a>
+                    <a class="nav-link ft" href="/Views/Activities/ActivityList.aspx">Activity</a>
                   </li>
                   <li class="nav-item">
                         <a class="nav-link ft" href="#">FAQ</a>

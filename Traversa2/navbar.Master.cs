@@ -21,7 +21,7 @@ namespace Traversa2
 
         protected void LinkButtonMap_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Map.aspx");
+            Response.Redirect("/Views/Map/Map.aspx");
         }
 
         protected void LinkButtonItinerary_Click(object sender, EventArgs e)
@@ -36,7 +36,7 @@ namespace Traversa2
 
         protected void LinkButtonEvent_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Views/Activities/ActivityList.aspx");
+            Response.Redirect("/Views/Activities/ActivityList.aspx");
         }
     }
 }

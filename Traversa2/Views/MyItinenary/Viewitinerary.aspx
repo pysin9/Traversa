@@ -44,48 +44,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
      <br />
-    <asp:Label ID="LabeID" runat="server" Text="" ></asp:Label>
-    <asp:Label ID="Labelerr" runat="server" Text=""></asp:Label>
+    <div class="text-center">
+        <asp:Label ID="Labelerr" runat="server" Text=""></asp:Label>
+    </div>
+    
     <div class="container">
         <h5 class="r">My Itinerary: </h5>
         <div class="u">
             <asp:LinkButton ID="LbtnCreate"  class="btn btn-info" runat="server" OnClick="LbtnCreate_Click">Create</asp:LinkButton>
-        </div>
-       
-        <%--<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">Create Itinerary</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                  
-                  <div class="container-fluid">
-                  <form>
-                      <div class="form-group">
-                        <asp:Label ID="LabelItin" runat="server" for="recipient-name" class="col-form-label" Text="Itinerary Name:"></asp:Label>
-                         <asp:TextBox ID="TBName" class="form-control" runat="server"  placeholder="Enter Itinerary name"></asp:TextBox>                           
-                      </div>
-                      <div class="form-group">
-                          <asp:Label ID="Label1" runat="server" class="col-form-label" Text="Add Places:"></asp:Label>
-                          <asp:LinkButton ID="LinkButtonAdd" runat="server" OnClick="LinkButtonAdd_Click">Add+</asp:LinkButton>
-                          <asp:Label ID="LabelPName" runat="server" Text="Label"></asp:Label>
-                      </div>
-                      
-                  </form>
-                </div>
-              </div>
-              <div class="modal-footer">
-                  <asp:Button ID="Button1" class="btn btn-secondary" data-dismiss="modal" runat="server" Text="Close" />
-                  <asp:LinkButton ID="LinkButtonCreate" class="btn btn-primary" runat="server" Text="Create" OnClick="LinkButtonCreate_Click"></asp:LinkButton>
-              </div>
-            </div>
-          </div>--%>
-       <%-- </div>--%>
-    
+        </div>   
     <br />
     
 
