@@ -10,7 +10,7 @@
 namespace Traversa2 {
     
     
-    public partial class navbarAfterLogin {
+    public partial class navbarHost {
         
         /// <summary>
         /// head control.
@@ -31,6 +31,15 @@ namespace Traversa2 {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// LinkButtonHost control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonHost;
+        
+        /// <summary>
         /// UsernameLBL control.
         /// </summary>
         /// <remarks>
@@ -40,13 +49,13 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.Label UsernameLBL;
         
         /// <summary>
-        /// LinkButtonProfile control.
+        /// LinkButtonPro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonProfile;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonPro;
         
         /// <summary>
         /// LinkButtonFav control.
@@ -67,22 +76,22 @@ namespace Traversa2 {
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonCart;
         
         /// <summary>
-        /// LinkButtonIt control.
+        /// LinkButtonit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonIt;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonit;
         
         /// <summary>
-        /// LinkButtonLogout control.
+        /// LinkButtonLog control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonLogout;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonLog;
         
         /// <summary>
         /// ContentPlaceHolder1 control.

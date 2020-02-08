@@ -4,21 +4,85 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Traversa2.BLL;
 
 namespace Traversa2.Views.MyItinenary
 {
     public partial class TimeAndDate : System.Web.UI.Page
     {
+        public List<Place> pll;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (IsPostBack == false)
+            {
+                //CalendarDate.Visible = false;
+                Place pl = new Place();
+                pll = pl.GetAllPlaces();
 
+                DDLPlaces.Items.Clear();
+                DDLPlaces.Items.Insert(0, new ListItem("--Select--", "0"));
+                DDLPlaces.AppendDataBoundItems = true;
+                DDLPlaces.DataTextField = "PName";
+                DDLPlaces.DataValueField = "PlId";
+                DDLPlaces.DataSource = pll;
+                DDLPlaces.DataBind();
+
+            }
         }
 
-        protected void CalendarIT_DayRender(object sender, DayRenderEventArgs e)
+        //protected void ImageButtonDate_Click(object sender, ImageClickEventArgs e)
+        //{
+        //    if (CalendarDate.Visible == false)
+        //    {
+        //        CalendarDate.Visible = true;
+        //    }
+        //    else
+        //    {
+        //        CalendarDate.Visible = false;
+        //    }
+        //}
+
+        //protected void CalendarDate_SelectionChanged(object sender, EventArgs e)
+        //{
+        //    TextBoxDate.Text = CalendarDate.SelectedDate.ToShortDateString();
+        //}
+
+        protected void btnCreate_Click(object sender, EventArgs e)
         {
-            if (e.Day.Date.CompareTo(DateTime.Today) < 0)
+            if (NameTB.Text == "")
             {
-                e.Day.IsSelectable = false;
+                Labelerr.Text = "Name is required";
+            }
+            if (DDLPlaces.SelectedIndex == -1)
+            {
+                Labelerr.Text = "You need to choose a place";
+            }
+            //if(TextBoxDate.Text == "")
+            //{
+            //    Labelerr.Text = "You need to choose a date";
+            //}
+            else
+            {
+                int placeid = int.Parse(DDLPlaces.SelectedItem.Value);
+                string name = NameTB.Text;
+                int userId = Convert.ToInt32(Session["UserID"].ToString());
+                /*string date = TextBoxDate.Text*/
+
+
+
+                Itinerary it = new Itinerary(placeid, name, userId);
+                int res = it.Addnew();
+                if (res == 1)
+                {
+                    Labelerr.Text = "Successfully created";
+                }
+                else
+                {
+                    Labelerr.Text = "Error";
+                }
+
+
+
             }
         }
     }

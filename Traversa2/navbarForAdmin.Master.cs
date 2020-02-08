@@ -50,7 +50,7 @@ namespace Traversa2
             Session.Remove("Username");
             Session.Remove("Email");
             Session.Remove("UserID");
-            Response.Redirect("/Views/Users/Login.aspx");
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('You have successfully log out');window.location ='/Views/Users/Login.aspx';", true);
         }
     }
 }

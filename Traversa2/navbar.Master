@@ -44,7 +44,7 @@
                     <asp:LinkButton ID="LinkButtonItinerary" CssClass="nav-link ft" Text="Itinerary" runat="server" OnClick="LinkButtonItinerary_Click"></asp:LinkButton>
                   </li>
                   <li class="nav-item">
-                    <asp:LinkButton ID="LinkButtonEvent" CssClass="nav-link ft" Text="Events" runat="server"></asp:LinkButton>
+                    <asp:LinkButton ID="LinkButtonEvent" CssClass="nav-link ft" Text="Events" runat="server" OnClick="LinkButtonEvent_Click"></asp:LinkButton>
                   </li>
                   <li class="nav-item">
                       <asp:LinkButton ID="LinkButtonFAQ" CssClass="nav-link ft" Text="FAQ" runat="server"></asp:LinkButton>

@@ -13,22 +13,31 @@ namespace Traversa2.Views.MyItinenary {
     public partial class Viewitinerary {
         
         /// <summary>
-        /// LinkButtonCreate control.
+        /// LabeID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonCreate;
+        protected global::System.Web.UI.WebControls.Label LabeID;
         
         /// <summary>
-        /// DataListCategory control.
+        /// Labelerr control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataListCategory;
+        protected global::System.Web.UI.WebControls.Label Labelerr;
+        
+        /// <summary>
+        /// LbtnCreate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LbtnCreate;
         
         /// <summary>
         /// LabelMessage control.

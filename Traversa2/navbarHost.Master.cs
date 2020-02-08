@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Traversa2
 {
-    public partial class navbarAfterLogin : System.Web.UI.MasterPage
+    public partial class navbarHost : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -21,23 +21,25 @@ namespace Traversa2
             }
         }
 
-        protected void LinkButtonProfile_Click(object sender, EventArgs e)
+      
+
+        protected void LinkButtonPro_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Views/Users/Profile.aspx");
         }
 
-        protected void LinkButtonLogout_Click(object sender, EventArgs e)
+        protected void LinkButtonit_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/MyItinenary/Viewitinerary.aspx");
+        }
+
+        protected void LinkButtonLog_Click(object sender, EventArgs e)
         {
             Session.Abandon();
             Session.Remove("Username");
             Session.Remove("Email");
             Session.Remove("UserID");
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('You have successfully log out');window.location ='/Views/Users/Login.aspx';", true);
-        }
-
-        protected void LinkButtonIt_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/Views/MyItinenary/Viewitinerary.aspx");
         }
     }
 }

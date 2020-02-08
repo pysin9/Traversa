@@ -1,10 +1,9 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="navbarAfterLogin.master.cs" Inherits="Traversa2.navbarAfterLogin" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="navbarHost.master.cs" Inherits="Traversa2.navbarHost" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-   
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -34,7 +33,7 @@
                      <a class="nav-link ft" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link ft" href="/Views/Map/Map.aspx">Map</a>
+                    <a class="nav-link ft" href="#">Map</a>
                   </li>
                   <li class="nav-item ">
                     <a class="nav-link ft" href="/Views/Places/Category.aspx" >
@@ -42,9 +41,15 @@
                     </a>
                   
                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link ft" href="Views/Activities/ActivityList.aspx">Activity</a>
-                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="Views/Activities/ActivityList.aspx" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Activity
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                       <asp:LinkButton ID="LinkButtonHost" class="dropdown-item" runat="server" Text="Host Experience" OnClick="LinkButtonEXP_Click" ></asp:LinkButton>
+                         
+                    </div>
+                 </li>
                   <li class="nav-item">
                         <a class="nav-link ft" href="#">FAQ</a>
                   </li>
@@ -53,29 +58,24 @@
                       <asp:Label ID="UsernameLBL" runat="server" Text=""></asp:Label>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <asp:LinkButton ID="LinkButtonProfile" class="dropdown-item" runat="server" Text="Profile" OnClick="LinkButtonProfile_Click"></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButtonPro" class="dropdown-item" runat="server" Text="Profile" OnClick="LinkButtonPro_Click"></asp:LinkButton>
                          <asp:LinkButton ID="LinkButtonFav" class="dropdown-item" runat="server" Text="Favourite"></asp:LinkButton>
-                         <asp:LinkButton ID="LinkButtonCart" class="dropdown-item" href="/Views/Purchase/Cart.aspx" runat="server" Text="View Cart"></asp:LinkButton>
-                        <asp:LinkButton ID="LinkButtonIt" runat="server" class="dropdown-item" OnClick="LinkButtonIt_Click">Create itinerary</asp:LinkButton>
-                         <asp:LinkButton ID="LinkButtonLogout" class="dropdown-item" runat="server" Text="Logout" OnClick="LinkButtonLogout_Click"></asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonCart" class="dropdown-item" runat="server" Text="View Cart"></asp:LinkButton>
+                        <asp:LinkButton ID="LinkButtonit" runat="server" class="dropdown-item" OnClick="LinkButtonit_Click">Create itinerary</asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonLog" class="dropdown-item" runat="server" Text="Logout" OnClick="LinkButtonLog_Click"></asp:LinkButton>
                     </div>
                  </li>
                 </ul>
               </div>
             </div>
            </nav>
-     
-            <div>
-                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            </div>
-            
-         
+        </div>
     </form>
-         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-   
-
 </body>
 </html>
