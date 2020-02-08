@@ -169,5 +169,51 @@ namespace Traversa2.DAL
 
             return result;
         }
+
+
+        public List<Activity> SelectByCat(int catId)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            String sqlstmt = "SELECT * FROM Activity where CatId = @paraID ";
+
+            SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
+
+            da.SelectCommand.Parameters.AddWithValue("@paraID", catId);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            List<Activity> acList = new List<Activity>();
+
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            if (rec_cnt == 0)
+            {
+                acList = null;
+            }
+            else
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    int acid = Convert.ToInt32(row["ActId"]);
+                    string aname = row["ActName"].ToString();
+                    string adesc = row["ActDesc"].ToString();
+                    string aloca = row["Location"].ToString();
+                    string image = row["Image"].ToString();
+                    int catid = Convert.ToInt32(row["CatId"]);
+                    string apeople = row["ActPpl"].ToString();
+                    string aprice = row["ActPrice"].ToString();
+                    string aprovided = row["ActProvided"].ToString();
+                    string abring = row["ActToBring"].ToString();
+
+                    Activity objRate = new Activity(acid, aname, adesc, aloca, catid, image, apeople, aprice, aprovided, abring );
+                    acList.Add(objRate);
+                }
+            }
+            return acList;
+        }
+
+      
     }
 }

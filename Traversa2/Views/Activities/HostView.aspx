@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarForAdmin.Master" AutoEventWireup="true" CodeBehind="HostView.aspx.cs" Inherits="Traversa2.Views.Activities.HostView" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="HostView.aspx.cs" Inherits="Traversa2.Views.Activities.HostView" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -8,10 +8,13 @@
         .t{
             font-weight: bold;
         }
+        #divider{
+            text-align:center;
+        }
     </style>
-
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <div id ="divider">
     <div class ="cold">
         <h1>Activity</h1>
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
@@ -30,7 +33,6 @@
                 <asp:BoundField HeaderText="Title" DataField="AName" />
                 <asp:BoundField HeaderText="Description" DataField="ADesc" />
                 <asp:BoundField HeaderText="Location" DataField="ALocation" />
-                <asp:BoundField HeaderText="Category" DataField="CatId" />
                 <asp:BoundField HeaderText="No. of Ppl" DataField="APeople"/>
                 <asp:BoundField HeaderText="Price" DataField="APrice"/>
                 
@@ -55,7 +57,8 @@
         </asp:GridView>
  
     </div>
-    
+    </div>
 </asp:Content>
+
 
 

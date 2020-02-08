@@ -2,12 +2,23 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
+
         .auto-style1 {
-            width: 315px;
-            height: 280px;
-            margin:100px 0 0 0;
-            border-radius: 30px;
+            width: 318px;
         }
+        
+        #table1{
+            margin-left:auto; 
+        }
+        #table2{
+            margin-right:auto;
+            margin-top: 100px;
+        }
+        .hr{
+            color:black;
+
+        }
+
         .icon-text{
             width: 260px;
             height: 36px; 
@@ -39,6 +50,28 @@
            
         }
 
+        .auto-style4 {
+            width: 717px;
+        }
+
+        .auto-style5 {
+            width: 71%;
+            height: 318px;
+        }
+        .auto-style6 {
+            width: 717px;
+            height: 72px;
+        }
+        
+        .auto-style7 {
+            width: 247px;
+            height: 297px;
+        }
+        
+        .auto-style8 {
+            height: 80px;
+        }
+        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
@@ -46,43 +79,80 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <div style="margin-left:450px; margin-top: 200px;">
-        <asp:Label runat="server" ID="name" Text="[Title]"></asp:Label>
-    </div>
+    <table id="table1" class="auto-style5">
+        <tr>
+            <td class="auto-style8">
+                <asp:Label ID="LblCartMsg" runat="server"></asp:Label>
+            </td>
+        </tr>
 
-    <div class="activityInfo" style="width: 317px; height: 1000px;">
-        <img alt="Chef Cooking" class="auto-style1" src="https://www.theguideistanbul.com/wp-content/uploads/2019/11/Pelin-Cantinery-800x640.jpg" />
-
-        <br />
-        <br />
-        <br />
-
-        <i class="fa fa-map-marker" style="font-size:36px; margin-left:5px;"></i>
-        <div class="icon-text"><asp:Label ID="Location" runat="server" Text="Chronos #01-07, 10 Bipolis Rd"></asp:Label></div>
-        <br />
-        <i class="fa fa-clock-o" style="font-size:36px"></i>
-        <asp:Label ID="Duration" runat="server" class="icon-text-1">Duration: 2 hrs</asp:Label>
-        <br />
-        <br />
-        <br />
-        <i class="fas fa-user-friends" style="font-size:36px"></i>
-        <asp:Label ID="People" runat="server" class="icon-text-1"> 2 ~ 3 per grp</asp:Label>
-        <br />
-        <br />
-        <br />
-        <i class="fas fa-comments" style="font-size:36px"></i>
-        <asp:Label ID="Language" runat="server" class="icon-text-1">Hosted in English</asp:Label>
-        <br />
-        <br />
-        <br />
-        <i class='far fa-money-bill-alt' style='font-size:36px'></i>
-        <asp:Label ID="Mon" runat="server" class="icon-text-1"> per person</asp:Label>
-        <br />
-        <br />
-        <br />
-        <asp:Button ID="btnAdd" class="button" runat="server" Text="Add to Cart" OnClick="btnAdd_Click" />
+        <tr>
+            <td class="auto-style6">
+                 <asp:Label ID="lblAcId" runat="server"></asp:Label>
+                <asp:Label ID="name" runat="server" Text="" style="font-weight:bold; font-size:30px; text-align:center;"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td class="auto-style4">
+                <br />
+                <asp:Label ID="desc" runat="server" Text="" style="font-size:21px;"></asp:Label>
+            </td>
+            
+        </tr>
         
+    </table>
 
-    </div>
+    <table class="auto-style7" id="table2">
+        <tr class="auto-style1">
+            <td><asp:Image ID="image" runat="server" style="width:300px; height:300px; display:block; margin-left:auto; margin-right:auto;"/></td>
+        </tr>
+        <tr>
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+        <tr>
+            <td>
+                
+                <asp:Label ID="Label2" runat="server" class="icon-text-1"  Text="Location: " style="font-size:21px;"></asp:Label>
+                <asp:Label ID="location" runat="server" Text="" style="font-size:21px;"></asp:Label>
+        
+            </td>
+        </tr>
+        <tr>
+            <td>
+               
+               <asp:Label ID="Label3" runat="server" class="icon-text-1" Text="Date: " style="font-size:21px;"></asp:Label>
+                <asp:Label ID="date" runat="server" Text="" style="font-size:21px;"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Label ID="Label4" runat="server" class="icon-text-1" Text="No. of People: " style="font-size:21px;"></asp:Label>
+                <asp:Label ID="people" runat="server" Text="" style="font-size:21px;"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <asp:Label ID="Label5" runat="server" class="icon-text-1" Text="Price: " style="font-size:21px;"></asp:Label>
+                <asp:Label ID="price" runat="server" Text="" style="font-size:21px;"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Qty: &nbsp
+                <asp:TextBox ID="txtQty" runat="server"></asp:TextBox>
+                <br />
+                <asp:RequiredFieldValidator ID="CartQty" runat="server" ErrorMessage="Quantity is empty!" ControlToValidate="txtQty" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <asp:Button ID="btnAdd" class="button" runat="server" Text="Add to Cart" OnClick="btnAdd_Click" />
+            </td>
+        </tr>
+    </table>
+
+   
     
 </asp:Content>
