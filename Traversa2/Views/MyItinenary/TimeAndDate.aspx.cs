@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Traversa2.BLL;
+using System.Drawing;
 
 namespace Traversa2.Views.MyItinenary
 {
@@ -52,14 +53,17 @@ namespace Traversa2.Views.MyItinenary
             if (NameTB.Text == "")
             {
                 Labelerr.Text = "Name is required";
+                Labelerr.ForeColor = Color.Red;
             }
             if (DDLPlaces.SelectedIndex == -1)
             {
                 Labelerr.Text = "You need to choose a place";
+                Labelerr.ForeColor = Color.Red;
             }
             //if(TextBoxDate.Text == "")
             //{
             //    Labelerr.Text = "You need to choose a date";
+
             //}
             else
             {
@@ -75,10 +79,12 @@ namespace Traversa2.Views.MyItinenary
                 if (res == 1)
                 {
                     Labelerr.Text = "Successfully created";
+                    Labelerr.ForeColor = Color.Green;
                 }
                 else
                 {
                     Labelerr.Text = "Error";
+                    Labelerr.ForeColor = Color.Green;
                 }
 
 

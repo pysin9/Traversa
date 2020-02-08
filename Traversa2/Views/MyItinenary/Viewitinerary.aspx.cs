@@ -20,8 +20,7 @@ namespace Traversa2.Views.MyItinenary
             {
                 if (Session["UserID"] != null)
                 {
-                    LabeID.Text = Session["UserID"].ToString();
-                    LabeID.Visible = false;
+
                     Itinerary i = new Itinerary();
 
 
@@ -32,8 +31,8 @@ namespace Traversa2.Views.MyItinenary
                     LabelMessage.Visible = false;
                 }
 
-               
-                
+
+
 
 
 
@@ -49,7 +48,7 @@ namespace Traversa2.Views.MyItinenary
 
 
 
-        
+
 
         protected void LinkButtonAdd_Click(object sender, EventArgs e)
         {
