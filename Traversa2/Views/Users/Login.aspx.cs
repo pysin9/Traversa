@@ -42,24 +42,29 @@ namespace Traversa2.Views.Users
                 user = user.GetbyEmail(emailTB.Text);
                 if (user != null)
                 {
-
-                    Session["Username"] = user.Name.ToString();
-                    Session["Email"] = user.Email.ToString();
-                    Session["UserID"] = user.ID.ToString();
-
-                    lblsuccess.Text = "Login Success";
-                    lblsuccess.ForeColor = Color.Green;
-
-                    if (emailTB.Text == "Admin@gmail.com")
+                    if (passwordTB.Text == user.Password)
                     {
-                        Response.Redirect("../Home/AdminHomepage.aspx");
+                        Session["Username"] = user.Name.ToString();
+                        Session["Email"] = user.Email.ToString();
+                        Session["UserID"] = user.ID.ToString();
+
+                        lblsuccess.Text = "Login Success";
+                        lblsuccess.ForeColor = Color.Green;
+
+                        if (emailTB.Text == "Admin@gmail.com")
+                        {
+                            Response.Redirect("../Home/AdminHomepage.aspx");
+                        }
+                        else
+                        {
+                            Response.Redirect("../Home/UserHomepage.aspx");
+                        }
                     }
                     else
                     {
-                        Response.Redirect("../Home/UserHomepage.aspx");
+                        lblError.Text = "Incorrect Password";
+                        lblError.ForeColor = Color.Red;
                     }
-
-
                 }
                 else
                 {

@@ -80,6 +80,7 @@ namespace Traversa2.Views.MyItinenary
                 {
                     Labelerr.Text = "Successfully created";
                     Labelerr.ForeColor = Color.Green;
+                    Response.Redirect("ViewItinerary.aspx");
                 }
                 else
                 {

@@ -60,11 +60,11 @@ namespace Traversa2.DAL
                 string password = row["Password"].ToString();
                 string foodpref = row["FoodPref"].ToString();
                 string language = row["Language"].ToString();
-				string style = row["Style"].ToString();
+                string style = row["Style"].ToString();
 
 
-                user = new TravellerProfile(id, name, Email,  foodpref, language, style);
-                
+                user = new TravellerProfile(id, name, password, Email, foodpref, language, style);
+
 
             }
             return user;
@@ -112,7 +112,7 @@ namespace Traversa2.DAL
             sqlCmd.Parameters.AddWithValue("@paramail", tv.Email);
             sqlCmd.Parameters.AddWithValue("@paralang", tv.Language);
             sqlCmd.Parameters.AddWithValue("@parafp", tv.FoodPref);
-			sqlCmd.Parameters.AddWithValue("@parasty", tv.Style);
+            sqlCmd.Parameters.AddWithValue("@parasty", tv.Style);
 
             myConn.Open();
             result = sqlCmd.ExecuteNonQuery();
@@ -121,8 +121,8 @@ namespace Traversa2.DAL
 
             return result;
         }
-		
-		public TravellerProfile SelectById(int ID)
+
+        public TravellerProfile SelectById(int ID)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -149,6 +149,6 @@ namespace Traversa2.DAL
             }
             return tv;
         }
-        
+
     }
 }

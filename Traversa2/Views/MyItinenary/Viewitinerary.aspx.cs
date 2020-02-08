@@ -13,47 +13,38 @@ namespace Traversa2.Views.MyItinenary
     {
         public List<Itinerary> iList;
         public List<Place> PL;
-        public List<int> plidList = new List<int>();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack == false)
             {
                 if (Session["UserID"] != null)
                 {
+                    int userid = Convert.ToInt32(Session["UserID"]);
+                    Itinerary ui = new Itinerary();
+                    ui = ui.selectbyuserid(userid);
+                    if (ui != null)
+                    {
+                        Itinerary ii = new Itinerary();
+                        iList = ii.retrieveAll(userid);
 
-                    Itinerary i = new Itinerary();
 
+                        DataListItinName.Visible = true;
+                        DataListItinName.DataSource = iList;
+                        DataListItinName.DataBind();
 
-                    //DataListItinName.Visible = true;
-                    //DataListItinName.DataSource = iList;
-                    //DataListItinName.DataBind();
+                        LabelMessage.Visible = false;
+                    }
+                    else
+                    {
+                        DataListItinName.Visible = false;
+                        LabelMessage.Visible = true;
+                    }
 
-                    LabelMessage.Visible = false;
                 }
-
-
-
-
-
-
-
-
-
             }
         }
 
 
-
-
-
-
-
-
-
-        protected void LinkButtonAdd_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("CreateItinerary.aspx");
-        }
 
         protected void LbtnCreate_Click(object sender, EventArgs e)
         {

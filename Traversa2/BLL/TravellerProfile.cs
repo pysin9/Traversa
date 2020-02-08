@@ -13,21 +13,34 @@ namespace Traversa2.BLL
         public string Email { get; set; }
         public string FoodPref { get; set; }
         public string Language { get; set; }
-		public string Style { get; set; }
+        public string Style { get; set; }
+        public string Password { get; set; }
 
         public TravellerProfile()
         {
 
         }
 
-         public TravellerProfile(int id, string name, string email, string foodpref, string language, string style)
+        public TravellerProfile(int id, string name, string password, string email, string foodpref, string language, string style)
         {
             this.ID = id;
             this.Name = name;
+            this.Password = password;
             this.Email = email;
             this.FoodPref = foodpref;
             this.Language = language;
-			this.Style = style;
+            this.Style = style;
+        }
+
+        public TravellerProfile(int id, string name, string email, string foodpref, string language, string style)
+        {
+            this.ID = id;
+            this.Name = name;
+
+            this.Email = email;
+            this.FoodPref = foodpref;
+            this.Language = language;
+            this.Style = style;
         }
 
         public int UpdateProifle()

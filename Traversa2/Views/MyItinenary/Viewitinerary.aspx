@@ -59,22 +59,22 @@
     
     <div class="text-center container">
         <asp:Label ID="LabelMessage" runat="server" Text="Nothing to see here" Visible="true"></asp:Label>
-      <%--  <asp:DataList ID="DataListItinName" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" Visible="false" CssClass="i" OnItemCommand="DataListItinName_ItemCommand">
+        <asp:DataList ID="DataListItinName" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" Visible="false" CssClass="i">
             <ItemTemplate >
                 <div class="dropdown">
                     <asp:Button ID="Buttonname" CommandName="Show"  class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" Text='<%# Bind("IName") %>'/>
                       <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                           
-                         <asp:LinkButton ID="LinkButtonAdd" class="btn btn-info dropdown-item" CommandName="Addd"  CommandArgument='<%# Eval("IName") %> ' runat="server">Add+</asp:LinkButton>--%>
-                             <%-- <asp:Image ID="Image3" runat="server" CssClass="col-md-4 i" ImageUrl='<%# Bind("ImagePath") %>' Visible="false"/>--%>
-                             <%-- <asp:Label ID="Labelna" runat="server" Text='<%# Bind("PName") %>'></asp:Label>--%>
-<%--                      </div>
+                         <asp:LinkButton ID="LinkButtonAdd" class="btn btn-info dropdown-item" CommandName="Addd"  CommandArgument='<%# Eval("IName") %> ' runat="server">Add+</asp:LinkButton>
+                              <asp:Image ID="Image3" runat="server" CssClass="col-md-4 i" ImageUrl='<%# Bind("ImagePath") %>' Visible="false"/>
+                              <asp:Label ID="Labelna" runat="server" Text='<%# Bind("PName") %>'></asp:Label>
+                      </div>
                     </div>
                            
                            
            </div>
                 </ItemTemplate>
-           </asp:DataList>--%>
+           </asp:DataList>
         
         
     </div>

@@ -24,7 +24,7 @@ namespace Traversa2.BLL
 
         }
 
-        public Itinerary(int itinId , int plId, string Iname, string seldate, string selTime, int UserID)
+        public Itinerary(int itinId, int plId, string Iname, string seldate, string selTime, int UserID)
         {
             ITinId = itinId;
             PlId = plId;
@@ -41,22 +41,21 @@ namespace Traversa2.BLL
             UserId = userid;
         }
 
-        public Itinerary(int ITid, int placeid, string Name, string Date, int userid)
+        public Itinerary(int ITid, string Name, int placeid, int userid)
         {
             ITinId = ITid;
             IName = Name;
             PlId = placeid;
-            selectDate = Date;
+
             UserId = userid;
         }
 
-        public Itinerary(int itid, string itname, int placeid, int userid, int plid, string pname, string Image, double avgrate)
+        public Itinerary(int itid, string itname, int placeid, int userid, string pname, string Image, double avgrate)
         {
             ITinId = itid;
             IName = itname;
             PlId = placeid;
             UserId = userid;
-            PlaceId = plid;
             image = Image;
             Avgrate = avgrate;
 
@@ -66,6 +65,18 @@ namespace Traversa2.BLL
         {
             ItinDAO dao = new ItinDAO();
             return (dao.Insert(this));
+        }
+
+        public List<Itinerary> retrieveAll(int id)
+        {
+            ItinDAO dao = new ItinDAO();
+            return dao.GetAll(id);
+        }
+
+        public Itinerary selectbyuserid(int ID)
+        {
+            ItinDAO dao = new ItinDAO();
+            return dao.SelectByuserid(ID);
         }
     }
 }
