@@ -804,3 +804,12 @@ C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfjk\Traversa\Traversa2\ob
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfjk\Traversa\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfjk\Traversa\Traversa2\obj\Debug\Traversa2.dll
 C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\fjkfjk\Traversa\Traversa2\obj\Debug\Traversa2.pdb
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\bin\Traversa2.dll.config
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\bin\Traversa2.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\bin\Traversa2.pdb
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\bin\AjaxControlToolkit.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\obj\Debug\Traversa.csprojAssemblyReference.cache
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\obj\Debug\Traversa.csproj.CoreCompileInputs.cache
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\obj\Debug\Traversa2.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa30\Traversa2\obj\Debug\Traversa2.pdb
