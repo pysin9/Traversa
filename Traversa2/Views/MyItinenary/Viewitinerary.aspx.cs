@@ -67,8 +67,17 @@ namespace Traversa2.Views.MyItinenary
                 Labelerr.Text = "Successfully deleted";
                 Labelerr.ForeColor = System.Drawing.Color.Green;
             }
+
+            if(e.CommandName == "Edit")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+
+                Session["ItinId"] = id.ToString();
+                Response.Redirect("EditItinerary.aspx");
+            }
         }
 
+        
 
 
 

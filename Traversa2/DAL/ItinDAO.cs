@@ -127,5 +127,64 @@ namespace Traversa2.DAL
             return user;
         }
 
+        public int UpdateIT(Itinerary it, int id)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlStmt = "UPDATE Itinerary SET IName = @parapname, PlaceId = @parappl where ItinId =  @paraplid";
+
+            int result = 0;    // Execute NonQuery return an integer value
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
+
+
+            sqlCmd = new SqlCommand(sqlStmt.ToString(), myConn);
+
+            sqlCmd.Parameters.AddWithValue("@paraplid", id);
+            sqlCmd.Parameters.AddWithValue("@parapname", it.IName);
+            sqlCmd.Parameters.AddWithValue("@parappl", it.PlId);
+            
+
+
+            myConn.Open();
+            result = sqlCmd.ExecuteNonQuery();
+
+            myConn.Close();
+
+            return result;
+        }
+
+        public Itinerary SelectByitin(int ID)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            string sqlstmt = "SELECT * From Itinerary where ItinId = @paraID";
+            SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
+
+            da.SelectCommand.Parameters.AddWithValue("@paraID", ID);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            Itinerary user = null;
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            if (rec_cnt == 1)
+            {
+                DataRow row = ds.Tables[0].Rows[0];
+                int id = Convert.ToInt32(row["ItinId"]);
+                string iname = row["IName"].ToString();
+                int pid = Convert.ToInt32(row["PlaceId"]);
+                int uid = Convert.ToInt32(row["UserId"]);
+
+
+
+                user = new Itinerary(id, iname, pid, uid);
+
+
+            }
+            return user;
+        }
+
     }
 }

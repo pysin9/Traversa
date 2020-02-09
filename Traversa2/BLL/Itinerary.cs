@@ -80,10 +80,22 @@ namespace Traversa2.BLL
             return dao.SelectByuserid(ID);
         }
 
+        public Itinerary selectbyidd(int ID)
+        {
+            ItinDAO dao = new ItinDAO();
+            return dao.SelectByitin(ID);
+        }
+
         public int dell(int idd)
         {
             ItinDAO dao = new ItinDAO();
             return dao.DeleteIT(idd);
+        }
+
+        public int updateOne(int id)
+        {
+            ItinDAO dao = new ItinDAO();
+            return dao.UpdateIT(this, id);
         }
     }
 }

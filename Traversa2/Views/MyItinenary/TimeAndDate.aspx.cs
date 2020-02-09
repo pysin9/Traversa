@@ -19,7 +19,7 @@ namespace Traversa2.Views.MyItinenary
             {
                 //CalendarDate.Visible = false;
                 Place pl = new Place();
-                rll = pl.GetAllPlaces();
+                pll = pl.GetAllPlaces();
 
                 DDLPlaces.Items.Clear();
                 DDLPlaces.Items.Insert(0, new ListItem("--Select--", "0"));

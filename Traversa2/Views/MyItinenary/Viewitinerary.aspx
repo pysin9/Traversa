@@ -40,6 +40,9 @@
              bottom: 9px;
               left: 8px;
         }
+        .dropdown-menu{
+            width: 930px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -64,15 +67,18 @@
         <asp:DataList ID="DataListItinName" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" Visible="false" CssClass="i" OnItemCommand="DataListItinName_ItemCommand">
             <ItemTemplate >
                 <div class="dropdown">
-                    <asp:Button ID="Buttonname" CommandName="Show"  class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" Text='<%# Bind("IName") %>' CommandArgument='<%#Eval("PlId") %>'/>
+                    <asp:Button ID="Buttonname" CommandName="Show"  class="btn btn-secondary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" Text='<%# Bind("IName") %>' CommandArgument='<%#Eval("PlId") %>'/>
                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
                          <table style="width: 100%;">
                              <tr>
                                  <td>
-                                     <asp:Image ID="Imagepl" runat="server" ImageUrl='<%# Bind("image") %>' width="40px" Height="40px"/>
+                                     <asp:Image ID="Imagepl" runat="server" ImageUrl='<%# Bind("image") %>' width="150px" Height="150px"/>
                                  </td>
                                  <td>
                                      <asp:Label ID="Labelna" runat="server" Text='<%# Bind("PName") %>'></asp:Label>
+                                 </td>
+                                 <td>
+                                     <asp:LinkButton ID="LinkButtonEdit" runat="server" CommandName="Edit" CommandArgument='<%# Eval("ItinId") %>'>Edit</asp:LinkButton>
                                  </td>
                                  <td>
                                      <asp:LinkButton ID="LinkButtonDEL" runat="server" CommandName="Delete" CommandArgument='<%# Eval("ItinId") %>'>Delete</asp:LinkButton>
@@ -90,7 +96,6 @@
            </asp:DataList>
         </div>
         </div>
-
 
         
     

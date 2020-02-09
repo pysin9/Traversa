@@ -141,6 +141,7 @@
     <Content Include="Views\Home\UserHomepage.aspx" />
     <Content Include="Views\Map\Map.aspx" />
     <Content Include="Views\MyItinenary\CreateItinerary.aspx" />
+    <Content Include="Views\MyItinenary\EditItinerary.aspx" />
     <Content Include="Views\MyItinenary\TimeAndDate.aspx" />
     <Content Include="Views\MyItinenary\Viewitinerary.aspx" />
     <Content Include="Views\Places\AddCategory.aspx" />
@@ -278,6 +279,13 @@
     </Compile>
     <Compile Include="Views\MyItinenary\CreateItinerary.aspx.designer.cs">
       <DependentUpon>CreateItinerary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MyItinenary\EditItinerary.aspx.cs">
+      <DependentUpon>EditItinerary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\MyItinenary\EditItinerary.aspx.designer.cs">
+      <DependentUpon>EditItinerary.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\MyItinenary\TimeAndDate.aspx.cs">
       <DependentUpon>TimeAndDate.aspx</DependentUpon>
