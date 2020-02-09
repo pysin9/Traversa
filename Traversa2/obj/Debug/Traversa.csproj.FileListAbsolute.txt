@@ -882,3 +882,38 @@ C:\Users\princ\OneDrive\Documents\Traversa (Most Recent)\Traversa\Traversa2\obj\
 C:\Users\princ\OneDrive\Documents\Traversa (Most Recent)\Traversa\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
 C:\Users\princ\OneDrive\Documents\Traversa (Most Recent)\Traversa\Traversa2\obj\Debug\Traversa2.dll
 C:\Users\princ\OneDrive\Documents\Traversa (Most Recent)\Traversa\Traversa2\obj\Debug\Traversa2.pdb
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\Traversa2.dll.config
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\Traversa2.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\Traversa2.pdb
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\csc.exe
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\csc.exe.config
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\csc.rsp
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\csi.exe
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\csi.rsp
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\System.AppContext.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\System.Collections.Immutable.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\System.IO.FileSystem.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\System.Reflection.Metadata.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\vbc.exe
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\vbc.exe.config
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\vbc.rsp
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\VBCSCompiler.exe
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\roslyn\VBCSCompiler.exe.config
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\bin\AjaxControlToolkit.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\obj\Debug\Traversa.csprojAssemblyReference.cache
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\obj\Debug\Traversa.csproj.CoreCompileInputs.cache
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\obj\Debug\Traversa2.dll
+C:\School\year 2 sem 2\EADP\Project\Traversa32\Traversa2\obj\Debug\Traversa2.pdb

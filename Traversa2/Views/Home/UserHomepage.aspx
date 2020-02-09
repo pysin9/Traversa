@@ -20,6 +20,9 @@
         {
             padding:0em;
         }
+        #btnRec{
+            display: inline-block;
+        }
     </style>
      <link href="../../Stylesheet/map.css" rel="stylesheet" />
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -137,5 +140,12 @@
                 </ItemTemplate>
             </asp:DataList> 
              </div>
+        </div>
+    <br />
+            <div class="container">
+            <div class=".col-lg-4 .col-lg-offset-2">
+            <h5 class="r">Have a place you want to recommend? </h5>
+             </div>
+                <asp:Button ID="btnRec" runat="server" Text="Recommend A Place!" OnClick="btnRec_Click" />
         </div>
 </asp:Content>

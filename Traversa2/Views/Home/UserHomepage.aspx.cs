@@ -48,5 +48,10 @@ namespace Traversa2.Views.Home
             DatalistRegion.DataSource = regionList;
             DatalistRegion.DataBind();
         }
+
+        protected void btnRec_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Views/Places/RecommendPlace.aspx");
+        }
     }
 }

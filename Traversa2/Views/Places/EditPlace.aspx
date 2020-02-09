@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="EditPlace.aspx.cs" Inherits="Traversa2.Views.Places.EditPlace" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarForAdmin.Master" AutoEventWireup="true" CodeBehind="EditPlace.aspx.cs" Inherits="Traversa2.Views.Places.EditPlace" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style>
         .imgName{

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="AddPlace.aspx.cs" Inherits="Traversa2.Views.Places.AddPlace" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarForAdmin.Master" AutoEventWireup="true" CodeBehind="AddPlace.aspx.cs" Inherits="Traversa2.Views.Places.AddPlace" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/PlaceForm.css" rel="stylesheet" type="text/css" />
 </asp:Content>
