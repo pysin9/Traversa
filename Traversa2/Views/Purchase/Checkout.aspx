@@ -27,20 +27,65 @@
             <SortedDescendingHeaderStyle BackColor="#00547E" />
         </asp:GridView>
         <br />
-        <asp:Label ID="lbl_TotalAmt" runat="server" Text="Label"></asp:Label>
+        <h3>Total Price: $<asp:Label ID="lbl_TotalAmt" runat="server" Text="Label"></asp:Label>0</h3>
         <br />
-        <h6>You May Also Like</h6>
+        <br />
+        <h6><a href="http://localhost:51081/Views/Activities/ActivityList.aspx">You May Also Like</a></h6>
         <div>
             <center>
                 <table>
                     <tr>
-                        <td><asp:Image ID="Image1" runat="server" ImageUrl="~/images/adventurecovewaterpark.jpg" Height="250px" Width="250px"/></td>
+                        <td><asp:Image ID="Image1" runat="server" ImageUrl="~/uploads/Food Gastronomy.jpg" Height="250px" Width="250px"/></td>
                         <td></td>
-                        <td><asp:Image ID="Image2" runat="server" ImageUrl="~/images/singaporezoo.jpg" Height="250px" Width="250px"/></td>
+                        <td><asp:Image ID="Image2" runat="server" ImageUrl="~/uploads/Italian cooking.jpg" Height="250px" Width="250px"/></td>
                     </tr>
                 </table>
             </center>
         </div>
+        <br />
+        <br />
+        <center>
+            <table border="1">
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        Amount Paid
+                    </td>
+                    <td>
+                        Card Number
+                    </td>
+                    <td>
+                        Expiry Date
+                    </td>
+                    <td>
+                        CVV
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:TextBox ID="tbName" runat="server"></asp:TextBox>
+                    </td>
+                    <td>
+                        <asp:TextBox ID="tbAmt" runat="server"></asp:TextBox>
+
+                    </td>
+                    <td>
+                        <asp:TextBox ID="tbCard" runat="server"></asp:TextBox>
+
+                    </td>
+                    <td>
+                        <asp:TextBox ID="tbExpiry" runat="server"></asp:TextBox>
+
+                    </td>
+                    <td>
+                        <asp:TextBox ID="tbCvv" runat="server"></asp:TextBox>
+
+                    </td>
+                </tr>
+            </table>
+        </center>
         <br />
         <br />
         <asp:Button ID="btnPlaceOrder" runat="server" Text="Place Order" OnClick="btnPlaceOrder_Click" />

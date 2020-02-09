@@ -9,7 +9,7 @@
     </div>
     <br />
     <div class="card-body text-center">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" OnRowCommand="GridView1_RowCommand" HorizontalAlign="Center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="Black" OnRowCommand="GridView1_RowCommand" HorizontalAlign="Center" BackColor="#CCCCCC" BorderColor="#999999" BorderStyle="Solid" BorderWidth="3px" CellSpacing="2" Visible="False">
             <Columns>
                 <asp:BoundField DataField="aid" HeaderText="Activity ID" />
                 <asp:BoundField DataField="aname" HeaderText="Activity Name" />
@@ -52,8 +52,6 @@
             <SortedDescendingHeaderStyle BackColor="#00547E" />
         </asp:GridView>
         <br />
-        <h6>Total Price:
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox></h6>
         <br />
         <br />
         <asp:Button ID="btnCheckOut" runat="server" Text="Check Out" OnClick="btnCheckOut_Click" />
