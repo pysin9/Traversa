@@ -13,10 +13,7 @@ namespace Traversa2.BLL
         public string ALocation { get; set; }
         public int CatId { get; set; }
         public string ImagePath { get; set; }
-
         public int AcId { get; set; }
-
-        public string APeople { get; set; }
         public string APrice { get; set; }
         public string AProvided { get; set; }
         public string ABring { get; set; }
@@ -27,14 +24,13 @@ namespace Traversa2.BLL
 
         }
 
-        public Activity(int acid, string aname, string adesc, string alocation, int catid, string imagepath, string apeople, string aprice, string aprovided, string abring)
+        public Activity(int acid, string aname, string adesc, string alocation, int catid, string imagepath, string aprice, string aprovided, string abring)
         {
             this.AName = aname;
             this.ADesc = adesc;
             this.ALocation = alocation;
             this.CatId = catid;
             this.ImagePath = imagepath;
-            this.APeople = apeople;
             this.APrice = aprice;
             this.AProvided = aprovided;
             this.ABring = abring;
@@ -42,14 +38,13 @@ namespace Traversa2.BLL
 
         }
 
-        public Activity(string aname, string adesc, string alocation, int catid, string imagepath, string apeople, string aprice, string aprovided, string abring)
+        public Activity(string aname, string adesc, string alocation, int catid, string imagepath, string aprice, string aprovided, string abring)
         {
             this.AName = aname;
             this.ADesc = adesc;
             this.ALocation = alocation;
             this.CatId = catid;
             this.ImagePath = imagepath;
-            this.APeople = apeople;
             this.APrice = aprice;
             this.AProvided = aprovided;
             this.ABring = abring;

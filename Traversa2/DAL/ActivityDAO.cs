@@ -16,8 +16,8 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "INSERT INTO Activity (ActName, ActDesc, Location, CatId, Image, ActPpl, ActPrice, ActProvided, ActToBring) VALUES (@paraAName,@paraADesc, @paraALocation, @paraCatid, @paraimage," +
-                " @paraAPeople, @paraAPrice, @paraAProvided, @paraABring)";
+            string sqlStmt = "INSERT INTO Activity (ActName, ActDesc, Location, CatId, Image, ActPrice, ActProvided, ActToBring) VALUES (@paraAName,@paraADesc, @paraALocation, @paraCatid, @paraimage," +
+                " @paraAPrice, @paraAProvided, @paraABring)";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
@@ -27,7 +27,6 @@ namespace Traversa2.DAL
             sqlCmd.Parameters.AddWithValue("@paraALocation", ac.ALocation);
             sqlCmd.Parameters.AddWithValue("@paraCatid", ac.CatId);
             sqlCmd.Parameters.AddWithValue("@paraimage", ac.ImagePath);
-            sqlCmd.Parameters.AddWithValue("@paraAPeople", ac.APeople);
             sqlCmd.Parameters.AddWithValue("@paraAPrice", ac.APrice);
             sqlCmd.Parameters.AddWithValue("@paraAProvided", ac.AProvided);
             sqlCmd.Parameters.AddWithValue("@paraABring", ac.ABring);
@@ -88,12 +87,11 @@ namespace Traversa2.DAL
                     string aloca = row["Location"].ToString();
                     string image = row["Image"].ToString();
                     int catid = Convert.ToInt32(row["CatId"]);
-                    string appl = row["ActPpl"].ToString();
                     string acost = row["ActPrice"].ToString();
                     string apvditem = row["ActProvided"].ToString();
                     string abringitem = row["ActToBring"].ToString();
 
-                    Activity objRate = new Activity(acid, aname, adesc, aloca, catid, image, appl, acost, apvditem, abringitem);
+                    Activity objRate = new Activity(acid, aname, adesc, aloca, catid, image, acost, apvditem, abringitem);
                     acList.Add(objRate);
                 }
             }
@@ -105,10 +103,10 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlstmt = "SELECT * From Activity where ActId = @paraId";
+            string sqlstmt = "SELECT * From Activity where ActId = @paraacid";
             SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
 
-            da.SelectCommand.Parameters.AddWithValue("@paraId", id);
+            da.SelectCommand.Parameters.AddWithValue("@paraacid", id);
 
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -123,13 +121,12 @@ namespace Traversa2.DAL
                 string location = row["Location"].ToString();
                 string image = row["Image"].ToString();
                 int catid = Convert.ToInt32(row["CatId"].ToString());
-                string appl = row["ActPpl"].ToString();
                 string acost = row["ActPrice"].ToString();
                 string apvditem = row["ActProvided"].ToString();
                 string abringitem = row["ActToBring"].ToString();
 
 
-                activity = new Activity(aname, adesc, location, catid, image, appl, acost, apvditem, abringitem);
+                activity = new Activity(aname, adesc, location, catid, image, acost, apvditem, abringitem);
 
 
             }
@@ -142,7 +139,7 @@ namespace Traversa2.DAL
             SqlConnection myConn = new SqlConnection(DBConnect);
 
             string sqlStmt = "UPDATE Activity SET ActName = @paraaname, ActDesc = @paraadesc, Location = @paraloca, CatId = @paracatid, Image = @paraimage, " +
-                "ActPpl = @paraappl, ActPrice = @paraacost, ActProvided = @paraapvditem, ActToBring = @paraabringitem where ActId =  @paraacid";
+                "ActPrice = @paraacost, ActProvided = @paraapvditem, ActToBring = @paraabringitem where ActId =  @paraacid";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
@@ -156,7 +153,6 @@ namespace Traversa2.DAL
             sqlCmd.Parameters.AddWithValue("@paraloca", ac.ALocation);
             sqlCmd.Parameters.AddWithValue("@paracatid", ac.CatId);
             sqlCmd.Parameters.AddWithValue("@paraimage", ac.ImagePath);
-            sqlCmd.Parameters.AddWithValue("@paraappl", ac.APeople);
             sqlCmd.Parameters.AddWithValue("@paraacost", ac.APrice);
             sqlCmd.Parameters.AddWithValue("@parapvditem", ac.AProvided);
             sqlCmd.Parameters.AddWithValue("@paraabringitem", ac.ABring);
@@ -202,18 +198,17 @@ namespace Traversa2.DAL
                     string aloca = row["Location"].ToString();
                     string image = row["Image"].ToString();
                     int catid = Convert.ToInt32(row["CatId"]);
-                    string apeople = row["ActPpl"].ToString();
                     string aprice = row["ActPrice"].ToString();
                     string aprovided = row["ActProvided"].ToString();
                     string abring = row["ActToBring"].ToString();
 
-                    Activity objRate = new Activity(acid, aname, adesc, aloca, catid, image, apeople, aprice, aprovided, abring );
+                    Activity objRate = new Activity(acid, aname, adesc, aloca, catid, image, aprice, aprovided, abring);
                     acList.Add(objRate);
                 }
             }
             return acList;
         }
 
-      
+
     }
 }

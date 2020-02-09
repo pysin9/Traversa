@@ -25,9 +25,9 @@ namespace Traversa2.Views.Activities
                 desc.Text = ac.ADesc;
                 location.Text = ac.ALocation;
                 image.ImageUrl = ac.ImagePath;
-
-                people.Text = ac.APeople;
                 price.Text = ac.APrice;
+                provItems.Text = ac.AProvided;
+                thingstobring.Text = ac.ABring;
 
             }
         }
@@ -51,10 +51,13 @@ namespace Traversa2.Views.Activities
 
             myConn.Close();
 
+            if (txtQty.Text != null)
+            {
+                txtQty.Text = "";
+            }
+
             LblCartMsg.Text = "Activity successfully added to Cart";
             LblCartMsg.ForeColor = System.Drawing.Color.Green;
-
-
         }
     }
 }

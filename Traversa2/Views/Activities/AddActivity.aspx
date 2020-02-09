@@ -18,6 +18,10 @@
             padding-right: 15px;
         }
 
+        .Rbtn {
+            text-align: left;
+            margin-left: 45px;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -58,13 +62,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">No. of People:</label>
-                            <asp:TextBox ID="APeople" runat="server" placeholder="Enter number of people required for activity" CssClass="col-lg-5"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVPpl" runat="server" ErrorMessage="No. of people is empty!" ControlToValidate="APeople" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
-                    </div>
 
                     <div class="form-group">
                         <div class="row justify-content-center">
@@ -74,14 +71,14 @@
                         </div>
                     </div>
 
-
+                    <!---
                     <div class="form-group">
                         <div class="row justify-content-center">
                             <label class="col-lg-3 control-label">Date:</label>
                             <asp:TextBox ID="ADate" runat="server" CssClass="col-lg-5" placeholder="Enter date of activity" TextMode="Date"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="FVDate" runat="server" ErrorMessage="No date has been selected!" ControlToValidate="ADate" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
                         </div>
-                    </div>
+                    </div> --->
 
                     <div class="form-group">
                         <div class="row justify-content-center">
@@ -99,7 +96,7 @@
                         </div>
                     </div>
 
-                    <asp:RadioButtonList ID="RBtnProvided" runat="server">
+                    <asp:RadioButtonList ID="RBtnProvided" runat="server" class="Rbtn">
                         <asp:ListItem Value="ProvidedNothing">Nothing</asp:ListItem>
                         <asp:ListItem Value="ProvidedSomething">I wish to provide something.</asp:ListItem>
                     </asp:RadioButtonList>
@@ -119,9 +116,9 @@
                         </div>
                     </div>
 
-                    <asp:RadioButtonList ID="RBtnBring" runat="server" RepeatDirection="Vertical">
+                    <asp:RadioButtonList ID="RBtnBring" runat="server" class="Rbtn">
                         <asp:ListItem Value="BringNothing">Nothing</asp:ListItem>
-                        <asp:ListItem Value="BringSomething">I wish to provide something.</asp:ListItem>
+                        <asp:ListItem Value="BringSomething">Participants are required to bring something.</asp:ListItem>
                     </asp:RadioButtonList>
 
                     <div class="form-group">

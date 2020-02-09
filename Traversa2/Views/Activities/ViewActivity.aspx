@@ -1,18 +1,14 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="ViewActivity.aspx.cs" Inherits="Traversa2.Views.Activities.ViewActivity" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="ViewActivity.aspx.cs" Inherits="Traversa2.Views.Activities.ViewActivity" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
 
-        .auto-style1 {
-            width: 318px;
-        }
-        
         #table1{
-            margin-left:auto; 
+            margin-right:auto; 
         }
         #table2{
             margin-right:auto;
-            margin-top: 100px;
+            margin-top: 20px;
         }
         .hr{
             color:black;
@@ -50,26 +46,45 @@
            
         }
 
-        .auto-style4 {
-            width: 717px;
-        }
-
         .auto-style5 {
-            width: 71%;
+            width: 85%;
             height: 318px;
+            margin-left: 45px;
         }
-        .auto-style6 {
-            width: 717px;
-            height: 72px;
-        }
-        
+                
         .auto-style7 {
-            width: 247px;
+            width: 1175px;
             height: 297px;
+            margin-left: 87px;
+            margin-top: 0px;
         }
         
         .auto-style8 {
             height: 80px;
+        }
+        
+        .auto-style10 {
+            width: 433px;
+        }
+        
+        .auto-style11 {
+            width: 120px;
+        }
+        
+        .auto-style14 {
+            width: 230px;
+        }
+        
+        .auto-style15 {
+            width: 120px;
+            height: 34px;
+        }
+        .auto-style16 {
+            width: 230px;
+            height: 34px;
+        }
+        .auto-style17 {
+            height: 34px;
         }
         
     </style>
@@ -81,78 +96,115 @@
 
     <table id="table1" class="auto-style5">
         <tr>
-            <td class="auto-style8">
-                <asp:Label ID="LblCartMsg" runat="server"></asp:Label>
+            <td class="auto-style10">&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="LblCartMsg" runat="server"></asp:Label></td>
+            <td class="auto-style8"></td>
+        </tr>
+        <tr>
+            <td class="auto-style10">
+                <asp:Image ID="image" runat="server" style="display:block; margin-left:auto; margin-right:auto;" Width="355px" Height="300px"/>
+            </td>
+            <td>
+                <asp:Label ID="lblAcId" runat="server" Visible="false"></asp:Label>
+                <asp:Label ID="name" runat="server" Text="" style="font-weight:bold; font-size:30px; text-align:center;"></asp:Label>
+                <br />
+                <br />
+                 <asp:Label ID="desc" runat="server" Text="" style="font-size:21px;"></asp:Label>
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
             </td>
         </tr>
 
         <tr>
-            <td class="auto-style6">
-                 <asp:Label ID="lblAcId" runat="server"></asp:Label>
-                <asp:Label ID="name" runat="server" Text="" style="font-weight:bold; font-size:30px; text-align:center;"></asp:Label>
-            </td>
+            <td class="auto-style10"></td>
+            <td></td>
         </tr>
-        <tr>
-            <td class="auto-style4">
-                <br />
-                <asp:Label ID="desc" runat="server" Text="" style="font-size:21px;"></asp:Label>
-            </td>
-            
-        </tr>
-        
+       
     </table>
+
+
 
     <table class="auto-style7" id="table2">
-        <tr class="auto-style1">
-            <td><asp:Image ID="image" runat="server" style="width:300px; height:300px; display:block; margin-left:auto; margin-right:auto;"/></td>
-        </tr>
+
         <tr>
-            <td>
-                &nbsp;
+            <td></td>
+
+        </tr>
+
+        <tr>
+            <td class="auto-style11">
+                <asp:Label ID="Label2" runat="server" Text="Location: " style="font-size:15px;"></asp:Label>
+            </td>
+            <td class="auto-style14">
+                <asp:Label ID="location" runat="server" Text="" style="font-size:15px;"></asp:Label>
+            </td>
+
+            <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label4" runat="server" Text="Provided Items: " style="font-size:20px;"></asp:Label>
             </td>
         </tr>
+
         <tr>
-            <td>
+            <td class="auto-style15">
+               <asp:Label ID="Label3" runat="server" Text="Price: " style="font-size:15px;"></asp:Label> 
+            </td>
+            <td class="auto-style16">
+                <asp:Label ID="price" runat="server" Text="" style="font-size:15px;"></asp:Label>
+            </td>
+            <td class="auto-style17">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="provItems" runat="server" Text="" style="font-size:20px;"></asp:Label>
+            </td>
+        </tr>
+
+        <tr>
+            <td class="auto-style11">
+                <asp:Label ID="Label1" runat="server" Text="Quantity: " style="font-size:15px;" ></asp:Label>  
+            </td>
+            <td class="auto-style14">
+                <asp:TextBox ID="txtQty" runat="server" style="font-size:15px;" placeholder="Enter no. of people joining" Width="190px"></asp:TextBox>
+            </td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td class="auto-style11">
                 
-                <asp:Label ID="Label2" runat="server" class="icon-text-1"  Text="Location: " style="font-size:21px;"></asp:Label>
-                <asp:Label ID="location" runat="server" Text="" style="font-size:21px;"></asp:Label>
-        
             </td>
-        </tr>
-        <tr>
-            <td>
-               
-               <asp:Label ID="Label3" runat="server" class="icon-text-1" Text="Date: " style="font-size:21px;"></asp:Label>
-                <asp:Label ID="date" runat="server" Text="" style="font-size:21px;"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <asp:Label ID="Label4" runat="server" class="icon-text-1" Text="No. of People: " style="font-size:21px;"></asp:Label>
-                <asp:Label ID="people" runat="server" Text="" style="font-size:21px;"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-               <asp:Label ID="Label5" runat="server" class="icon-text-1" Text="Price: " style="font-size:21px;"></asp:Label>
-                <asp:Label ID="price" runat="server" Text="" style="font-size:21px;"></asp:Label>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Qty: &nbsp
-                <asp:TextBox ID="txtQty" runat="server"></asp:TextBox>
+            <td class="auto-style14">
+                <asp:RequiredFieldValidator ID="CartQty" runat="server" ErrorMessage="Quantity is empty!" ControlToValidate="txtQty" ForeColor="Red" CssClass="col-lg-3" style="font-size:15px;"></asp:RequiredFieldValidator>
                 <br />
-                <asp:RequiredFieldValidator ID="CartQty" runat="server" ErrorMessage="Quantity is empty!" ControlToValidate="txtQty" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
+            </td>
+            <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label9" runat="server" Text="Things to Bring: " style="font-size:20px;"></asp:Label>
             </td>
         </tr>
+
         <tr>
-            <td>
+            <td class="auto-style11">
                 <asp:Button ID="btnAdd" class="button" runat="server" Text="Add to Cart" OnClick="btnAdd_Click" />
             </td>
+            <td class="auto-style14">
+                
+            </td>
+            <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="thingstobring" runat="server" Text="" style="font-size:20px;"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td class="auto-style11"></td>
         </tr>
     </table>
 
+    
+    
    
     
 </asp:Content>

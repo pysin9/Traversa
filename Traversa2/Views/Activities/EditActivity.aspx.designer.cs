@@ -103,24 +103,6 @@ namespace Traversa2.Views.Activities {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator FVCategory;
         
         /// <summary>
-        /// APeople control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox APeople;
-        
-        /// <summary>
-        /// FVPpl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator FVPpl;
-        
-        /// <summary>
         /// APrice control.
         /// </summary>
         /// <remarks>

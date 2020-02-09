@@ -47,7 +47,6 @@ namespace Traversa2.Views.Activities
             string fileName = Path.GetFileName(FileUpload.PostedFile.FileName);
             string filePath = "~/uploads/" + fileName;
 
-            string ppl = APeople.Text;
             string cost = APrice.Text;
             string pvditem = AProvided.Text;
             string bringitem = ABring.Text;
@@ -62,7 +61,7 @@ namespace Traversa2.Views.Activities
             }
             FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
 
-            Activity ac = new Activity(name, desc, loca, cat, filePath, ppl, cost, pvditem, bringitem);
+            Activity ac = new Activity(name, desc, loca, cat, filePath, cost, pvditem, bringitem);
 
             int result = ac.AddActivity();
             if (result == 1)
@@ -75,8 +74,6 @@ namespace Traversa2.Views.Activities
                 ALocation.Text = "";
                 category.ClearSelection();
                 imgName.Text = "";
-
-                APeople.Text = "";
                 APrice.Text = "";
                 AProvided.Text = "";
                 ABring.Text = "";

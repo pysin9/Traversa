@@ -33,7 +33,6 @@
                 <asp:BoundField HeaderText="Title" DataField="AName" />
                 <asp:BoundField HeaderText="Description" DataField="ADesc" />
                 <asp:BoundField HeaderText="Location" DataField="ALocation" />
-                <asp:BoundField HeaderText="No. of Ppl" DataField="APeople"/>
                 <asp:BoundField HeaderText="Price" DataField="APrice"/>
                 
                 <asp:BoundField HeaderText="Provided Items" DataField="AProvided"/>
@@ -59,6 +58,5 @@
     </div>
     </div>
 </asp:Content>
-
 
 

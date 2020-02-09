@@ -29,10 +29,10 @@ namespace Traversa2.Views.Activities
                 category.DataBind();
                 if (Session["ActId"] != null)
                 {
-                    int activityid = Convert.ToInt32(Session["ActId"]);
-                    lblAcId.Text = activityid.ToString();
+                    int acid = Convert.ToInt32(Session["ActId"]);
+                    lblAcId.Text = acid.ToString();
                     Activity ac = new Activity();
-                    ac = ac.retrieveOne(activityid);
+                    ac = ac.retrieveOne(acid);
                     if (ac != null)
                     {
                         AName.Text = ac.AName;
@@ -42,8 +42,6 @@ namespace Traversa2.Views.Activities
                         string img = ac.ImagePath;
                         img = img.Replace("~/uploads/", "");
                         imgName.Text = img;
-
-                        APeople.Text = ac.APeople;
                         APrice.Text = ac.APrice;
                         AProvided.Text = ac.AProvided;
                         ABring.Text = ac.ABring;
@@ -66,9 +64,7 @@ namespace Traversa2.Views.Activities
             string desc = ADesc.Text;
             string loca = ALocation.Text;
             int cat = int.Parse(category.SelectedItem.Value);
-            int acid = Convert.ToInt32(Session["ActId"]); ;
-
-            string ppl = APeople.Text;
+            int acid = Convert.ToInt32(Session["ActId"]);
             string cost = APrice.Text;
             string pvditem = AProvided.Text;
             string bringitem = ABring.Text;
@@ -85,7 +81,7 @@ namespace Traversa2.Views.Activities
                 }
                 FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
 
-                Activity ac = new Activity(name, desc, loca, cat, filePath, ppl, cost, pvditem, bringitem);
+                Activity ac = new Activity(name, desc, loca, cat, filePath, cost, pvditem, bringitem);
 
                 int result = ac.updateOne(acid);
                 if (result == 1)
@@ -112,7 +108,7 @@ namespace Traversa2.Views.Activities
                 }
                 FileUpload.PostedFile.SaveAs(Server.MapPath(filePath));
 
-                Activity ac = new Activity(name, desc, loca, cat, filePath, ppl, cost, pvditem, bringitem);
+                Activity ac = new Activity(name, desc, loca, cat, filePath, cost, pvditem, bringitem);
 
                 int result = ac.updateOne(acid);
                 if (result == 1)
