@@ -296,7 +296,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            String sqlstmt = "SELECT TOP 3 * FROM Place ORDER BY AvgRating DESC";
+            String sqlstmt = "SELECT TOP 4 * FROM Place ORDER BY AvgRating DESC";
 
             SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
 

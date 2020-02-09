@@ -82,11 +82,25 @@ namespace Traversa2.Views.Places
 		protected void BtnSearch_Click(object sender, EventArgs e)
         {
             string substring = TextBoxSearch.Text;
-            Place pl = new Place();
-            placeList = pl.GetBySearch(substring);
+            if (substring == "")
+            {
+                int Catid = Convert.ToInt32(Session["catid"]);
+                Label13.Text = Catid.ToString();
 
-            DataListPlaces.DataSource = placeList;
-            DataListPlaces.DataBind();
+                Place pl = new Place();
+                placeList = pl.GetAllPlacesByCat(Catid);
+
+                DataListPlaces.DataSource = placeList;
+                DataListPlaces.DataBind();
+            }
+            else
+            {
+                Place pl = new Place();
+                placeList = pl.GetBySearch(substring);
+
+                DataListPlaces.DataSource = placeList;
+                DataListPlaces.DataBind();
+            }
         }
     }
 }

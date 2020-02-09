@@ -44,12 +44,23 @@ namespace Traversa2.Views.Places
 		protected void BtnSearch_Click(object sender, EventArgs e)
         {
             string substring = TextBoxSearch.Text;
-            CatergoriesID cat = new CatergoriesID();
-            categoryList = cat.GetBySearch(substring);
 
-            DataListCategory.DataSource = categoryList;
-            DataListCategory.DataBind();
+            if (substring == "")
+            {
+                CatergoriesID cat = new CatergoriesID();
+                categoryList = cat.GetAll();
 
+                DataListCategory.DataSource = categoryList;
+                DataListCategory.DataBind();
+            }
+            else
+            {
+                CatergoriesID cat = new CatergoriesID();
+                categoryList = cat.GetBySearch(substring);
+
+                DataListCategory.DataSource = categoryList;
+                DataListCategory.DataBind();
+            }
         }
     }
 }
