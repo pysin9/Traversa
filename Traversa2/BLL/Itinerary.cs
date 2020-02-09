@@ -41,6 +41,13 @@ namespace Traversa2.BLL
             UserId = userid;
         }
 
+        public Itinerary(int placeid, string Name)
+        {
+            PlId = placeid;
+            IName = Name;
+          
+        }
+
         public Itinerary(int ITid, string Name, int placeid, int userid)
         {
             ITinId = ITid;

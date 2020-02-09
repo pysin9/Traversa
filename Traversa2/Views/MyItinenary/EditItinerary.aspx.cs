@@ -76,7 +76,7 @@ namespace Traversa2.Views.MyItinenary
 
 
 
-                Itinerary it = new Itinerary(placeid, name, userId);
+                Itinerary it = new Itinerary(placeid, name);
                 int res = it.updateOne(id);
                 if (res == 1)
                 {

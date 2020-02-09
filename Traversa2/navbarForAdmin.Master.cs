@@ -28,7 +28,7 @@ namespace Traversa2
 
         protected void LinkButtonViewPl_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Views/Places/ViewAllPlace.aspx");
+            Response.Redirect("/Views/Places/ViewAllPlaces.aspx");
         }
 
         protected void LinkButtonUser_Click(object sender, EventArgs e)
@@ -59,5 +59,15 @@ namespace Traversa2
             Session.Remove("UserID");
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('You have successfully log out');window.location ='/Views/Users/Login.aspx';", true);
         }
+
+        //protected void LinkButtonadd_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("/Views/Activities/AddActivity.aspx");
+        //}
+
+        //protected void LinkButtonViewAct_Click(object sender, EventArgs e)
+        //{
+        //    Response.Redirect("/Views/Activities/ViewActivity.aspx");
+        //}
     }
 }
