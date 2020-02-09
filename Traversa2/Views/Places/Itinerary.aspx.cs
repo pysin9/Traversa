@@ -25,7 +25,7 @@ namespace Traversa2.Views.Places
                 if (Session["catid"] != null)
                 {
                     int Catid = Convert.ToInt32(Session["catid"]);
-                    Label13.Text = Catid.ToString();
+                    
 
                     Place pl = new Place();
                     placeList = pl.GetAllPlacesByCat(Catid);

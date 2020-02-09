@@ -156,7 +156,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlStmt = "UPDATE Category SET CatName = @parapname, CatImage = @paraimage, where CatId =  @paraplid";
+            string sqlStmt = "UPDATE Category SET CatName = @parapname, CatImage = @paraimage WHERE CatId =  @paraplid";
 
             int result = 0;    // Execute NonQuery return an integer value
             SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
@@ -165,9 +165,9 @@ namespace Traversa2.DAL
             sqlCmd = new SqlCommand(sqlStmt.ToString(), myConn);
 
             sqlCmd.Parameters.AddWithValue("@paraplid", id);
-            sqlCmd.Parameters.AddWithValue("@parapname",ca.CatName);
+            sqlCmd.Parameters.AddWithValue("@parapname", ca.CatName);
             sqlCmd.Parameters.AddWithValue("@paraimage", ca.CatImage);
-           
+
 
             myConn.Open();
             result = sqlCmd.ExecuteNonQuery();
@@ -176,8 +176,8 @@ namespace Traversa2.DAL
 
             return result;
         }
-		
-		public List<CatergoriesID> SearchFor(string substring)
+
+        public List<CatergoriesID> SearchFor(string substring)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
