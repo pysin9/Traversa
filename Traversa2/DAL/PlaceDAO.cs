@@ -329,5 +329,46 @@ namespace Traversa2.DAL
             }
             return plList;
         }
+
+        public List<Place> selectregion(string region)
+        {
+            string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+            SqlConnection myConn = new SqlConnection(DBConnect);
+
+            String sqlstmt = "SELECT TOP 4 * FROM Place WHERE Region = @parareg";
+
+            SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
+
+            da.SelectCommand.Parameters.AddWithValue("@parareg", region);
+
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            List<Place> plList = new List<Place>();
+
+            int rec_cnt = ds.Tables[0].Rows.Count;
+            if (rec_cnt == 0)
+            {
+                plList = null;
+            }
+            else
+            {
+                foreach (DataRow row in ds.Tables[0].Rows)
+                {
+                    int plid = Convert.ToInt32(row["PlaceId"]);
+                    string pname = row["PName"].ToString();
+                    string pdesc = row["PDesc"].ToString();
+                    string ploca = row["Location"].ToString();
+                    string image = row["Image"].ToString();
+                    double avgrate = Convert.ToDouble(row["AvgRating"]);
+                    int catid = Convert.ToInt32(row["CatId"]);
+                    string reg = Convert.ToString(row["Region"]);
+
+                    Place objRate = new Place(plid, pname, pdesc, ploca, catid, image, avgrate, reg);
+                    plList.Add(objRate);
+                }
+            }
+            return plList;
+        }
     }
 }

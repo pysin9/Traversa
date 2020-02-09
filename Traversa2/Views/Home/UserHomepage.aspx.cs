@@ -10,16 +10,22 @@ namespace Traversa2.Views.Home
 {
     public partial class UserHomepage : System.Web.UI.Page
     {
-        public List<Place> categoryList;
+        public List<Place> ratingList;
+        public List<Place> regionList;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack == false)
             {
                 Place pl = new Place();
-                categoryList = pl.GetTop3Rating();
+                ratingList = pl.GetTop3Rating();
 
-                DatalistRating.DataSource = categoryList;
+                DatalistRating.DataSource = ratingList;
                 DatalistRating.DataBind();
+
+                string reg = ddlRegion.SelectedItem.Value;
+                regionList = pl.SelectByRegion(reg);
+                DatalistRegion.DataSource = regionList;
+                DatalistRegion.DataBind();
             }
         }
 
@@ -32,6 +38,15 @@ namespace Traversa2.Views.Home
 
                 Response.Redirect("~/Views/Places/ViewOnePlace.aspx");
             }
+        }
+
+        protected void ddlRegion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Place pl = new Place();
+            string reg = ddlRegion.SelectedItem.Value;
+            regionList = pl.SelectByRegion(reg);
+            DatalistRegion.DataSource = regionList;
+            DatalistRegion.DataBind();
         }
     }
 }

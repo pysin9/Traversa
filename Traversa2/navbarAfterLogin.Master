@@ -54,7 +54,7 @@
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <asp:LinkButton ID="LinkButtonProfile" class="dropdown-item" runat="server" Text="Profile" OnClick="LinkButtonProfile_Click"></asp:LinkButton>
-                         <asp:LinkButton ID="LinkButtonFav" class="dropdown-item" runat="server" Text="Favourite"></asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonRec" class="dropdown-item" runat="server" Text="Recommend a Place" href="/Views/Places/RecommendPlace.aspx"></asp:LinkButton>
                          <asp:LinkButton ID="LinkButtonCart" class="dropdown-item" href="/Views/Purchase/Cart.aspx" runat="server" Text="View Cart"></asp:LinkButton>
                         <asp:LinkButton ID="LinkButtonIt" runat="server" class="dropdown-item" OnClick="LinkButtonIt_Click">Create itinerary</asp:LinkButton>
                          <asp:LinkButton ID="LinkButtonLogout" class="dropdown-item" runat="server" Text="Logout" OnClick="LinkButtonLogout_Click"></asp:LinkButton>

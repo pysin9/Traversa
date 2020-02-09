@@ -120,5 +120,11 @@ namespace Traversa2.BLL
             PlaceDAO dao = new PlaceDAO();
             return dao.gettoprating();
         }
+
+        public List<Place> SelectByRegion(string reg)
+        {
+            PlaceDAO dao = new PlaceDAO();
+            return dao.selectregion(reg);
+        }
     }
 }
