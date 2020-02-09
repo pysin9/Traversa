@@ -21,7 +21,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class ="cold">
-        <label class=" t">Edit Category</label>
+        <label class=" t">View All Category</label>
         <br>
         <asp:Label ID="LabelMessage" runat="server" Text=""></asp:Label>
         <asp:GridView ID="GridViewCat" runat="server" AutoGenerateColumns="False"  CellPadding="4" ForeColor="#333333" GridLines="None" HorizontalAlign="Center" OnRowDeleting="GridViewCat_RowDeleting" DataKeyNames="CatId" OnSelectedIndexChanged="GridViewCat_SelectedIndexChanged" 
