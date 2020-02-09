@@ -16,7 +16,7 @@ namespace Traversa2.Views.Places
         {
             if (IsPostBack == false)
             {
-                int placeid = Convert.ToInt32(Session["PlaceId"]);
+                int placeid = Convert.ToInt32(Session["PId"]);
                 Place pl = new Place();
                 pl = pl.retrieveOne(placeid);
                 name.Text = pl.PName;
