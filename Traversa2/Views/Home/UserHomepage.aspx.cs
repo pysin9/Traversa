@@ -34,7 +34,7 @@ namespace Traversa2.Views.Home
             if (e.CommandName.Equals("Go"))
             {
                 int placeid = Convert.ToInt32(e.CommandArgument);
-                Session["PlaceId"] = placeid.ToString();
+                Session["PId"] = placeid.ToString();
 
                 Response.Redirect("~/Views/Places/ViewOnePlace.aspx");
             }

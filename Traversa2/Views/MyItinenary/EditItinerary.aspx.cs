@@ -15,39 +15,45 @@ namespace Traversa2.Views.MyItinenary
         public List<Place> rll;
         protected void Page_Load(object sender, EventArgs e)
         {
-            Place pl = new Place();
-            pll = pl.GetAllPlaces();
-
-            DDLPlaces.Items.Clear();
-            DDLPlaces.Items.Insert(0, new ListItem("--Select--", "0"));
-            DDLPlaces.AppendDataBoundItems = true;
-            DDLPlaces.DataTextField = "PName";
-            DDLPlaces.DataValueField = "PlId";
-            DDLPlaces.DataSource = pll;
-            DDLPlaces.DataBind();
-
-            Place ppl = new Place();
-            rll = ppl.GetTop3Rating();
-
-            DatalistRating.DataSource = rll;
-            DatalistRating.DataBind();
-            if(Session["ItinId"] != null)
+            if (IsPostBack == false)
             {
-                int id = Convert.ToInt32(Session["ItinId"]);
-                Itinerary ii = new Itinerary();
-                ii = ii.selectbyidd(id);
-                if (ii != null)
+                Place pl = new Place();
+                pll = pl.GetAllPlaces();
+
+                DDLPlaces.Items.Clear();
+                DDLPlaces.Items.Insert(0, new ListItem("--Select--", "0"));
+                DDLPlaces.AppendDataBoundItems = true;
+                DDLPlaces.DataTextField = "PName";
+                DDLPlaces.DataValueField = "PlId";
+                DDLPlaces.DataSource = pll;
+                DDLPlaces.DataBind();
+
+                Place ppl = new Place();
+                rll = ppl.GetTop3Rating();
+
+                DatalistRating.DataSource = rll;
+                DatalistRating.DataBind();
+
+                if (Session["ItinId"] != null)
                 {
-                    NameTB.Text = ii.IName;
-                    
-                    DDLPlaces.SelectedValue = ii.PlId.ToString();
-                    
-                }
-                else
-                {
-                    Response.Redirect("TimeAndDate.aspx");
+                    int id = Convert.ToInt32(Session["ItinId"]);
+                    Itinerary ii = new Itinerary();
+                    ii = ii.selectbyidd(id);
+                    if (ii != null)
+                    {
+                        NameTB.Text = ii.IName;
+
+                        DDLPlaces.SelectedValue = ii.PlId.ToString();
+
+                    }
+                    else
+                    {
+                        Response.Redirect("TimeAndDate.aspx");
+                    }
                 }
             }
+
+
         }
 
         protected void btnUpdate_Click(object sender, EventArgs e)
@@ -75,7 +81,7 @@ namespace Traversa2.Views.MyItinenary
                 int id = Convert.ToInt32(Session["ItinId"]);
 
 
-
+                Labelerr.Text = placeid.ToString();
                 Itinerary it = new Itinerary(placeid, name);
                 int res = it.updateOne(id);
                 if (res == 1)
@@ -100,7 +106,7 @@ namespace Traversa2.Views.MyItinenary
             if (e.CommandName.Equals("Go"))
             {
                 int placeid = Convert.ToInt32(e.CommandArgument);
-                Session["PlaceId"] = placeid.ToString();
+                Session["PId"] = placeid.ToString();
 
                 Response.Redirect("~/Views/Places/ViewOnePlace.aspx");
             }
