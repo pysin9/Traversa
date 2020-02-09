@@ -22,6 +22,15 @@ namespace Traversa2.Views.MyItinenary {
         protected global::System.Web.UI.WebControls.Label Labelerr;
         
         /// <summary>
+        /// DatalistRating control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList DatalistRating;
+        
+        /// <summary>
         /// NameTB control.
         /// </summary>
         /// <remarks>

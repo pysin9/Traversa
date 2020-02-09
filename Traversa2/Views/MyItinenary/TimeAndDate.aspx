@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="TimeAndDate.aspx.cs" Inherits="Traversa2.Views.MyItinenary.TimeAndDate" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-
+      <link href="../../Stylesheet/category.css" rel="stylesheet" />
+     <link href="../../Stylesheet/login.css" rel="stylesheet" type="text/css" />
     <style>
          
         .t{
@@ -39,14 +40,32 @@
         <asp:Label ID="Labelerr" runat="server" Text=""></asp:Label>
     </div>
     <div class="container">
-        <h5 class="r">My Itinerary: </h5>
-        <div class="u">
-          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModalCenter">
-            Create
-          </button>
-        </div>
+        <h5 class="r">Create itinerary: </h5>
     </div>
     <br />
+
+    <div class="container">
+            <div class=".col-lg-4 .col-lg-offset-2">
+            <h5 class="r">Popular by Ratings: </h5>
+            <br />
+            <asp:DataList ID="DatalistRating" runat="server" RepeatColumns="4" RepeatDirection="Horizontal"  OnItemCommand="DataListCategory_ItemCommand">
+                <ItemTemplate >
+                    <div class="card text-center r" style="width: 13rem; height: 15rem;">
+                        <asp:Image ID="Image2" class="card-img-top" ImageUrl='<%# Bind("ImagePath", "{0}") %>' runat="server" height="165px"  width="206px"/>
+                        <br />
+                
+                        <div class="card-body">
+                           <asp:Label ID="Label1" runat="server" Text='<%# Bind("AvgRating") %>'></asp:Label><asp:Label ID="Label2" runat="server" Text="/5"></asp:Label>
+                            <br />
+                           <asp:LinkButton ID="LinkButtonRating" runat="server" Text='<%# Bind("PName") %>' CommandName="Go" CommandArgument='<%# Eval("PlId") %>' ></asp:LinkButton>
+                        </div>
+                        </div>
+                </ItemTemplate>
+            </asp:DataList> 
+             </div>
+        </div>
+
+     <br />
      <div class="container ice">
         <div class="card hot">
             <div class="card-title text-center  T">Add Itinerary</div>
@@ -90,6 +109,10 @@
             </div>
         </div>
     </div>
+   
+
+      
+
 
 
 </asp:Content>

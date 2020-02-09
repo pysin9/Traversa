@@ -11,9 +11,19 @@ namespace Traversa2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            LinkButtonHost.Visible = false;
             if (Session["Username"] != null)
             {
+                int ishot = Convert.ToInt32(Session["isHost"]);
                 UsernameLBL.Text = "Hi, " + Session["Username"];
+                if (ishot == 1)
+                {
+                    LinkButtonHost.Visible = true;
+                }
+                else
+                {
+                    LinkButtonHost.Visible = false;
+                }
             }
             else
             {
@@ -38,6 +48,11 @@ namespace Traversa2
         protected void LinkButtonIt_Click(object sender, EventArgs e)
         {
             Response.Redirect("/Views/MyItinenary/Viewitinerary.aspx");
+        }
+
+        protected void LinkButtonHost_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/Views/Activities/HostActivity.aspx");
         }
     }
 }

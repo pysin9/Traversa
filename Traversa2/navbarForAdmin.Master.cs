@@ -11,7 +11,14 @@ namespace Traversa2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["Username"] != null)
+            {
+                UsernameLBL.Text = "Hi, " + Session["Username"];
+            }
+            else
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "alert('You are not allow to access to this page');window.location ='/Views/Users/Login.aspx';", true);
+            }
         }
 
         protected void LinkButtonAddPl_Click(object sender, EventArgs e)

@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Traversa2.BLL;
-using System.Drawing;
+
 
 namespace Traversa2.Views.MyItinenary
 {
@@ -28,11 +28,14 @@ namespace Traversa2.Views.MyItinenary
                         iList = ii.retrieveAll(userid);
 
 
+
                         DataListItinName.Visible = true;
                         DataListItinName.DataSource = iList;
                         DataListItinName.DataBind();
 
                         LabelMessage.Visible = false;
+
+
                     }
                     else
                     {
@@ -49,6 +52,21 @@ namespace Traversa2.Views.MyItinenary
         protected void LbtnCreate_Click(object sender, EventArgs e)
         {
             Response.Redirect("TimeAndDate.aspx");
+        }
+
+        protected void DataListItinName_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            
+
+            if(e.CommandName == "Delete")
+            {
+                int id = Convert.ToInt32(e.CommandArgument);
+
+                Itinerary it = new Itinerary();
+                it.dell(id);
+                Labelerr.Text = "Successfully deleted";
+                Labelerr.ForeColor = System.Drawing.Color.Green;
+            }
         }
 
 

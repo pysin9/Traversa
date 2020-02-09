@@ -56,6 +56,7 @@ namespace Traversa2.BLL
             IName = itname;
             PlId = placeid;
             UserId = userid;
+            PName = pname;
             image = Image;
             Avgrate = avgrate;
 
@@ -77,6 +78,12 @@ namespace Traversa2.BLL
         {
             ItinDAO dao = new ItinDAO();
             return dao.SelectByuserid(ID);
+        }
+
+        public int dell(int idd)
+        {
+            ItinDAO dao = new ItinDAO();
+            return dao.DeleteIT(idd);
         }
     }
 }

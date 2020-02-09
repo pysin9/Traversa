@@ -47,6 +47,7 @@ namespace Traversa2.Views.Users
                         Session["Username"] = user.Name.ToString();
                         Session["Email"] = user.Email.ToString();
                         Session["UserID"] = user.ID.ToString();
+                        Session["isHost"] = user.isHost.ToString();
 
                         lblsuccess.Text = "Login Success";
                         lblsuccess.ForeColor = Color.Green;

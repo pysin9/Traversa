@@ -60,7 +60,7 @@ namespace Traversa2.DAL
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            String sqlstmt = "SELECT ItinId, IName, UserId, PName, Image, PlaceId, Place.PlaceId, AvgRating FROM Itinerary INNER JOIN Place ON Itinterary.PlaceId = Place.PlaceId where UserId = @paraid";
+            String sqlstmt = "SELECT ItinId, IName, Itinerary.PlaceId, UserId, PName, Image, AvgRating FROM Itinerary INNER JOIN Place ON Itinerary.PlaceId = Place.PlaceId where UserId = @paraid";
 
             SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
 

@@ -12,13 +12,14 @@ namespace Traversa2.Views.MyItinenary
     public partial class TimeAndDate : System.Web.UI.Page
     {
         public List<Place> pll;
+        public List<Place> rll;
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack == false)
             {
                 //CalendarDate.Visible = false;
                 Place pl = new Place();
-                pll = pl.GetAllPlaces();
+                rll = pl.GetAllPlaces();
 
                 DDLPlaces.Items.Clear();
                 DDLPlaces.Items.Insert(0, new ListItem("--Select--", "0"));
@@ -28,6 +29,23 @@ namespace Traversa2.Views.MyItinenary
                 DDLPlaces.DataSource = pll;
                 DDLPlaces.DataBind();
 
+                Place ppl = new Place();
+                rll = ppl.GetTop3Rating();
+
+                DatalistRating.DataSource = rll;
+                DatalistRating.DataBind();
+
+            }
+        }
+
+        protected void DataListCategory_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName.Equals("Go"))
+            {
+                int placeid = Convert.ToInt32(e.CommandArgument);
+                Session["PlaceId"] = placeid.ToString();
+
+                Response.Redirect("~/Views/Places/ViewOnePlace.aspx");
             }
         }
 

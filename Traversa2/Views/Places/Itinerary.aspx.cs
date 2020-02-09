@@ -35,7 +35,11 @@ namespace Traversa2.Views.Places
                 }
                 else
                 {
+                    Place pl = new Place();
+                    placeList = pl.GetAllPlaces();
 
+                    DataListPlaces.DataSource = placeList;
+                    DataListPlaces.DataBind();
                 }
 
 

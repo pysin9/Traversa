@@ -61,9 +61,10 @@ namespace Traversa2.DAL
                 string foodpref = row["FoodPref"].ToString();
                 string language = row["Language"].ToString();
                 string style = row["Style"].ToString();
+                int isHost = Convert.ToInt32(row["IsHost"]);
 
 
-                user = new TravellerProfile(id, name, password, Email, foodpref, language, style);
+                user = new TravellerProfile(id, name, password, Email, foodpref, language, style, isHost);
 
 
             }

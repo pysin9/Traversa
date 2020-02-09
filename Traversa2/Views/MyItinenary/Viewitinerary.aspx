@@ -57,17 +57,30 @@
     
 
     
-    <div class="text-center container">
-        <asp:Label ID="LabelMessage" runat="server" Text="Nothing to see here" Visible="true"></asp:Label>
-        <asp:DataList ID="DataListItinName" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" Visible="false" CssClass="i">
+    <div class=" container">
+        <div class="text-center">
+             <asp:Label ID="LabelMessage" runat="server" Text="Nothing to see here" Visible="true"></asp:Label>
+        </div> 
+        <asp:DataList ID="DataListItinName" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" Visible="false" CssClass="i" OnItemCommand="DataListItinName_ItemCommand">
             <ItemTemplate >
                 <div class="dropdown">
-                    <asp:Button ID="Buttonname" CommandName="Show"  class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" Text='<%# Bind("IName") %>'/>
-                      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                          
-                         <asp:LinkButton ID="LinkButtonAdd" class="btn btn-info dropdown-item" CommandName="Addd"  CommandArgument='<%# Eval("IName") %> ' runat="server">Add+</asp:LinkButton>
-                              <asp:Image ID="Image3" runat="server" CssClass="col-md-4 i" ImageUrl='<%# Bind("ImagePath") %>' Visible="false"/>
-                              <asp:Label ID="Labelna" runat="server" Text='<%# Bind("PName") %>'></asp:Label>
+                    <asp:Button ID="Buttonname" CommandName="Show"  class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" Text='<%# Bind("IName") %>' CommandArgument='<%#Eval("PlId") %>'/>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                         <table style="width: 100%;">
+                             <tr>
+                                 <td>
+                                     <asp:Image ID="Imagepl" runat="server" ImageUrl='<%# Bind("image") %>' width="40px" Height="40px"/>
+                                 </td>
+                                 <td>
+                                     <asp:Label ID="Labelna" runat="server" Text='<%# Bind("PName") %>'></asp:Label>
+                                 </td>
+                                 <td>
+                                     <asp:LinkButton ID="LinkButtonDEL" runat="server" CommandName="Delete" CommandArgument='<%# Eval("ItinId") %>'>Delete</asp:LinkButton>
+                                 </td>
+                             </tr>
+                             
+                         </table>
+                       </div>
                       </div>
                     </div>
                            
@@ -75,10 +88,9 @@
            </div>
                 </ItemTemplate>
            </asp:DataList>
-        
-        
-    </div>
         </div>
+        </div>
+
 
         
     
