@@ -66,7 +66,7 @@ namespace Traversa2.Views.Places
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
             int userid = Convert.ToInt32(Session["UserId"]);
-            int placeid = Convert.ToInt32(Session["place"]);
+            int placeid = Convert.ToInt32(Session["PId"]);
 
             int rating = Convert.ToInt32(rdRate.SelectedValue);
             string com = Request.Form["comment"];
