@@ -82,8 +82,20 @@ namespace Traversa2.Views.Places
             DataListPlaces.DataSource = placeList;
             DataListPlaces.DataBind();
         }
-		
-		protected void BtnSearch_Click(object sender, EventArgs e)
+
+        protected void DataListPlaces_ItemCommand(object source, DataListCommandEventArgs e)
+        {
+            if (e.CommandName == "viewPlace")
+            {
+                int PlaceID = Convert.ToInt32(e.CommandArgument);
+
+
+                Session["PId"] = PlaceID.ToString();
+                Response.Redirect("ViewOnePlace.aspx");
+            }
+        }
+
+        protected void BtnSearch_Click(object sender, EventArgs e)
         {
             string substring = TextBoxSearch.Text;
             if (substring == "")

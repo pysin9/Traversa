@@ -56,7 +56,7 @@ namespace Traversa2.Views.Places
                     {
                         lblAlert.Text = "category created";
                         lblAlert.ForeColor = Color.Green;
-
+                        Response.Redirect("ViewAllCategory.aspx");
                     }
                     else
                     {

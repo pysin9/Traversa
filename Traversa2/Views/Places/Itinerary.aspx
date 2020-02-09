@@ -102,7 +102,7 @@
              <br />
             <br />
              <asp:Label ID="Label13"  runat="server" Text=""></asp:Label>
-            <asp:DataList ID="DataListPlaces" runat="server"  CssClass="i">
+            <asp:DataList ID="DataListPlaces" runat="server"  CssClass="i"  OnItemCommand="DataListPlaces_ItemCommand">
                   <ItemTemplate>
                       <div class="row">
                               <div class="col-lg-10">
