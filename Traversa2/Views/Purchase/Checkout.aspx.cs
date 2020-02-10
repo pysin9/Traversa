@@ -42,14 +42,6 @@ namespace Traversa2.Views.Purchase
         protected void btnPlaceOrder_Click(object sender, EventArgs e)
         {
             Response.Redirect("History.aspx");
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
-            con.Open();
-            SqlCommand com = new SqlCommand();
-            com.Connection = con;
-            com.CommandText = "DELETE FROM [ShoppingCart]";
-            SqlDataReader data = com.ExecuteReader();
-            con.Close();
         }
 
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)

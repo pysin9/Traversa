@@ -7,56 +7,63 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Traversa2.Views.Purchase
-{
-
-
-    public partial class Checkout
-    {
-
+namespace Traversa2.Views.FAQ {
+    
+    
+    public partial class FaqAddForm {
+        
         /// <summary>
-        /// GridView1 control.
+        /// Tbfaqid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
-
+        protected global::System.Web.UI.WebControls.TextBox Tbfaqid;
+        
         /// <summary>
-        /// lbl_TotalAmt control.
+        /// TbQuestion control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_TotalAmt;
-
+        protected global::System.Web.UI.WebControls.TextBox TbQuestion;
+        
         /// <summary>
-        /// Image1 control.
+        /// TbAnswer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
-
+        protected global::System.Web.UI.WebControls.TextBox TbAnswer;
+        
         /// <summary>
-        /// Image2 control.
+        /// BtnSubmit control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
-
+        protected global::System.Web.UI.WebControls.Button BtnSubmit;
+        
         /// <summary>
-        /// btnPlaceOrder control.
+        /// BtnBack control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPlaceOrder;
+        protected global::System.Web.UI.WebControls.Button BtnBack;
+        
+        /// <summary>
+        /// LblMsg control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LblMsg;
     }
 }

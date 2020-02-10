@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="EditActivity.aspx.cs" Inherits="Traversa2.Views.Activities.EditActivity" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="EditActivity.aspx.cs" Inherits="Traversa2.Views.Activities.EditActivity" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/PlaceForm.css" rel="stylesheet" type="text/css" />
@@ -27,7 +27,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container" id="container">
         <div class=".col-lg-4 .col-lg-offset-2">
-            <div class="card-heading">Activity</div>
+            <div class="card-heading">Activity </div>
             <asp:Label ID="LblMsg" runat="server"></asp:Label>
             <div class="card-body">
                 <form>

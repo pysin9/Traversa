@@ -28,7 +28,13 @@
         </asp:GridView>
         <br />
         <br />
+        <div>
+            <center>
+                <asp:Image ID="Image1" runat="server" ImageUrl="~/images/history.jpg" Height="250px" Width="1000px"/>
+            </center>
+        </div>
         <br />
-        <asp:Button ID="btnHome" runat="server" Text="Back To Home" OnClick="btnCheckOut_Click"/>
+        <br />
+        <asp:Button ID="btnHome" runat="server" Text="Back To Home" />
     </div>
 </asp:Content>

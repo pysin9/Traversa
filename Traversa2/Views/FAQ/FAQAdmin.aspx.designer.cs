@@ -7,13 +7,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Traversa2.Views.Purchase
-{
-
-
-    public partial class History
-    {
-
+namespace Traversa2.Views.FAQ {
+    
+    
+    public partial class FAQAdmin {
+        
         /// <summary>
         /// GridView1 control.
         /// </summary>
@@ -22,23 +20,14 @@ namespace Traversa2.Views.Purchase
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView GridView1;
-
+        
         /// <summary>
-        /// Image1 control.
+        /// ButtonAdd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
-
-        /// <summary>
-        /// btnHome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnHome;
+        protected global::System.Web.UI.WebControls.Button ButtonAdd;
     }
 }

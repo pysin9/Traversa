@@ -37,10 +37,5 @@ namespace Traversa2.Views.Purchase
             GridView1.DataSource = ds.Tables[0];
             GridView1.DataBind();
         }
-
-        protected void btnCheckOut_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("/Views/Home/UserHomepage.aspx");
-        }
     }
 }
