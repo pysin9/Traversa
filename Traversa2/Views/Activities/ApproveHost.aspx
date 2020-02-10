@@ -6,27 +6,38 @@
             margin-left:auto;
             margin-right:auto;
         }
-        .auto-style2 {
-            margin-left: 417px;
-            margin-right: auto;
-            width: 863px;
-        }
         .auto-style4 {
-            width: 132px;
+            width: 95px;
         }
         .auto-style9 {
-            width: 453px;
+            width: 381px;
         }
-    </style>
+        .auto-style10 {
+            margin-left: 480px;
+            margin-right: auto;
+            width: 624px;
+        }
+        </style>
 </asp:Content>
+
+   
+
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+     <!-- To make dropdown link in 'Host An Activities' appear
+     1. Enter email used for sign in and tick Accept Terms Checkbox.
+     2. Click Submit Btn to sign up as Host successfully. 
+     3. Click on 'Host An Activity', dropdown will appear. Click 'Your Activities' to create new activity.
+     4. If dropdown link 'Your Activities' does not appear in 'Host An Activity' in navbar, close window and run again to make dropdown link appear.
+     --->
+
     <br />
     <br />
     <h2 style="text-align:center;"><asp:Label ID="Label4" runat="server" Text="Sign up as a Host"></asp:Label></h2>
 
     <h6 style="text-align:center;"><asp:Label ID="LblMsg" runat="server" Text=""></asp:Label></h6>
     <br />
-    <table class="auto-style2">
+    <table class="auto-style10">
        
         <tr>
             <td class="auto-style4">
@@ -43,7 +54,7 @@
                 <asp:Label ID="Label5" runat="server" Text="Email: " ></asp:Label>
             </td>
             <td class="auto-style9">
-                <asp:TextBox ID="HEmail" runat="server" Width="392px" placeholder="Enter your email used as a user"></asp:TextBox>
+                <asp:TextBox ID="HEmail" runat="server" Width="344px" placeholder="Enter your email used to sign in as a user" CssClass="offset-sm-0"></asp:TextBox>
             </td>
             <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email is empty!" ControlToValidate="HEmail" ForeColor="Red" CssClass="col-lg-3" style="font-size:15px;"></asp:RequiredFieldValidator></td>
         </tr>
@@ -79,22 +90,31 @@
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Reasons are empty!" ControlToValidate="HReasons" ForeColor="Red" CssClass="col-lg-3" style="font-size:15px;"></asp:RequiredFieldValidator>
             </td>
         </tr>
-         <tr>
-            <td class="auto-style4"></td>
-        </tr>
-            --->
+            -->
+      
 
     </table>
+
+    <table class="hostform">
+        <tr>
+            <td>
+                <asp:CheckBox ID="HostRequired" runat="server" Text="I agree to hold full responsibility for all my actions taken as a host." Checked="true"/>
+            </td>
+        </tr>
+    </table>
     <br />
-    &nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
-    <asp:CheckBox ID="HostRequired" runat="server" Text="I agree to hold full responsibility for all my actions taken as a host." Checked="true"/>
-    <br />
-    &nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+   <br />
+   <table class="hostform">
+       <tr>
+           <td></td>
+           <td>
+               <asp:Button ID="btSubmit" runat="server" Text="Submit"  OnClick="btnSubmit_Click" />
+           </td>
+           <td></td>
+       </tr>
+   </table> 
    
-    <br />
-    <br />
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:Button ID="btSubmit" runat="server" Text="Submit"  style="margin-left: 500px;" OnClick="btnSubmit_Click" />
+    
     <br />
     <br />
 

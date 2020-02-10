@@ -37,7 +37,7 @@ namespace Traversa2.Views.Activities
 
             int id = Convert.ToInt32(GVActivity.DataKeys[e.RowIndex].Value);
             Activity rec = new Activity();
-            rec.deleteOne(id);
+            rec.DeleteOne(id);
             lblMsg.Text = "Activity successfully deleted!";
             lblMsg.ForeColor = System.Drawing.Color.Green;
             BindData();

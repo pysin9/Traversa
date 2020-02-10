@@ -44,10 +44,10 @@
                  </li>
                   <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Activity
+                      Host An Activity
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                         <asp:LinkButton ID="LinkButtonHost" class="dropdown-item" runat="server" Text="Host An Activity" OnClick="LinkButtonHost_Click" Visible="false"></asp:LinkButton>
+                         <asp:LinkButton ID="LinkButtonHost" class="dropdown-item" runat="server" Text="Your Activities" OnClick="LinkButtonHost_Click" Visible="false"></asp:LinkButton>
                         
                     </div>
                     </li>

@@ -95,12 +95,6 @@
                             
                         </div>
                     </div>
-                    <!---
-                    <asp:RadioButtonList ID="RBtnProvided" runat="server" class="Rbtn">
-                        <asp:ListItem Value="ProvidedNothing">Nothing</asp:ListItem>
-                        <asp:ListItem Value="ProvidedSomething">I wish to provide something.</asp:ListItem>
-                    </asp:RadioButtonList>
-                        --->
 
                      <div class="form-group">
                         <div class="row justify-content-center">
@@ -115,12 +109,7 @@
                             <label class="col-lg-11 control-label" id="labelB">Things to Bring:</label>
                         </div>
                     </div>
-                    <!---
-                    <asp:RadioButtonList ID="RBtnBring" runat="server" class="Rbtn">
-                        <asp:ListItem Value="BringNothing">Nothing</asp:ListItem>
-                        <asp:ListItem Value="BringSomething">Participants are required to bring something.</asp:ListItem>
-                    </asp:RadioButtonList>
-                        --->
+                   
                     <div class="form-group">
                         <div class="row justify-content-center">
                             <asp:TextBox ID="ABring" runat="server" placeholder="List items/things participants are required to bring for this activity to commence." CssClass="col-lg-8" TextMode="MultiLine"></asp:TextBox>

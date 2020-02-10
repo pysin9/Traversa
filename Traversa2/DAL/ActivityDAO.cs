@@ -154,7 +154,7 @@ namespace Traversa2.DAL
             sqlCmd.Parameters.AddWithValue("@paracatid", ac.CatId);
             sqlCmd.Parameters.AddWithValue("@paraimage", ac.ImagePath);
             sqlCmd.Parameters.AddWithValue("@paraacost", ac.APrice);
-            sqlCmd.Parameters.AddWithValue("@parapvditem", ac.AProvided);
+            sqlCmd.Parameters.AddWithValue("@paraapvditem", ac.AProvided);
             sqlCmd.Parameters.AddWithValue("@paraabringitem", ac.ABring);
 
 

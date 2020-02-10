@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="HostView.aspx.cs" Inherits="Traversa2.Views.Activities.HostView" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="HostView.aspx.cs" Inherits="Traversa2.Views.Activities.HostView" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="head" runat="server">
     <style>
@@ -16,6 +16,7 @@
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id ="divider">
     <div class ="cold">
+        <br />
         <h1>Activity</h1>
         <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
         <br />

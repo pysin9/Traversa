@@ -29,10 +29,10 @@ namespace Traversa2.Views.Activities
                 category.DataBind();
                 if (Session["ActId"] != null)
                 {
-                    int acid = 8;
+                    int acid = Convert.ToInt32(Session["ActId"]);
                     lblAcId.Text = acid.ToString();
                     Activity ac = new Activity();
-                    ac = ac.retrieveOne(acid);
+                    ac = ac.RetrieveOne(acid);
                     if (ac != null)
                     {
                         AName.Text = ac.AName;
@@ -64,7 +64,7 @@ namespace Traversa2.Views.Activities
             string desc = ADesc.Text;
             string loca = ALocation.Text;
             int cat = int.Parse(category.SelectedItem.Value);
-            int acid = 8;
+            int acid = Convert.ToInt32(Session["ActId"]); 
             string cost = APrice.Text;
             string pvditem = AProvided.Text;
             string bringitem = ABring.Text;
@@ -83,7 +83,7 @@ namespace Traversa2.Views.Activities
 
                 Activity ac = new Activity(name, desc, loca, cat, filePath, cost, pvditem, bringitem);
 
-                int result = ac.updateOne(acid);
+                int result = ac.UpdateOne(acid);
                 if (result == 1)
                 {
                     LblMsg.Text = "Activity successfully added!";
@@ -110,7 +110,7 @@ namespace Traversa2.Views.Activities
 
                 Activity ac = new Activity(name, desc, loca, cat, filePath, cost, pvditem, bringitem);
 
-                int result = ac.updateOne(acid);
+                int result = ac.UpdateOne(acid);
                 if (result == 1)
                 {
                     LblMsg.Text = "Activity successfully updated!";

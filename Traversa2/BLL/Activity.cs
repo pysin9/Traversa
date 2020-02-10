@@ -62,19 +62,19 @@ namespace Traversa2.BLL
             return dao.GetAll();
         }
 
-        public int deleteOne(int id)
+        public int DeleteOne(int id)
         {
             ActivityDAO dao = new ActivityDAO();
             return dao.DeleteActivity(id);
         }
 
-        public Activity retrieveOne(int id)
+        public Activity RetrieveOne(int id)
         {
             ActivityDAO dao = new ActivityDAO();
             return dao.getOne(id);
         }
 
-        public int updateOne(int id)
+        public int UpdateOne(int id)
         {
             ActivityDAO dao = new ActivityDAO();
             return dao.UpdateActivity(this, id);

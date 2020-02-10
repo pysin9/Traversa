@@ -20,7 +20,7 @@ namespace Traversa2.Views.Activities
                 int actid = Convert.ToInt32(Session["ActId"]);
                 lblAcId.Text = actid.ToString();
                 Activity ac = new Activity();
-                ac = ac.retrieveOne(actid);
+                ac = ac.RetrieveOne(actid);
                 name.Text = ac.AName;
                 desc.Text = ac.ADesc;
                 location.Text = ac.ALocation;

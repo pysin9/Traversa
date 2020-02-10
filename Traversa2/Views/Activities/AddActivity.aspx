@@ -71,14 +71,7 @@
                         </div>
                     </div>
 
-                    <!---
-                    <div class="form-group">
-                        <div class="row justify-content-center">
-                            <label class="col-lg-3 control-label">Date:</label>
-                            <asp:TextBox ID="ADate" runat="server" CssClass="col-lg-5" placeholder="Enter date of activity" TextMode="Date"></asp:TextBox>
-                            <asp:RequiredFieldValidator ID="FVDate" runat="server" ErrorMessage="No date has been selected!" ControlToValidate="ADate" ForeColor="Red" CssClass="col-lg-3"></asp:RequiredFieldValidator>
-                        </div>
-                    </div> --->
+                   
 
                     <div class="form-group">
                         <div class="row justify-content-center">
@@ -95,13 +88,7 @@
                             
                         </div>
                     </div>
-                    <!---
-                    <asp:RadioButtonList ID="RBtnProvided" runat="server" class="Rbtn">
-                        <asp:ListItem Value="ProvidedNothing">Nothing</asp:ListItem>
-                        <asp:ListItem Value="ProvidedSomething">I wish to provide something.</asp:ListItem>
-                    </asp:RadioButtonList>
-                        --->
-
+                   
                      <div class="form-group">
                         <div class="row justify-content-center">
                             <asp:TextBox ID="AProvided" runat="server" placeholder="List things you will be providing for this activity, eg. transportation, food, tickets, etc..." CssClass="col-lg-8" TextMode="MultiLine"></asp:TextBox>

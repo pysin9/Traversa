@@ -41,7 +41,7 @@ namespace Traversa2.Views.Activities
 
                     if (result == 1)
                     {
-                        LblMsg.Text = "Host application successfully submitted!";
+                        LblMsg.Text = "Successfully signed up as a Host!";
                         LblMsg.ForeColor = System.Drawing.Color.Green;
                         Session["isHost"] = tp.isHost.ToString();
 
