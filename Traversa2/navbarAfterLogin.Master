@@ -50,6 +50,18 @@
                          <asp:LinkButton ID="LinkButtonHost" class="dropdown-item" runat="server" Text="Host Experience" OnClick="LinkButtonHost_Click" Visible="false"></asp:LinkButton>
                     </div>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link ft" href="/Views/Activities/ActivityList.aspx">Activity</a>
+                  </li>
+                   <li class="nav-item">
+                    <a class="nav-link ft" href="/Views/Activities/HostView.aspx">Host An Activity</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ft" href="/Views/Activities/ApproveHost.aspx">Sign up as Host</a>
+                  </li>
+                    <li class="nav-item">
+                        <a class="nav-link ft" href="/Views/Activities/ApproveHost.aspx">FAQ</a>
+                  </li>
                   <li class="nav-item">
                         <a class="nav-link ft" href="#">FAQ</a>
                   </li>

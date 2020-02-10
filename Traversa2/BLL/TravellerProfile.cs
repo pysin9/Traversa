@@ -16,6 +16,8 @@ namespace Traversa2.BLL
         public string Style { get; set; }
         public string Password { get; set; }
         public int isHost { get; set; }
+        public string Description { get; set; }
+        public string Reason { get; set; }
 
         public TravellerProfile()
         {
@@ -45,6 +47,14 @@ namespace Traversa2.BLL
             this.Style = style;
         }
 
+        public TravellerProfile(int id, string email, string description, string reason)
+        {
+            this.ID = id;
+            this.Email = email;
+            this.Description = description;
+            this.Reason = reason;
+        }
+
         public int UpdateProifle()
         {
             UserDAO dao = new UserDAO();
@@ -66,6 +76,25 @@ namespace Traversa2.BLL
         {
             UserDAO dao = new UserDAO();
             return dao.UpdatePassword(UserID, psd);
+        }
+
+        public int HostApproval()
+        {
+            UserDAO dao = new UserDAO();
+            return dao.UpdateHostInfo(this);
+        }
+
+
+        public TravellerProfile RetrieveHost(int ID)
+        {
+            UserDAO dao = new UserDAO();
+            return dao.SelectByIdHost(ID);
+        }
+
+        public int deleteOne(int id)
+        {
+            UserDAO dao = new UserDAO();
+            return dao.DeleteHostAppl(id);
         }
     }
 }

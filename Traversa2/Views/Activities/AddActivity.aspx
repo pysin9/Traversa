@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="AddActivity.aspx.cs" Inherits="Traversa2.Views.Activities.AddActivity" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="AddActivity.aspx.cs" Inherits="Traversa2.Views.Activities.AddActivity" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/PlaceForm.css" rel="stylesheet" type="text/css" />

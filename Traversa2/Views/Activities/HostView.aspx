@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="HostView.aspx.cs" Inherits="Traversa2.Views.Activities.HostView" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="HostView.aspx.cs" Inherits="Traversa2.Views.Activities.HostView" %>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="head" runat="server">
     <style>

@@ -133,9 +133,11 @@
     <Content Include="uploads\thumbs.png" />
     <Content Include="Views\Activities\ActivityList.aspx" />
     <Content Include="Views\Activities\AddActivity.aspx" />
+    <Content Include="Views\Activities\ApproveHost.aspx" />
     <Content Include="Views\Activities\EditActivity.aspx" />
     <Content Include="Views\Activities\HostView.aspx" />
     <Content Include="Views\Activities\ViewActivity.aspx" />
+    <Content Include="Views\Activities\ViewAllHost.aspx" />
     <Content Include="Views\Home\AdminHomepage.aspx" />
     <Content Include="Views\Home\Home.aspx" />
     <Content Include="Views\Home\UserHomepage.aspx" />
@@ -224,6 +226,13 @@
     <Compile Include="Views\Activities\AddActivity.aspx.designer.cs">
       <DependentUpon>AddActivity.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\Activities\ApproveHost.aspx.cs">
+      <DependentUpon>ApproveHost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Activities\ApproveHost.aspx.designer.cs">
+      <DependentUpon>ApproveHost.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\Activities\EditActivity.aspx.cs">
       <DependentUpon>EditActivity.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -244,6 +253,13 @@
     </Compile>
     <Compile Include="Views\Activities\ViewActivity.aspx.designer.cs">
       <DependentUpon>ViewActivity.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Activities\ViewAllHost.aspx.cs">
+      <DependentUpon>ViewAllHost.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\Activities\ViewAllHost.aspx.designer.cs">
+      <DependentUpon>ViewAllHost.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\Home\AdminHomepage.aspx.cs">
       <DependentUpon>AdminHomepage.aspx</DependentUpon>
