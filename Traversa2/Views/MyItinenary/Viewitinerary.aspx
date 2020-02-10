@@ -1,13 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="Viewitinerary.aspx.cs" Inherits="Traversa2.Views.MyItinenary.Viewitinerary" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script>
-      $( function() {
-        $( "#accordion" ).accordion();
-      } );
-      </script>
+   
     
     
     <link href="../../Stylesheet/category.css" rel="stylesheet" />
@@ -57,14 +50,14 @@
             <asp:LinkButton ID="LbtnCreate"  class="btn btn-info" runat="server" OnClick="LbtnCreate_Click">Create</asp:LinkButton>
         </div>   
     <br />
-    
+    <br />
 
     
     <div class=" container">
         <div class="text-center">
              <asp:Label ID="LabelMessage" runat="server" Text="Nothing to see here" Visible="true"></asp:Label>
         </div> 
-        <asp:DataList ID="DataListItinName" runat="server" RepeatColumns="3" RepeatDirection="Horizontal" Visible="false" CssClass="i" OnItemCommand="DataListItinName_ItemCommand">
+        <asp:DataList ID="DataListItinName" runat="server" Visible="false" CssClass="i" OnItemCommand="DataListItinName_ItemCommand">
             <ItemTemplate >
                 <div class="dropdown">
                     <asp:Button ID="Buttonname" CommandName="Show"  class="btn btn-secondary dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" runat="server" Text='<%# Bind("IName") %>' CommandArgument='<%#Eval("PlId") %>'/>
@@ -88,10 +81,6 @@
                          </table>
                        </div>
                       </div>
-                    </div>
-                           
-                           
-           </div>
                 </ItemTemplate>
            </asp:DataList>
         </div>

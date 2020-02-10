@@ -1054,3 +1054,37 @@ C:\Users\princ\OneDrive\Documents\Traversa Project Heree\Traversa\Traversa2\obj\
 C:\Users\princ\OneDrive\Documents\Traversa Project Heree\Traversa\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
 C:\Users\princ\OneDrive\Documents\Traversa Project Heree\Traversa\Traversa2\obj\Debug\Traversa2.dll
 C:\Users\princ\OneDrive\Documents\Traversa Project Heree\Traversa\Traversa2\obj\Debug\Traversa2.pdb
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\Traversa2.dll.config
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\Traversa2.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\Traversa2.pdb
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\csc.exe
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\csc.exe.config
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\csc.rsp
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\csi.exe
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\csi.rsp
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\System.AppContext.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\vbc.exe
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\vbc.exe.config
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\vbc.rsp
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\VBCSCompiler.exe
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\obj\Debug\Traversa.csprojAssemblyReference.cache
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\obj\Debug\Traversa.csproj.CoreCompileInputs.cache
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\obj\Debug\Traversa.csproj.CopyComplete
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\obj\Debug\Traversa2.dll
+C:\Users\pysin\OneDrive\Documents\Y2S2\traversaaaaa\FINNALLY\Traversa\Traversa2\obj\Debug\Traversa2.pdb

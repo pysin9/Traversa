@@ -20,28 +20,37 @@ namespace Traversa2.Views.MyItinenary
                 if (Session["UserID"] != null)
                 {
                     int userid = Convert.ToInt32(Session["UserID"]);
-                    Itinerary ui = new Itinerary();
-                    ui = ui.selectbyuserid(userid);
-                    if (ui != null)
+                    //Itinerary ui = new Itinerary();
+                    //ui = ui.selectbyuserid(userid);
+                    //if (ui != null)
+                    //{
+                    Itinerary ii = new Itinerary();
+                    iList = ii.retrieveAll(userid);
+
+                    if(iList == null)
                     {
-                        Itinerary ii = new Itinerary();
-                        iList = ii.retrieveAll(userid);
-
-
-
+                        DataListItinName.Visible = false;
+                        LabelMessage.Visible = true;
+                    }
+                    else
+                    {
                         DataListItinName.Visible = true;
                         DataListItinName.DataSource = iList;
                         DataListItinName.DataBind();
 
                         LabelMessage.Visible = false;
+                    }
 
 
-                    }
-                    else
-                    {
-                        DataListItinName.Visible = false;
-                        LabelMessage.Visible = true;
-                    }
+                    
+
+
+                    //}
+                    //else
+                    //{
+                    //    DataListItinName.Visible = false;
+                    //    LabelMessage.Visible = true;
+                    //}
 
                 }
             }
@@ -56,9 +65,9 @@ namespace Traversa2.Views.MyItinenary
 
         protected void DataListItinName_ItemCommand(object source, DataListCommandEventArgs e)
         {
-            
 
-            if(e.CommandName == "Delete")
+
+            if (e.CommandName == "Delete")
             {
                 int id = Convert.ToInt32(e.CommandArgument);
 
@@ -68,7 +77,7 @@ namespace Traversa2.Views.MyItinenary
                 Labelerr.ForeColor = System.Drawing.Color.Green;
             }
 
-            if(e.CommandName == "Edit")
+            if (e.CommandName == "Edit")
             {
                 int id = Convert.ToInt32(e.CommandArgument);
 
@@ -77,7 +86,7 @@ namespace Traversa2.Views.MyItinenary
             }
         }
 
-        
+
 
 
 
