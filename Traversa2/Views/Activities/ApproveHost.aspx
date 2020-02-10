@@ -7,26 +7,15 @@
             margin-right:auto;
         }
         .auto-style2 {
-            margin-left: auto;
+            margin-left: 417px;
             margin-right: auto;
-            width: 1048px;
+            width: 863px;
         }
         .auto-style4 {
-            width: 270px;
+            width: 132px;
         }
-        .auto-style5 {
-            width: 270px;
-            height: 90px;
-        }
-        .auto-style6 {
-            width: 521px;
-            height: 90px;
-        }
-        .auto-style7 {
-            height: 90px;
-        }
-        .auto-style8 {
-            width: 521px;
+        .auto-style9 {
+            width: 453px;
         }
     </style>
 </asp:Content>
@@ -44,7 +33,7 @@
                 <asp:Label ID="lbId" runat="server"></asp:Label>
 
             </td>
-            <td>
+            <td class="auto-style9">
                 <br />
             </td>
             <td></td>
@@ -53,8 +42,8 @@
             <td class="auto-style4">
                 <asp:Label ID="Label5" runat="server" Text="Email: " ></asp:Label>
             </td>
-            <td class="auto-style8">
-                <asp:TextBox ID="HEmail" runat="server" Width="491px" placeholder="Enter your email used as a user"></asp:TextBox>
+            <td class="auto-style9">
+                <asp:TextBox ID="HEmail" runat="server" Width="392px" placeholder="Enter your email used as a user"></asp:TextBox>
             </td>
             <td><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email is empty!" ControlToValidate="HEmail" ForeColor="Red" CssClass="col-lg-3" style="font-size:15px;"></asp:RequiredFieldValidator></td>
         </tr>
@@ -64,6 +53,7 @@
                 <br />
             </td>
         </tr>
+        <!---
         <tr>
             <td class="auto-style4">
                  <asp:Label ID="Label3" runat="server" Text="More About Yourself: "></asp:Label>
@@ -92,23 +82,19 @@
          <tr>
             <td class="auto-style4"></td>
         </tr>
-        <tr>
-            <td class="auto-style4">
-                <br />
-            </td>
-            
-        </tr>
+            --->
+
     </table>
     <br />
-    &nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
     <asp:CheckBox ID="HostRequired" runat="server" Text="I agree to hold full responsibility for all my actions taken as a host." Checked="true"/>
     <br />
-    &nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    
-    <asp:Label ID="LblError" runat="server" Text=""></asp:Label>
+    &nbsp&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;
+   
     <br />
     <br />
-    <asp:Button ID="Button1" runat="server" Text="Submit"  style="margin-left: 500px;" OnClick="Button1_Click" />
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <asp:Button ID="btSubmit" runat="server" Text="Submit"  style="margin-left: 500px;" OnClick="btnSubmit_Click" />
     <br />
     <br />
 

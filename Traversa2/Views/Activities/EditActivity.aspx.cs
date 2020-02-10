@@ -29,7 +29,7 @@ namespace Traversa2.Views.Activities
                 category.DataBind();
                 if (Session["ActId"] != null)
                 {
-                    int acid = Convert.ToInt32(Session["ActId"]);
+                    int acid = 8;
                     lblAcId.Text = acid.ToString();
                     Activity ac = new Activity();
                     ac = ac.retrieveOne(acid);
@@ -64,7 +64,7 @@ namespace Traversa2.Views.Activities
             string desc = ADesc.Text;
             string loca = ALocation.Text;
             int cat = int.Parse(category.SelectedItem.Value);
-            int acid = Convert.ToInt32(Session["ActId"]);
+            int acid = 8;
             string cost = APrice.Text;
             string pvditem = AProvided.Text;
             string bringitem = ABring.Text;

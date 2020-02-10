@@ -47,12 +47,17 @@ namespace Traversa2.BLL
             this.Style = style;
         }
 
-        public TravellerProfile(int id, string email, string description, string reason)
+        /*public TravellerProfile(int id, string email, string description, string reason)
         {
             this.ID = id;
             this.Email = email;
             this.Description = description;
             this.Reason = reason;
+        }*/
+
+        public TravellerProfile(string email)
+        {
+            this.Email = email;
         }
 
         public int UpdateProifle()
@@ -85,11 +90,11 @@ namespace Traversa2.BLL
         }
 
 
-        public TravellerProfile RetrieveHost(int ID)
+        /*public TravellerProfile RetrieveHost(int ID)
         {
             UserDAO dao = new UserDAO();
             return dao.SelectByIdHost(ID);
-        }
+        }*/
 
         public int deleteOne(int id)
         {

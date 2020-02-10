@@ -52,7 +52,7 @@ namespace Traversa2
 
         protected void LinkButtonHost_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/Views/Activities/HostActivity.aspx");
+            Response.Redirect("/Views/Activities/HostView.aspx");
         }
     }
 }

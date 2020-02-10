@@ -152,7 +152,7 @@ namespace Traversa2.DAL
         }
 
 
-        public int UpdateHostInfo(TravellerProfile tv)
+        /*public int UpdateHostInfo(TravellerProfile tv)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
@@ -176,37 +176,60 @@ namespace Traversa2.DAL
             myConn.Close();
 
             return result;
-        }
+        }*/
 
-        public TravellerProfile SelectByIdHost(int ID)
+        public int UpdateHostInfo(TravellerProfile tv)
         {
             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
             SqlConnection myConn = new SqlConnection(DBConnect);
 
-            string sqlstmt = "SELECT Email, Description, Reason From Travellers where UserId = @paraId";
-            SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
-            da.SelectCommand.Parameters.AddWithValue("@paraId", ID);
+            string sqlStmt = "UPDATE Travellers SET isHost = 1 where Email = @paramail";
 
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            int rec_cnt = ds.Tables[0].Rows.Count;
-
-            TravellerProfile tv = null;
-            if (rec_cnt > 0)
-            {
-                DataRow row = ds.Tables[0].Rows[0];
-                int id = Convert.ToInt32(row["UserId"]);
-                string email = row["Email"].ToString();
-                string description = row["Description"].ToString();
-                string reason = row["Reason"].ToString();
+            int result = 0;    // Execute NonQuery return an integer value
+            SqlCommand sqlCmd = new SqlCommand(sqlStmt, myConn);
 
 
-                TravellerProfile objRate = new TravellerProfile(id, email, description, reason);
+            sqlCmd = new SqlCommand(sqlStmt.ToString(), myConn);
 
+            sqlCmd.Parameters.AddWithValue("@paramail", tv.Email);
 
-            }
-            return tv;
+            myConn.Open();
+            result = sqlCmd.ExecuteNonQuery();
+
+            myConn.Close();
+
+            return result;
         }
+
+        /* public TravellerProfile SelectByIdHost(int ID)
+         {
+             string DBConnect = ConfigurationManager.ConnectionStrings["ConnStr"].ConnectionString;
+             SqlConnection myConn = new SqlConnection(DBConnect);
+
+             string sqlstmt = "SELECT Email, Description, Reason From Travellers where UserId = @paraId";
+             SqlDataAdapter da = new SqlDataAdapter(sqlstmt, myConn);
+             da.SelectCommand.Parameters.AddWithValue("@paraId", ID);
+
+             DataSet ds = new DataSet();
+             da.Fill(ds);
+             int rec_cnt = ds.Tables[0].Rows.Count;
+
+             TravellerProfile tv = null;
+             if (rec_cnt > 0)
+             {
+                 DataRow row = ds.Tables[0].Rows[0];
+                 int id = Convert.ToInt32(row["UserId"]);
+                 string email = row["Email"].ToString();
+                 string description = row["Description"].ToString();
+                 string reason = row["Reason"].ToString();
+
+
+                 TravellerProfile objRate = new TravellerProfile(id, email, description, reason);
+
+
+             }
+             return tv;
+         } */
 
         public int DeleteHostAppl(int id)
         {

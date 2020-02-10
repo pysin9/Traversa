@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbar.Master" AutoEventWireup="true" CodeBehind="AddActivity.aspx.cs" Inherits="Traversa2.Views.Activities.AddActivity" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/navbarAfterLogin.Master" AutoEventWireup="true" CodeBehind="AddActivity.aspx.cs" Inherits="Traversa2.Views.Activities.AddActivity" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <link href="../../Stylesheet/PlaceForm.css" rel="stylesheet" type="text/css" />
@@ -95,12 +95,12 @@
                             
                         </div>
                     </div>
-
+                    <!---
                     <asp:RadioButtonList ID="RBtnProvided" runat="server" class="Rbtn">
                         <asp:ListItem Value="ProvidedNothing">Nothing</asp:ListItem>
                         <asp:ListItem Value="ProvidedSomething">I wish to provide something.</asp:ListItem>
                     </asp:RadioButtonList>
-
+                        --->
 
                      <div class="form-group">
                         <div class="row justify-content-center">
@@ -116,10 +116,12 @@
                         </div>
                     </div>
 
+                    <!---
                     <asp:RadioButtonList ID="RBtnBring" runat="server" class="Rbtn">
                         <asp:ListItem Value="BringNothing">Nothing</asp:ListItem>
                         <asp:ListItem Value="BringSomething">Participants are required to bring something.</asp:ListItem>
                     </asp:RadioButtonList>
+                        --->
 
                     <div class="form-group">
                         <div class="row justify-content-center">
@@ -141,4 +143,5 @@
         <!-- end container-fluid -->
     </div>
 </asp:Content>
+
 
